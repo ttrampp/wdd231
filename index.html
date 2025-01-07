@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231 -- Web Frontend Development -- Tanya Trampp</title>
     <meta name="description" content="WDD 231 Course Home Page">
     <meta name="author" content="Tanya Trampp">
-    
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/home.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
 </head>
+
 <body>
-    
+    <header>
+        <h1>Tanya Trampp</h1>
+        <button class="hamburger">&#9776</button>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber.html">Chamber</a></li>
+            <li><a href="github.html">GitHub Profile</a></li>
+            <li><a href="linkedin.html">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="section-container">
+            <section class="one">
+                <h2>Course Work</h2>
+                <ul id="course-work">
+                    <li>Web Fundamentals</li>
+                    <li>Programming with Classes</li>
+                    <li>Frontend Web Development</li>
+                </ul>
+            </section>
+
+            <section class="two">
+                <h2>Kirtland, NM, USA</h2>
+                <figure>
+                    <img src="images/hatch-green-chili.webp" alt="Green Chili" ;>
+                    <figcaption>New Mexico Green Chili</figcaption>
+                </figure>
+            </section>
+        </div>
+
+        <section class="three">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div id="certificate-filters">
+                <button class="filter-btn" data-category="all">All</button>
+                <button class="filter-btn" data-category="CSE">CSE</button>
+                <button class="filter-btn" data-category="WDD">WDD</button>
+            </div>
+            <div id="course-list" class="courses">
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> 👀 Tanya Trampp 👀 New Mexico, USA</p>
+        <p>Last Modified: <span id="date-modified">Loading...</span></p>
+        <script>
+            let text = document.lastModified;
+            document.getElementById("date-modified").innerHTML = text;
+        </script>
+    </footer>
 </body>
+
 </html>

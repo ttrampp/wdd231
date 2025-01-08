@@ -106,10 +106,14 @@ const courses = [
 document.addEventListener('DOMContentLoaded', () => {
     const coursesContainer = document.getElementById('course-list');
     const filters = document.querySelectorAll('.filter-btn');
+    const creditsElement = document.getElementById('credits');
 
     function displayCourses(filter) {
         coursesContainer.innerHTML = '';
         const filteredCourses = courses.filter(course => filter === 'all' || course.subject === filter);
+        const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+        creditsElement.textContent = totalCredits;
+
 
         filteredCourses.forEach(course => {
             const courseBtn = document.createElement('button');
@@ -117,6 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
             courseBtn.className = 'course-btn';
             if (course.completed) {
                 courseBtn.classList.add('completed')
+            }
+            else {
+                courseBtn.classList.add('incomplete')
             }
             coursesContainer.appendChild(courseBtn);
         });

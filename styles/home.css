@@ -188,7 +188,7 @@ figure img {
 }
 
 figcaption {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--color-three);
     margin-top: 10px;
 }
@@ -197,7 +197,21 @@ figcaption {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+}
+
+
+.three p {
+    font-size: 1.4rem;
+    color: var(--color-one);
+    font-weight: bold;
+    padding-bottom: 26px;
+}
+
+p #credits {
+    color: var(--color-five);
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .filter-btn {
@@ -230,6 +244,13 @@ figcaption {
     gap: 20px;
     justify-items: center;
     margin-bottom: 26px;
+}
+
+.courses .course-btn.incomplete {
+    background-color: var(--color-four);
+    color: var(--color-one);
+    border: 2px solid var(--color-two);
+    border-radius: 5px;
 }
 
 .courses .completed:after {
@@ -324,7 +345,7 @@ footer {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    font-size: 0.9rem;
+    font-size: 1rem;
     white-space: normal;
     max-width: 100%;
     margin-top: auto;

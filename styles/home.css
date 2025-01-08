@@ -29,6 +29,39 @@ body {
     min-height: 100vh;
 }
 
+header {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--color-three);
+    color: var(--color-six);
+    /*text-align: center;*/
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.header-container h1 {
+    font-family: var(--heading-font);
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-image {
+    width: auto;
+    height: 138px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr;
@@ -52,7 +85,7 @@ main {
 
 
 nav {
-    background-color: var(--color-three);
+    background-color: var(--color-one);
     width: 100%;
     position: relative;
 }
@@ -68,17 +101,17 @@ nav ul {
 
 nav ul li a {
     display: block;
-    background-color: var(--color-three);
+    background-color: var(--color-one);
     color: var(--color-six);
-    padding: 15px 0;
+    padding: 14px 0;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: large;
     text-align: center;
     flex-grow: 1;
 }
 
 nav ul li.active a {
-    background-color: var(--color-three);
+    background-color: var(--color-one);
     color: var(--color-seven);
     font-weight: bold;
     font-size: x-large;
@@ -88,6 +121,7 @@ nav ul li.active a {
 nav ul li a:hover {
     color: var(--color-seven);
     background-color: var(--color-two);
+    font-size: x-large;
 }
 
 /**********INDEX HOME PAGE**********/
@@ -101,28 +135,43 @@ nav ul li a:hover {
 .section-container .one,
 .section-container .two {
     flex: 1;
+    padding-bottom: 26px;
 }
+
 
 section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: stretch;
     text-align: center;
-    margin: 20px 0;
-    padding: 15px;
+    margin: 26px 0;
+    padding: 0;
     border: 2px solid var(--color-four);
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: var(--color-six);
     box-shadow: 0 4px 8px var(--color-one);
 }
 
 section h2 {
-    color: var(--color-two);
+    background-color: var(--color-three);
+    color: var(--color-six);
+    padding: 10px;
     font-family: var(--heading-font);
     text-align: center;
-    margin-bottom: 15px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
+
+.section-container h2 {
+    margin-bottom: 26px;
+}
+
+#certificate-filters {
+    margin-top: 26px;
+}
+
 
 #course-work {
     list-style: disc;
@@ -135,7 +184,7 @@ figure {
 
 figure img {
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 figcaption {
@@ -152,23 +201,35 @@ figcaption {
 }
 
 .filter-btn {
-    padding: 10px 15px;
+    padding: 10px 14px;
     background-color: var(--color-one);
     color: var(--color-six);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 14px;
+    width: 26%;
+    font-weight: bold;
+    font-size: large;
 }
 
 .filter-btn:hover {
     background-color: var(--color-five);
 }
 
+.filter-btn.active {
+    background-color: var(--color-five);
+    color: var(--color-seven);
+    font-weight: bold;
+}
+
 .courses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
     justify-items: center;
+    margin-bottom: 26px;
 }
 
 .courses .completed:after {
@@ -187,6 +248,7 @@ figcaption {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    width: 74%;
 }
 
 .courses .course-btn:hover {
@@ -233,7 +295,7 @@ figcaption {
     }
 
     section {
-        margin-bottom: 20px;
+        margin-bottom: 26px;
     }
 
     .courses {
@@ -272,4 +334,17 @@ footer p {
     line-height: 1.4;
     margin: 0;
     padding: 0;
+}
+
+footer img.footer-flag-inline {
+    width: 26px;
+    /*size of flag*/
+    height: auto;
+    /*aspect ration maintained*/
+    margin-left: 8px;
+    /*space between flag and text*/
+    vertical-align: middle;
+    /*line up flag with text*/
+    display: inline;
+    /*makes sure flag stays inline with text*/
 }

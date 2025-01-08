@@ -124,10 +124,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filters.forEach(button => {
         button.addEventListener('click', (event) => {
+            filters.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active')
             const category = event.target.getAttribute('data-category');
             displayCourses(category);
         });
     });
 
     displayCourses('all');
+    //filters[0].classList.add('active');//
 });

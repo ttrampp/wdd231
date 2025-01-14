@@ -1,0 +1,80 @@
+/*general body*/
+body {
+    background-color: #283044;
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+header {
+    background-color: #283044;
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    padding: 26px;
+}
+
+/*cards container*/
+#cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+    padding: 26px;
+    background-color: #78a1bb;
+    /*text-align: center;*/
+    justify-content: center;
+    /*align-items: center;*/
+    max-width: 1234px;
+    margin: 0 auto;
+}
+
+/*individual cards*/
+section {
+    background-color: #bfa89e;
+    border-radius: 8px;
+    padding: 26px;
+    box-shadow: 0 4px 8px #8b7900;
+    border: 8px solid #8b786d;
+    width: 100%;
+
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+/*full name*/
+h2 {
+    color: black;
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+}
+
+/*birthdate and birthplace*/
+p {
+    padding: 0;
+    color: black;
+    margin: 2px 0;
+}
+
+/*portrait*/
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 14px auto 0 auto;
+    border: 2px solid darkslategrey;
+}
+
+@media (max-width: 1024px) {
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #cards {
+        grid-template-columns: 1fr;
+    }
+}

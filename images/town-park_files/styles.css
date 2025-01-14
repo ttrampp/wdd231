@@ -1,0 +1,111 @@
+
+
+
+
+
+
+
+
+/* body */
+body{font-family:Tahoma, Verdana, Segoe, sans-serif}
+
+/* header */
+header{background:#680dbb}
+.accessible-btn a{background:#9a0000!important}
+.accessibility-menu ul{box-shadow:inset 0 0 0px 2px #9a0000}
+
+/* top bar */
+#top-bar{background:#5900ac}
+#alert{font-family:Tahoma, Verdana, Segoe, sans-serif}
+#alert-header{color:#39ed20}
+#alert-more{color:#ffffff}
+
+/* translate */
+#translation-links ul{background:#ffffff}
+#translation-links ul a{color:#056e03}
+#translation-links span{font-family:Tahoma, Verdana, Segoe, sans-serif;color:#ffffff}
+
+/* social media links */
+header .social-media-link{color:#ffffff}
+header .social-media-link:hover{color:#39ed20}
+#site-information .social-media-link{color:#9a0000}
+
+/* navigation */
+#nav a,#nav span{color:#ffffff;font-family:Tahoma, Verdana, Segoe, sans-serif}
+#nav ul a,#nav ul span{color:#ffffff}
+
+/* slider */
+#slider{height:775px;position: relative;overflow:hidden}
+#freeform #slider{height:425px}
+
+/* quick links */
+#quick-links-carousel .quick-link{color:#056e03;font-family:Tahoma, Verdana, Segoe, sans-serif}
+#quick-links-carousel .quick-link:hover{color:#680dbb}
+#quick-links{background:#f9f3ec}
+/* section heading */
+.section-heading h2{font-family:Tahoma, Verdana, Segoe, sans-serif;color:#056e03}
+
+/* news */
+.news-info>a:hover .news-title{color:#680dbb}
+.news-title{color:#bd1616;font-family:Tahoma, Verdana, Segoe, sans-serif}
+.news-date{color:#680dbb;font-family:'Montserrat',sans-serif;opacity:.65}
+.news-caption{color:#1d365d;font-family:Tahoma, Verdana, Segoe, sans-serif}
+#post a,.news-info a{color:#bd1616}
+
+/* site information */
+.site-info-header{color:#4a009d;font-family:Tahoma, Verdana, Segoe, sans-serif}
+#site-information .site-info-link{color:#4a009d;font-family:Tahoma, Verdana, Segoe, sans-serif;opacity:.65}
+#site-information .site-info-link:hover{color:#9a0000;opacity:1}
+#site-information #address{color:#4a009d;opacity:.65}
+.search-form .fa-search {color: #39ed20}
+/* buttons */
+.button,
+a.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.btn{background:#5900ac;font-family:Tahoma, Verdana, Segoe, sans-serif;color:#ffffff!important}
+.button:hover,
+a.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.btn:hover{background:#680dbb;color:#fff!important}
+.button:active,
+a.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+.btn:active{background:#680dbb}
+.faq-container{border-top-color:#4a009d}
+.rpfbids tr[bgcolor] {background: #4a009d!important;}
+
+/* footer */
+footer{background:#5900ac;font-family:'Open Sans',sans-serif}
+#revize-link:hover{color:#ffffff}
+#revize-login:hover{color:#ffffff}
+
+/* share button */
+.floating-share-btn{background:#680dbb !important}
+.quick-link:hover>.ql-icon {background: #4a009d!important;}
+span.slider-caption {font-family: Tahoma, Verdana, Segoe, sans-serif;}
+
+/* flyout */
+#flyout-wrap{background:#4a009d}
+#flyout a,#flyout span{color:#ffffff;font-family:Tahoma, Verdana, Segoe, sans-serif}
+#post{font-size:16px;color:#0d1621}
+#breadcrumbs,#breadcrumbs a{color:#0d1621;font-family:Tahoma, Verdana, Segoe, sans-serif}
+#page-title{color:#0d1621}
+@media only screen and (min-width:992px){
+	#nav>li:hover>a,#nav>li:hover>span{color:#39ed20}
+	#nav ul{background:#5900ac}
+	#flyout ul{background:#680dbb}
+	#flyout ul a,#flyout ul span{font-family:Tahoma, Verdana, Segoe, sans-serif;color:#ffffff}
+}
+@media only screen and (max-width:991px){
+	#logo{width:250px}
+
+	

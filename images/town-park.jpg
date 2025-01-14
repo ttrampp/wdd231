@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://kirtlandnm.org/town_park.php -->
+<html lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		 <!--<base href="https://kirtlandnm.org/town_park.php">--><base href=".">
+	
+
+	
+
+
+<link href="./town-park_files/revize.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./town-park_files/document_center_styles.css">
+<script type="text/javascript" src="./town-park_files/simple_accordian.js.download"></script>
+
+
+<script type="text/javascript">
+
+
+
+</script>
+
+
+
+
+
+	
+	
+
+
+
+
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+	<link rel="stylesheet" href="./town-park_files/bootstrap.min.css">
+	<link rel="stylesheet" href="./town-park_files/all.min.css">
+	
+	
+
+
+	<!-- Metadata Area Starts -->
+	<title>TOWN PARK</title>
+	<meta property="og:title" content="TOWN PARK">
+	<meta property="og:image" content="https://webgen1.revize.com/revize/kirtlandnm/logo/Kirtland Seal Blue Red Star.jpg?t=1669821741684">
+	<meta name="robots" content="index, follow">
+
+
+	<link rel="stylesheet" href="./town-park_files/layout.css">
+	<link rel="stylesheet" href="./town-park_files/styles.css">
+	<link rel="shortcut icon" href="https://kirtlandnm.org/_assets_/images/favicon.ico?t=1669821741684">
+	<link rel="apple-touch-icon" href="https://kirtlandnm.org/_assets_/images/touch-icon-ipad2.png?t=1669821741684">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://kirtlandnm.org/_assets_/images/touch-icon-ipad2.png?t=1669821741684">
+
+	
+
+	<!-- Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./town-park_files/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="./town-park_files/m=el_main"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="./town-park_files/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="./town-park_files/m=el_main"></script></head>
+<body id="freeform" class="user-not-logged-in mobile" style="position: relative; min-height: 100%; top: 0px;" data-new-gr-c-s-check-loaded="14.1216.0" data-gr-ext-installed="">
+
+
+
+
+<script type="text/javascript">
+if (typeof(RZ) == 'undefined') RZ = {};
+if (!RZ.link) RZ.link = new Object();
+RZ.pagetype = 'template'
+RZ.baseurlprefix = ''
+RZ.baseurlpath = ''
+RZ.protocolRelativeRevizeBaseUrl='//webgen1.revize.com'
+
+RZ.pagetemplatename = 'freeform'
+RZ.pagetemplateid = '6'
+RZ.pagemodule = 'links'
+RZ.pagemoduleid = '7'
+RZ.pagerecordid = '164';
+
+RZ.pageid = 'links-164';
+RZ.pageparentid = '0';
+RZ.pagesectionid = '0';
+RZ.pagesectionname = '';
+RZ.pagesectionlevel = '0';
+RZ.pagesectionfolder = '';
+RZ.pagesectionfilter = 'sectionid=0';
+RZ.pagelinkfilter = 'linklevel=0 and linksectionid=0';
+RZ.pagelinklevel = '0';
+RZ.pagelinkid = '164';
+RZ.pageidfield = '';
+
+RZ.isnewrecord = false;
+RZ.editmodule = '';
+RZ.editrecordid = '164';
+RZ.editrecordversion = '';
+RZ.editversion = '';
+RZ.editaction = '';
+
+RZ.page_roles = ''
+RZ.page_users = '95ce9079de54cfe9cd5a23d8c3876a06c49410b0c717b8d4e5d4c69d86f5a66e'
+RZ.page_key = 'freeform[164]'
+RZ.parent_key = 'index[]'
+RZ.inherit_key = 'index[]'
+RZ.workflowname = ''
+RZ.permissions_options = ''
+RZ.permissions_module = 'webspace_page_permissions'
+RZ.webspace = 'kirtlandnm'
+RZ.webspacedesc = "City of Thomas";
+
+RZ.featurespattern = '(EZ)';
+null
+
+RZ.webspacelinksurl = ''
+RZ.webspacelinksurl = './webspace/links.html'
+RZ.workflowlist = ''
+RZ.revizeserverurl = 'https://webgen1.revize.com/revize/kirtlandnm';
+
+if (!RZ.nextseq) RZ.nextseq = {linknames:{},modules:{}};
+
+RZ.webspace_config = new Object();
+RZ.webspace_config.admin_email = "noreply@co.walla-walla.wa.us";
+RZ.webspace_config.calendar_options = "max_events=4";
+RZ.webspace_config.form_captcha = "yes";
+RZ.webspace_config.form_server = "revizeserver";
+RZ.webspace_config.form_technology = "jsp";
+RZ.webspace_config.formwizard_ftp_password = "";
+RZ.webspace_config.formwizard_ftp_port = "";
+RZ.webspace_config.formwizard_ftp_server = "";
+RZ.webspace_config.formwizard_ftp_user = "";
+RZ.webspace_config.formwizard_setup = "yes";
+RZ.webspace_config.formwizard_smtp_password = "xxx";
+RZ.webspace_config.formwizard_smtp_server = "xxx";
+RZ.webspace_config.formwizard_smtp_user = "xxx";
+RZ.webspace_config.google_analytics = "";
+RZ.webspace_config.home_pageid = "0";
+RZ.webspace_config.home_sectionid = "0";
+RZ.webspace_config.home_template = "home,index,sitemap";
+RZ.webspace_config.icon_email = "<img src=\"/revize/images/email_icon_yellow.gif\" width=\"16\" border=\"0\" height=\"17\" title=\"Request email notification when page changes\" alt=\"Request email notification when page changes\" style=\"\" />";
+RZ.webspace_config.image_maxheight = "3000";
+RZ.webspace_config.image_maxwidth = "3000";
+RZ.webspace_config.image_setup = "yes";
+RZ.webspace_config.isNewMenuManagerEnabled = "yes";
+RZ.webspace_config.livesite_url = "";
+RZ.webspace_config.menu_links_module = "links";
+RZ.webspace_config.menu_newsection = "";
+RZ.webspace_config.menu_nexturl = "webspace_menu-editform.jsp";
+RZ.webspace_config.menu_sections_module = "sections";
+RZ.webspace_config.menu_system = "custom";
+RZ.webspace_config.menu_version = "1.00";
+RZ.webspace_config.new_menu_manager_enabled = "yes";
+RZ.webspace_config.notify_return_url = "enotify/index.php";
+RZ.webspace_config.rte_setup = "yes";
+RZ.webspace_config.to_email = "";
+RZ.webspace_config.use_folders = "1";
+RZ.webspace_config.use_new_buttons = "yes";
+
+RZ.isauthenticationactive = true
+RZ.warning = ""
+RZ.adminwinmsg = null
+
+RZ.channels = 'revize,fileschannel';
+RZ.jsversion = 1.2</script>
+<script type="text/javascript" src="./town-park_files/snippet_helper.js.download"></script>
+
+
+
+	<div class="calendarEventPopup">
+  <script>
+    window.addEventListener('message', function(e) {
+      var $iframe = jQuery("#calendarEvent");
+      var eventName = e.data[0];
+      var data = e.data[1];
+      switch(eventName) {
+        case 'setHeight':
+          $iframe.height(data);
+          break;
+      }
+    }, false);
+  </script>
+  <style>
+      @media only screen and (max-width:768px){iframe#calendarEvent{height:auto!important}}
+      @media only screen and (max-height:700px){iframe#calendarEvent{height:auto!important}}
+  </style>
+  <div id="RZcalendar_detail" style="display:none;z-index:9999;position:relative;visibility:hidden">
+    <div class="calendarEvent-overlay" style="position:fixed;top:0;right:0;bottom:0;left:0;width:100%;z-index:10;background-color:rgba(0,0,0,.6)"></div><!-- /.calendarEvent-overlay -->
+    <iframe src="./town-park_files/saved_resource.html" id="calendarEvent" style="margin:0 auto;position:fixed;z-index:9999;top:5%;right:0;left:0;width:600px;min-height:370px;max-width:100%;border:0"></iframe>
+  </div><!-- /#RZcalendar_detail -->
+</div><!-- /.calendarEventPopup -->
+<header>
+	<a href="https://kirtlandnm.org/town_park.php#main" class="btn" id="skip" tabindex="0">SKIP TO CONTENT</a>
+	<!--/.cookieConsent-->
+	<div class="accessibility-wrap">
+		<div class="accessible-btn">
+			<a href="https://kirtlandnm.org/town_park.php#" class="fa fa-wheelchair" aria-label="accessibility button" data-target="accessibility-menu"></a>
+		</div><!--/.accessible-btn-->
+		<div class="accessibility-menu">
+			<ul>
+				<li>
+					<a id="highcontrast" href="https://kirtlandnm.org/town_park.php#">High Contrast</a>
+				</li>
+				<li>
+					<a id="yellowlinks" href="https://kirtlandnm.org/town_park.php#">Yellow Links</a>
+				</li>
+				<li>
+					<a href="https://kirtlandnm.org/town_park.php#" id="greyscale">Grey Scale</a>
+				</li>
+				<li>
+					<a href="https://kirtlandnm.org/town_park.php#" id="underline-links">Underline Links</a>
+				</li>
+			</ul>
+		</div><!--/.accessibility-menu-->
+	
+		<!-- Share widget make into an include file -->
+		<button type="button" class="share-btn floating-share-btn" data-toggle="modal" data-target="#shareModal" aria-label="share page">
+			<i class="fa fa-share-alt"></i>
+		</button>
+	</div><!--/.accessibility-wrap-->
+	<section id="top-bar">
+		<div class="container clearfix">
+
+			
+			
+				
+		
+
+
+
+
+
+
+
+
+
+
+	
+
+			
+			<div id="google-translate" class="hidden">
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({pagelanguage: 'en',
+							layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+							'google-translate');
+					}
+				</script>
+				<script type="text/javascript" src="./town-park_files/element.js.download"></script>
+			<div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="./town-park_files/cleardot.gif" class="goog-te-gadget-icon" alt="" style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"><span style="vertical-align: middle;"><a aria-haspopup="true" class="VIpgJd-ZVi9od-xl07Ob-lTBxed" href="https://kirtlandnm.org/town_park.php#"><span>Select Language</span><img src="./town-park_files/cleardot.gif" alt="" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="./town-park_files/cleardot.gif" alt="" width="1" height="1"><span aria-hidden="true" style="color: rgb(118, 118, 118);">▼</span></a></span></div></div></div><!--/#google-translate.control.hidden-sm.hidden-xs-->
+			<ul id="translation-links" class="hidden-sm hidden-xs">
+				<li><span tabindex="0" aria-label="translate website">Translate <i class="fa fa-angle-down"></i></span>
+					<ul class="clearfix">
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Afrikaans" data-lang="Afrikaans">Afrikaans</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Albanian" data-lang="Albanian">Albanian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Arabic" data-lang="Arabic">Arabic</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Armenian" data-lang="Armenian">Armenian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Azerbaijani" data-lang="Azerbaijani">Azerbaijani</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Basque" data-lang="Basque">Basque</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Belarusian" data-lang="Belarusian">Belarusian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Bengali" data-lang="Bengali">Bengali</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Bosnian" data-lang="Bosnian">Bosnian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Bulgarian" data-lang="Bulgarian">Bulgarian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Catalan" data-lang="Catalan">Catalan</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Cebuano" data-lang="Cebuano">Cebuano</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Chinese" data-lang="Chinese (Simplified)">Chinese (Simplified)</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Chinese" data-lang="Chinese (Traditional)">Chinese (Traditional)</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Croatian" data-lang="Croatian">Croatian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Czech" data-lang="Czech">Czech</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Danish" data-lang="Danish">Danish</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Dutch" data-lang="Dutch">Dutch</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="English" data-lang="English">English</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Esperanto" data-lang="Esperanto">Esperanto</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Estonian" data-lang="Estonian">Estonian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Filipino" data-lang="Filipino">Filipino</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Finnish" data-lang="Finnish">Finnish</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="French" data-lang="French">French</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Galician" data-lang="Galician">Galician</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Georgian" data-lang="Georgian">Georgian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="German" data-lang="German">German</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Greek" data-lang="Greek">Greek</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Gujarati" data-lang="Gujarati">Gujarati</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Haitian Creole" data-lang="Haitian Creole">Haitian Creole</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Hausa" data-lang="Hausa">Hausa</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Hebrew" data-lang="Hebrew">Hebrew</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Hindi" data-lang="">Hindi</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Hmong" data-lang="Hmong">Hmong</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Hungarian" data-lang="Hungarian">Hungarian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Icelandic" data-lang="Icelandic">Icelandic</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Igbo" data-lang="Igbo">Igbo</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Indonesian" data-lang="Indonesian">Indonesian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Irish" data-lang="Irish">Irish</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Italian" data-lang="Italian">Italian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Japanese" data-lang="Japanese">Japanese</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Javanese" data-lang="Javanese">Javanese</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Kannada" data-lang="Kannada">Kannada</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Khmer" data-lang="Khmer">Khmer</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Korean" data-lang="Korean">Korean</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Lao" data-lang="Lao">Lao</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Latin" data-lang="Latin">Latin</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Latvian" data-lang="Latvian">Latvian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Lithuanian" data-lang="Lithuanian">Lithuanian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Macedonian" data-lang="Macedonian">Macedonian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Malay" data-lang="Malay">Malay</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Maltese" data-lang="Maltese">Maltese</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Maori" data-lang="Maori">Maori</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Marathi" data-lang="Marathi">Marathi</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Mongolian" data-lang="Mongolian">Mongolian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Nepali" data-lang="Nepali">Nepali</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Norwegian" data-lang="Norwegian">Norwegian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Persian" data-lang="Persian">Persian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Polish" data-lang="Polish">Polish</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Portuguese" data-lang="Portuguese">Portuguese</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Punjabi" data-lang="Punjabi">Punjabi</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Romanian" data-lang="Romanian">Romanian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Russian" data-lang="Russian">Russian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Serbian" data-lang="Serbian">Serbian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Slovak" data-lang="Slovak">Slovak</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Slovenian" data-lang="Slovenian">Slovenian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Somali" data-lang="Somali">Somali</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Spanish" data-lang="Spanish">Spanish</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Swahili" data-lang="Swahili">Swahili</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Swedish" data-lang="Swedish">Swedish</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Tamil" data-lang="Tamil">Tamil</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Telugu" data-lang="Telugu">Telugu</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Thai" data-lang="Thai">Thai</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Turkish" data-lang="Turkish">Turkish</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Ukrainian" data-lang="Ukrainian">Ukrainian</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Urdu" data-lang="Urdu">Urdu</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Vietnamese" data-lang="Vietnamese">Vietnamese</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Welsh" data-lang="Welsh">Welsh</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Yiddish" data-lang="Yiddish">Yiddish</a></li>
+						<li><a href="https://kirtlandnm.org/town_park.php#" class="Yoruba" data-lang="Yoruba">Yoruba</a></li>
+					<li><a href="https://kirtlandnm.org/town_park.php#" class="Zulu" data-lang="Zulu">Zulu</a></li>
+					</ul>
+				</li>
+			</ul><!--/#translation-links-->
+			<div id="weather" class="weather hidden-sm hidden-xs"><span>1/13/2025</span> <span class="forecast">25° Clouds</span><i class="icon-26"></i></div>
+		</div><!--/.container.clearfix-->
+	</section><!--/#top-bar-->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+
+				
+
+
+
+
+
+
+
+
+<a href="https://kirtlandnm.org/" id="logo">
+	
+
+	
+
+	<h1 class="sr-only">Kirtland, NM</h1>
+	<img src="./town-park_files/Kirtland Seal Blue Red Star.jpg" alt="Kirtland, NM Logo">
+</a><!--/#logo-->
+				<div id="toggles" class="hidden-lg hidden-md">
+					<div id="search-toggle" class="fa fa-search"></div>
+					<div id="nav-toggle" class="fa fa-bars"></div>
+				</div><!--/#toggles.hidden-lg.hidden-md-->
+			</div><!--/.col-md-4-->
+			<div class="col-md-8">
+				<div class="clearfix">
+					<div id="search">
+						<form class="search-form" method="get" action="https://kirtlandnm.org/search.php">
+							<label for="search-input" aria-label="search site">
+								<i class="fa fa-search" aria-hidden="true"></i>
+								<img src="./town-park_files/search-label.png" alt="search site"></label>
+							<input name="q" class="form-control search-input" placeholder="Search..." type="search" id="search-input">
+						</form><!--/.search-form-->
+					</div><!-- /#search-->
+
+
+					<div class="social-media-links">
+						
+
+
+
+
+
+
+
+
+	<script language="JavaScript" type="text/JavaScript">
+		RZ.module = 'alert';
+		RZ.recordid = '';
+		RZ.nexturl = "/revize/webgen_includes/thomastown/editforms/alert-editform.jsp?pageType=dependent&pagerecordid=0&pageId=links-164";
+		RZ.popupwidth = ''; RZ.popupheight = ''; RZ.popupscroll = '';
+		RZ.img = '<span class="rzBtn">Edit Alert</span>';
+		RZ.set='alert.pageid=0';		RZ.options = '';
+		if (typeof RZaction != 'undefined') RZaction('editform');
+	</script>
+            <a href="https://www.facebook.com/townofkirtlandnm" class="fab fa-facebook-f social-media-link"><span class="sr-only">Facebook</span></a>
+
+					</div><!--/.social-media-links-->
+
+				</div><!--/.clearfix-->
+				<nav>
+					<!-- start plugin: menus.topnav-onpage -->
+					<div class="float_button_anchor">
+					
+
+
+ 
+<ul id="nav" class="topnav v2_05-23-2012">
+	<li class="menuLI level0 menuDisplay li-198"><a class="menuA level0 menuDisplay" href="https://kirtlandnm.org/index.php" target="_self">Home</a></li>
+	<li class="menuLI level0 menuDisplay li-101"><a class="menuA level0 menuDisplay" href="https://kirtlandnm.org/doing_business/index.php" target="_self">Doing Business</a></li>
+	<li class="menuLI level0 menuDisplay li-50 children"><a class="menuA level0 menuDisplay" href="https://kirtlandnm.org/_page/index.php" target="_self">Government<i class="fa fa-angle-down toggle" tabindex="0"></i></a>
+		<ul class="menuUL level1 menuHidden ul-83 first-level" style="display: none;">
+			<li class="menuLI level1 menuHidden li-83"><a class="menuA level1 menuHidden" href="https://kirtlandnm.org/_page/new_page.php" target="_self">Mayor</a></li>
+			<li class="menuLI level1 menuHidden li-84"><a class="menuA level1 menuHidden" href="https://kirtlandnm.org/_page/town_council.php" target="_self">Town Council</a></li>
+			<li class="menuLI level1 menuHidden li-166"><a class="menuA level1 menuHidden" href="https://kirtlandnm.org/_page/town_clerk.php" target="_self">Town Clerk</a></li>
+			<li class="menuLI level1 menuHidden li-167 children"><a class="menuA level1 menuHidden" href="https://kirtlandnm.org/_page/agenda___minutes.php" target="_self">Agenda &amp; Minutes &amp; Ordinances<i class="fa fa-angle-down toggle2" tabindex="0"></i></a>
+				<ul class="menuUL level2 menuHidden ul-181 second-level" style="display: none;">
+					<li class="menuLI level2 menuHidden li-181"><a class="menuA level2 menuHidden" href="https://kirtlandnm.org/_page/agendas.php" target="_self">Agendas</a></li>
+					<li class="menuLI level2 menuHidden li-182"><a class="menuA level2 menuHidden" href="https://kirtlandnm.org/_page/minutes.php" target="_self">Minutes</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li class="menuLI level0 menuDisplay li-108"><a class="menuA level0 menuDisplay" href="https://kirtlandnm.org/services/index.php" target="_self">Services</a></li>
+	<li class="menuLI level0 menuDisplay li-164"><a class="menuA level0 menuDisplay" href="https://kirtlandnm.org/town_park.php" target="_self">TOWN PARK</a></li>
+</ul>
+
+
+
+
+
+
+
+					
+					</div>
+					<!-- end plugin: menus.topnav-onpage -->
+				</nav>
+			</div><!--/.col-md-8-->
+		</div><!--/.row-->
+	</div><!--/.container-->
+<section id="slider">
+	<div class="rzEditWrap rzSliderBtns">
+
+		<script language="JavaScript" type="text/JavaScript">
+			RZ.module = 'slider';
+			RZ.nexturl = "/revize/webgen_includes/thomastown/editforms/slider-editlist.jsp?pageid=0";
+			RZ.popupwidth = ''; RZ.popupheight = ''; RZ.popupscroll = '';
+			RZ.img = '<span class="rzBtn">Edit Slider</span>';
+			RZ.caption = '';
+			RZ.options = '';
+			if (typeof RZaction != 'undefined') RZaction('editlist');
+		</script>
+
+		
+	</div><!--/.rzEditWrap-->
+	<script language="JavaScript" type="text/JavaScript">
+if (typeof RZlistbegin != 'undefined') RZlistbegin(1)
+</script>
+
+	
+		
+		
+
+		
+
+		
+		
+
+	
+	
+	<script language="JavaScript" type="text/JavaScript">
+if (typeof RZlinktemplate != 'undefined') RZlinktemplate('slider','','')
+if (typeof RZ.nextseq != 'undefined') RZ.nextseq.modules['slider_1']={field:'seq_no',seq:'2.00'};
+</script>
+
+
+	
+
+	<div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 425px;"><ul class="bxslider" style="width: auto; position: relative;">
+		<li style="background: url(&quot;slider-images/Park  big view - Copy (2).jpg&quot;) center center / cover no-repeat; float: none; list-style: none; position: absolute; width: 1583px; z-index: 50; display: block;"><span class="sr-only">Park  big view - Copy (2)</span></li>
+	</ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="https://kirtlandnm.org/town_park.php">Prev</a><a class="bx-next disabled" href="https://kirtlandnm.org/town_park.php">Next</a></div></div></div><!--/.bxslider-->
+</section><!--/#slider-->
+</header>
+<main id="main" tabindex="-1" class="container">
+
+
+	<div class="row">
+		<div class="col-md-3">
+			<aside id="flyout-wrap"><div id="flyout-toggle" class="hidden-lg hidden-md"><i class="fa fa-bars"></i> Sub Menu</div>
+				<!-- start plugin: menus.leftnav-section -->
+				
+				
+
+
+				<div class="rzEditWrap">
+					<script language="JavaScript" type="text/JavaScript">
+					RZ.module = 'links';
+					RZ.nexturl = "/revize/plugins/menus/webspace_menu-editlist.jsp?pageid=links-164&"
+					+ "linksfilter=linkplacement=leftnav and linkparentid=164&"
+					+ "numberoflevels=2&"
+					+ "linkoptions=url,template,file&"
+					+ "linknewsection=*all*";
+					RZ.img = '<span class="rzBtn">Edit Links</span>';
+					RZ.caption = '';
+					RZ.set = "links.linkplacement=leftnav"
+					RZ.options = '';
+					if (typeof RZaction != 'undefined') RZaction('editlist');
+					</script>
+				</div>
+				
+ <ul id="flyout" class="leftnav v08-30-2012">
+	<li id="li-260" class="menuLI level0 menuSelectedChild first"><a class="menuA level0 menuSelectedChild first" href="https://kirtlandnm.org/doing_business/index.php" target="_self">Doing Business</a></li>
+	<li id="li-261" class="menuLI level0 menuSelectedChild"><a class="menuA level0 menuSelectedChild" href="https://kirtlandnm.org/_page/index.php" target="_self">Government</a></li>
+	<li id="li-262" class="menuLI level0 menuSelectedChild"><a class="menuA level0 menuSelectedChild" href="https://kirtlandnm.org/services/index.php" target="_self">Services</a></li>
+</ul>
+
+				<!-- end plugin: menus.leftnav-section -->
+			</aside><!--/#flyout-wrap-->
+		</div><!--/.col-md-3-->
+
+	<article class="col-md-9" id="entry">
+		
+		<div id="breadcrumbs">
+	
+		<a href="https://kirtlandnm.org/">Home</a>
+							&nbsp;TOWN&nbsp;PARK
+	
+</div>
+
+		
+
+
+<h2 id="page-title">TOWN PARK</h2>
+
+		<div id="post">
+			
+
+<div class="rzEditWrap">
+
+
+	
+		<script language="JavaScript" type="text/JavaScript">
+			RZ.module = 'freeform';
+			RZ.recordid = '';
+			RZ.nexturl = "/revize/webgen_includes/thomastown/editforms/freeform-editform.jsp";
+			RZ.popupwidth = ''; RZ.popupheight = ''; RZ.popupscroll = '';
+			RZ.img = '<span class="rzBtn">Edit Page Content</span>';
+			RZ.set = 'freeform.pageid=links-164';
+			RZ.options = '';
+			if (typeof RZaction != 'undefined') RZaction('editform');
+		</script>
+	
+
+	<script language="JavaScript" type="text/JavaScript">
+		RZ.module = 'freeform';
+		RZ.recordid = '';
+		RZ.nexturl = "/revize/webgen_includes/thomastown/editforms/metadata-editform.jsp";
+		RZ.popupwidth = ''; RZ.popupheight = ''; RZ.popupscroll = '';
+		RZ.img = '<span class="rzBtn">Edit Metadata</span>';
+		RZ.set = 'freeform.pageid=links-164';
+		RZ.options = '';
+		if (typeof RZaction != 'undefined') RZaction('editform');
+	</script>
+
+	<script language="JavaScript" type="text/JavaScript">
+		RZ.nexturl = '';
+		RZ.img = '<img src="images/edit/permissions.jpg" alt="Permissions" border="0" />';
+		RZ.options = '';
+		if (typeof RZaction != 'undefined') RZaction('permissions');
+	</script>
+</div>
+
+			
+<div class="clearfix">
+	<span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 18px;">The Kirtland Town Park is open for everyone to use.</span><br>
+<ul style="list-style-type: square;">
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif;">The Large Pavilion can be reserved.&nbsp; Simply call 505.598.4160 and we will put you on the calendar.&nbsp; A notice will be posted before your gathering to let everyone know that you have reserved it.&nbsp; Please be respectful of the time frame that was allotted to you.</span></li>
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif;">The small pavilions and use of the park are available on first-come-first-serve bases.</span></li>
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif;">Reservations will only be made for the Large Pavilion.</span></li>
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif;">Please obey the posted signs.</span></li>
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif;">There are NO Dogs, Bicycles, Skateboards, or Roller Blades allowed at the park.&nbsp;</span></li>
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif;">There is no grounds crew to clean up after your activity, please clean up after your gathering.</span></li>
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif;">Share the park with others.</span></li>
+</ul>
+<span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 18px;">&nbsp;We hope that you enjoy your time at The Kirtland Town Park!<br><img src="./town-park_files/jungle jim 1 - Copy.jpg" alt="jungle jim 1 slides" width="292" height="222"> &nbsp; &nbsp; &nbsp;<img src="./town-park_files/jungle jim 2 - Copy.jpg" alt="jungle jim 2 climber" width="297" height="214"><br></span>
+</div>
+
+		</div><!--/#post-->
+	</article><!--/.col-md-9#entry-->
+	</div><!--/.row-->
+
+
+</main>
+<footer class="text-center">
+	
+Powered by
+<a href="http://www.revize.com/" target="_blank" id="revize-link">revize.</a>, the Government Website Experts&nbsp;
+<a href="https://webgen1.revize.com/revize/security/index.jsp?webspace=kirtlandnm&amp;filename=/town_park.php" id="revize-login">Login</a>
+
+
+</footer><!--/.text-center-->
+
+
+<div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModal">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" id="myModalLabel">Share this page</h4>
+			</div>
+			<div class="modal-body">
+				<div class="copylink">
+					<p>Copy and paste this code into your website.</p>
+					<pre>&lt;a href="http://kirtlandnm.org/town_park.php"&gt;Your Link Name&lt;/a&gt;</pre>
+				</div><!-- /.copylink -->
+				<div class="share-btns">
+					<p>Share this page on your favorite Social network</p>
+					<div class="row">
+						<div class="col-md-3 col-xs-6">
+							<a href="https://www.facebook.com/sharer/sharer.php?u=http://kirtlandnm.org/town_park.php" class="btn-facebook" onclick="return !window.open(this.href, &#39;facebook &#39;, &#39;width=500,height=500&#39;)" target="_blank">
+								<i class="fab fa-facebook"></i> Facebook
+							</a>
+						</div>
+						<div class="col-md-3 col-xs-6">
+							<a href="https://www.twitter.com/home?status=http://kirtlandnm.org/town_park.php" class="btn-twitter" onclick="return !window.open(this.href, &#39;twitter &#39;, &#39;width=500,height=500&#39;)" target="_blank">
+								<i class="fab fa-twitter"></i> Twitter
+							</a>
+						</div>
+						<div class="col-md-3 col-xs-6">
+							<a href="https://www.plus.google.com/share?url=http://kirtlandnm.org/town_park.php" class="btn-google" onclick="return !window.open(this.href, &#39;google &#39;, &#39;width=500,height=500&#39;)" target="_blank">
+								<i class="fab fa-google-plus"></i> Google Plus
+							</a>
+						</div>
+						<div class="col-md-3 col-xs-6">
+							<a href="https://www.reddit.com/submit?url=http://kirtlandnm.org/town_park.php" class="btn-reddit" onclick="return !window.open(this.href, &#39;redit &#39;, &#39;width=500,height=500&#39;)" target="_blank">
+								<i class="fab fa-reddit"></i> Reddit
+							</a>
+						</div>
+					</div><!-- /.row -->
+				</div><!-- /.share-btns -->
+				<button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Close</button>
+			</div><!-- /.modal-body -->
+		</div>
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Share widget make into an include file -->
+
+
+<script src="./town-park_files/jquery.min.js.download"></script>
+<script src="./town-park_files/modernizr.custom.js.download"></script>
+<script src="./town-park_files/jquery.bxslider.min.js.download"></script>
+<script src="./town-park_files/bootstrap.min.js.download"></script>
+
+
+
+<script src="./town-park_files/scripts.js.download"></script>
+
+
+
+
+
+<script src="./town-park_files/revizeWeather.min.js.download"></script>
+<script>
+$(function(){
+        $.fn.revizeWeather({
+		zip: '48084',
+		city_name: '',
+		unit: 'f',
+		success: function(weather) {
+			var date = new Date();
+			date = (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
+			var html = '<span>'+date+'</span> <span class="forecast">'+weather.temp+'&deg; '+weather.forecast+'</span>';
+			html += '<i class="'+weather.icon+'"></i>';
+
+			$("#weather").html(html);
+		},
+		error: function(error) {
+			// better to just hide the section if there is an error
+			$('.weather').hide();
+			console.log(error);
+		}
+	});
+});
+</script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: &#39;Google Sans&#39;, Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-i3jM8c"><img src="./town-park_files/24px.svg" width="24" height="24" alt=""></div><div class=" VIpgJd-yAWNEb-hvhgNd-k77Iif-i3jM8c"><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="ltr">Original text</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="https://translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0" src="./town-park_files/saved_resource(1).html"></iframe></div></div></div>
+
+
+
+
+
+
+
+
+<div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><iframe frameborder="0" class="VIpgJd-ZVi9od-xl07Ob-OEVmcd skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 2675px; height: 263px; display: none;" src="./town-park_files/saved_resource(2).html"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

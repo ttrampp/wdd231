@@ -1,0 +1,551 @@
+
+
+
+
+
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: City of Thomas, Michigan Webgen
+	Developers: Alec Armstrong & Derek Ortiz
+	Author HTML, CSS, and JavaScript: Richard Opiniano
+	Author Design: Samir Alley @samiralley
+	Author URI: http://www.revize.com/
+	Date: 8/24/18
+
+-----------------------------------------------------------------------------------*/
+
+(function($) {
+
+
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: City of Thomas, Michigan Webgen
+	Developers: Alec Armstrong & Derek Ortiz
+	Author HTML, CSS, and JavaScript: Richard Opiniano
+	Author Design: Samir Alley @samiralley
+	Author URI: http://www.revize.com/
+	Date: 8/24/18
+
+-----------------------------------------------------------------------------------*/
+
+(function($) {
+
+	'use strict';
+
+	var $window = $(window),
+		$body = $('body');
+
+		$(function(){
+			if(RZ.pageid === 'index'){
+				$("#video-bg").YTPlayer();
+			}
+		});
+
+	/*!
+	 * IE10 viewport hack for Surface/desktop Windows 8 bug
+	 * Copyright 2014-2015 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 */
+
+	// See the Getting Started docs for more information:
+	// http://getbootstrap.com/getting-started/#support-ie10-width
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement('style');
+		msViewportStyle.appendChild(
+			document.createTextNode(
+			  '@-ms-viewport{width:auto!important}'
+			)
+		); document.querySelector('head').appendChild(msViewportStyle);
+	}
+
+	/*!
+	 * JavaScript Cookie v2.2.0
+	 * https://github.com/js-cookie/js-cookie
+	 *
+	 * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
+	 * Released under the MIT license
+	 */
+	 !function(e){var n;if("function"==typeof define&&define.amd&&(define(e),n=!0),"object"==typeof exports&&(module.exports=e(),n=!0),!n){var t=window.Cookies,o=window.Cookies=e();o.noConflict=function(){return window.Cookies=t,o}}}(function(){function f(){for(var e=0,n={};e<arguments.length;e++){var t=arguments[e];for(var o in t)n[o]=t[o]}return n}function a(e){return e.replace(/(%[0-9A-Z]{2})+/g,decodeURIComponent)}return function e(u){function c(){}function t(e,n,t){if("undefined"!=typeof document){"number"==typeof(t=f({path:"/"},c.defaults,t)).expires&&(t.expires=new Date(1*new Date+864e5*t.expires)),t.expires=t.expires?t.expires.toUTCString():"";try{var o=JSON.stringify(n);/^[\{\[]/.test(o)&&(n=o)}catch(e){}n=u.write?u.write(n,e):encodeURIComponent(String(n)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent),e=encodeURIComponent(String(e)).replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent).replace(/[\(\)]/g,escape);var r="";for(var i in t)t[i]&&(r+="; "+i,!0!==t[i]&&(r+="="+t[i].split(";")[0]));return document.cookie=e+"="+n+r}}function n(e,n){if("undefined"!=typeof document){for(var t={},o=document.cookie?document.cookie.split("; "):[],r=0;r<o.length;r++){var i=o[r].split("="),c=i.slice(1).join("=");n||'"'!==c.charAt(0)||(c=c.slice(1,-1));try{var f=a(i[0]);if(c=(u.read||u)(c,f)||a(c),n)try{c=JSON.parse(c)}catch(e){}if(t[f]=c,e===f)break}catch(e){}}return e?t[e]:t}}return c.set=t,c.get=function(e){return n(e,!1)},c.getJSON=function(e){return n(e,!0)},c.remove=function(e,n){t(e,"",f(n,{expires:-1}))},c.defaults={},c.withConverter=e,c}(function(){})});
+
+	/*
+	* E-Notify Auto submit
+	*/
+	$.urlParam=function(n){var e=new RegExp("[?&]"+n+"=([^]*)").exec(window.location.href);return null==e?null:e[1]||0};
+	var $enotify = $('iframe[src*="/revize/plugins/notify/notify.jsp"]');
+	if( $enotify.length > 0 ){
+		var emailStr = $.urlParam("email");
+		if( emailStr != null ){
+			$enotify.attr("src", $enotify.attr("src") + "&email=" + emailStr);
+		}
+	}
+
+	// For large calendar
+	$('#freeform iframe[src="calendar_app/index.html#css=css/calendar_colors.css"]').attr({'id': 'calendar', 'title': 'calendar'});
+
+	$('#skip').on('click', function(e) {
+		e.preventDefault();
+		$('#main').focus();
+	});
+
+	// ADA MENU
+  if (Cookies.get("highcontrast") == "on") {
+    $("html").addClass("highcontrast");
+    $(".highcontrast #flyout li:has(ul)>a").css({ color: "#fff" });
+    $("#highcontrast").text("High Contrast Off");
+  }
+  if (Cookies.get("yellowlinks") == "on") {
+    $("html").addClass("yellowlinks");
+    $("#yellowlinks").text("Yellow Links Off");
+  }
+  if (Cookies.get("greyscale") == "on") {
+    $("html").addClass("greyscale");
+    $("#greyscale").text("Grey Scale Off");
+  }
+  if (Cookies.get("underline-links") == "on") {
+    $("html").addClass("underline-links");
+    $("#underline-links").text("Underline Links Off");
+  }
+  $(".accessible-btn a").on("click keydown", function(e) {
+		if (e.keyCode === 13 || e.type === 'click') {
+			e.preventDefault();
+			$(this).parent().parent().toggleClass("visible");
+		}
+  });
+  $("#highcontrast").on("click keydown", function(e) {
+		if (e.keyCode === 13 || e.type === 'click') {
+			e.preventDefault();
+			if (Cookies.get("highcontrast")) {
+				Cookies.remove("highcontrast");
+			} else {
+				Cookies.set("highcontrast", "on", { expires: 7 });
+			}
+			if (Cookies.get("highcontrast") == "on") {
+				$("html").addClass("highcontrast");
+				$('#calendar').contents().find('html').addClass('highcontrast');
+				$(this).text("High Contrast Off");
+			} else {
+				$("html").removeClass("highcontrast");
+				$('#calendar').contents().find('html').removeClass('highcontrast');
+				$(this).text("High Contrast");
+			}
+		}
+  });
+  $("#yellowlinks").on("click keydown", function(e) {
+		if (e.keyCode === 13 || e.type === 'click') {
+			e.preventDefault();
+			if (Cookies.get("yellowlinks")) {
+				Cookies.remove("yellowlinks");
+			} else {
+				Cookies.set("yellowlinks", "on", { expires: 7 });
+			}
+			if (Cookies.get("yellowlinks") == "on") {
+				$("html").addClass("yellowlinks");
+				$('#calendar').contents().find('html').addClass('yellowlinks');
+				$(this).text("Yellow Links Off");
+			} else {
+				$("html").removeClass("yellowlinks");
+				$('#calendar').contents().find('html').removeClass('yellowlinks');
+				$(this).text("Yellow Links");
+			}
+		}
+  });
+  $("#greyscale").on("click keydown", function(e) {
+		if (e.keyCode === 13 || e.type === 'click') {
+			e.preventDefault();
+			if (Cookies.get("greyscale")) {
+				Cookies.remove("greyscale");
+			} else {
+				Cookies.set("greyscale", "on", { expires: 7 });
+			}
+			if (Cookies.get("greyscale") == "on") {
+				$("html").addClass("greyscale");
+				$('#calendar').contents().find('html').addClass('greyscale');
+				$(this).text("Greyscale Off");
+			} else {
+				$("html").removeClass("greyscale");
+				$('#calendar').contents().find('html').removeClass('greyscale');
+				$(this).text("Grey Scale");
+			}
+		}
+  });
+  $("#underline-links").on("click keydown", function(e) {
+		if (e.keyCode === 13 || e.type === 'click') {
+			e.preventDefault();
+			if (Cookies.get("underline-links")) {
+				Cookies.remove("underline-links");
+			} else {
+				Cookies.set("underline-links", "on", { expires: 7 });
+			}
+			if (Cookies.get("underline-links") == "on") {
+				$("html").addClass("underline-links");
+				$('#calendar').contents().find('html').addClass('underlink-links');
+				$(this).text("Underline Links Off");
+			} else {
+				$("html").removeClass("underline-links");
+				$('#calendar').contents().find('html').removeClass('underlink-links');
+				$(this).text("Underline Links");
+			}
+		}
+  });
+	// ADA MENU END
+
+	// Keyboard Navigation: Nav, flyout
+	var isClick = false;
+		$("#nav li a, #flyout  li a, a, button, .toggle, .toggle2").on('focusin', function(e) {
+			console.log(isClick);
+			if( isClick === false ) {
+				$(".focused").removeClass("focused");
+				$(e.currentTarget).parents("#nav li, #flyout li").addClass("focused");
+				$(".opened:not(.focused) ul:visible,.opened2:not(.focused) ul:visible").slideUp().parent().removeClass("opened opened2");
+			} else {
+				$(".focused").removeClass("focused");
+			isClick = false;
+		}
+	});
+
+	// prevent focused class changes on click - This way arrows wont pop when clicking nav links
+	$("#nav a,#flyout a").on('mousedown',function(){
+		isClick = true;
+	});
+
+	// RZ Class
+	if(typeof RZ !== "undefined"){
+		if(RZ.login){
+			$body.addClass("user-logged-in");
+				}else {
+			$body.addClass("user-not-logged-in");
+		}
+	}
+
+  
+	
+	$('#cookieConsent').remove();
+
+	// Search Toggle
+	$('#search-toggle').on('click keydown',function(e){
+		if (e.keyCode === 13 || e.type === 'click') {
+			$('#search').stop().slideToggle(200);
+			$(this).toggleClass('fa-search fa-times');
+		}
+	});
+
+	// Navigation Toggle
+	$("#nav-toggle").on("click keydown", function(e){
+		if (e.keyCode === 13 || e.type === 'click') {
+		$("#nav").stop().slideToggle();
+		$(this).toggleClass("fa-bars fa-times");
+		}
+	});
+
+	// Menu Toggles
+    $("#nav >li>ul,#flyout >li>ul").addClass('first-level');
+	$("#nav  li ul ul").addClass('second-level');
+	$("#nav >li:has(ul)").find("a:first").append('<i class="fa fa-angle-down toggle" tabindex="0">');
+	$("#nav li li:has(ul)").find("a:first").append('<i class="fa fa-angle-down toggle2" tabindex="0">');
+	$("#flyout >li:has(ul)").find("a:first").append('<i class="fa fa-angle-down toggle" tabindex="0">');
+
+	function mainSizer(){
+		var mainHeight = $('#freeform main').outerHeight();
+		var combinedHeight = $('header').outerHeight() + $('#slider').outerHeight() + $('footer').outerHeight();
+		var windowHeight = $(window).height();
+
+		if(mainHeight + combinedHeight < windowHeight){
+			$('#freeform main').css('min-height',(windowHeight - combinedHeight) + 'px');
+		}
+	}
+
+	function addNavClass() {
+		mainSizer();
+      if ($window.width() < 992) {
+        $("body").addClass('mobile');
+        $("body").removeClass('desktop');
+
+      } else{
+		$("body").addClass('mobile');
+        $("body").removeClass('desktop');
+		$('#nav ul').css('display','none');
+      }
+    }
+    addNavClass();
+    $window.resize(addNavClass);
+
+	$(".toggle").on("click keydown",function(e) {
+		if (e.keyCode === 13 || e.type === 'click') {
+			e.preventDefault();
+			var $parent = $(this).parent();
+			var $parentLi = $parent.parent();
+			$parentLi.toggleClass('opened');
+			if($parent.addClass('active').next('.first-level').is(":visible")){
+				$parent.next('.first-level').slideUp();
+			} else {
+				$(".first-level").slideUp("slow");
+				$parent.removeClass('active').next('.first-level').slideToggle();
+			}
+		}
+	});
+
+	$(".toggle2").on("click keydown",function(e) {
+		if (e.keyCode === 13 || e.type === 'click') {
+			e.preventDefault();
+			var $parent = $(this).parent();
+			var $parentLi = $parent.parent();
+			$parentLi.toggleClass('opened2');
+			if($parent.next('.second-level').is(":visible")){
+				$parent.next('.second-level').slideUp();
+			} else {
+			$(".second-level").slideUp("slow");
+				$parent.next('.second-level').slideToggle();
+			}
+		}
+	});
+
+	//colapse nav if left
+	$(".desktop *").focus(function(e){
+		var $opened = $(".opened");
+		var $opened2 = $(".opened2");
+		if( $opened.length > 0 || $opened2.length > 0 ) {
+		if( $(".opened :focus").length < 1 ){
+			$opened.children("ul").slideUp();
+			$opened.removeClass("opened");
+			$(".opened2").removeClass("opened2");
+		}
+		if( $(".opened2 :focus").length < 1 ){
+			$opened2.children("ul").slideUp();
+			$opened2.removeClass("opened2");
+		}
+		}
+	});
+
+	// Flyout
+	var flyout = $('#flyout'),
+		flyoutwrap = $('#flyout-wrap');
+
+	if (flyout.text().length){
+		flyoutwrap.prepend('<div id="flyout-toggle" class="hidden-lg hidden-md"><i class="fa fa-bars"></i> Sub Menu</div>');
+	}
+
+	$("#flyout-toggle").on("click keydown", function(e){
+		if (e.keyCode === 13 || e.type === 'click') {
+			flyout.slideToggle();
+			$(this).toggleClass("active");
+		}
+	});
+
+	// start calendar resize handler
+	function resizeIframe(height) {
+		var iFrameID = document.getElementById('calendar');
+		var calendarHTML = $('#calendar').contents().find('html');
+		calendarHTML.attr('lang', 'en');
+		if(iFrameID) {
+				// here you can set the height, I delete it first, then I set it again
+				iFrameID.height = "";
+				iFrameID.height = height;
+		}
+		console.log("height to: " + height);
+		if (Cookies.get("highcontrast") == "on") {
+			calendarHTML.addClass('highcontrast');
+		}
+		if (Cookies.get("yellowlinks") == "on") {
+			calendarHTML.addClass('yellowlinks');
+		}
+		if (Cookies.get("greyscale") == "on") {
+			calendarHTML.addClass("greyscale");
+		}
+		if (Cookies.get("underline-links") == "on") {
+			calendarHTML.addClass("underline-links");
+		}
+		$('#calendar').contents().find('#headerMonth').attr({'title': 'Month', 'aria-label': 'Month'});
+		$('#calendar').contents().find('#headerYear').attr({'title': 'Year', 'aria-label': 'Year'});
+		$('#calendar').contents().find('select[name="calendarName"]').attr({'title': 'Calendar Name', 'aria-label': 'Calendar Name'});
+	}
+	var eventMethod = window.addEventListener
+	? "addEventListener"
+	: "attachEvent";
+	var eventHandler = window[eventMethod];
+	var messageEvent = eventMethod === "attachEvent"
+		? "onmessage"
+		: "message";
+	eventHandler(messageEvent, function (e) {
+
+		if( e.data && e.data[0] === "setCalHeight" )
+		{
+			if(typeof resizeIframe === 'function'){
+				resizeIframe(e.data[1]);
+			}
+
+		}
+
+	});
+	// end calendar resize handler
+
+	// bxSlider
+	if(typeof $.fn.bxSlider !== "undefined"){
+		$('.bxslider').bxSlider({
+			mode:'fade',
+			auto:($('.bxslider').children().length < 2) ? false : true,
+			pager: false
+		});
+	}
+
+	// Owl Slider
+	if(typeof $.fn.owlCarousel !== "undefined"){
+		var quickLinkCount = $('.quick-link').length;
+		$("#quick-links-carousel").owlCarousel({
+			responsive: {
+				1367: {
+					items: (quickLinkCount >= 6 ? 6 : quickLinkCount),
+					autoplay: (quickLinkCount > 6 ? true : false)
+				},
+				1199: {
+					items: (quickLinkCount >= 5 ? 5 : quickLinkCount),
+					autoplay: (quickLinkCount > 5 ? true : false)
+				},
+				991: {
+					items: (quickLinkCount >= 4 ? 4 : quickLinkCount),
+					autoplay: (quickLinkCount > 4 ? true : false)
+				},
+				767: {
+					items: (quickLinkCount >= 3 ? 3 : quickLinkCount),
+					autoplay: (quickLinkCount > 3 ? true : false)
+				},
+				479: {
+					items: (quickLinkCount >= 2 ? 2 : quickLinkCount),
+					autoplay: (quickLinkCount > 2 ? true : false)
+				},
+				0: {
+					items: 1,
+					autoplay: (quickLinkCount > 1 ? true : false)
+				}
+			},
+			autoplayTimeout:3000,
+			autoplayHoverPause:true
+		});
+	}
+
+	$(function(){// Ready
+		var colors = ['#EC7132','#0EB3D2','#A5C43C','#2A88E6','#6172E5','#4BBFDA'];
+		var max = 6;
+		var cIndex = 0;
+		$('.ql-icon').each(function(i,el){
+		cIndex = cIndex === max ? 0 : cIndex;
+		$(this).css('background', colors[cIndex]);
+		cIndex++;
+		});
+	});
+
+	$window.ready(function(){
+
+		$('#translation-links span').on('keydown click', function(e){
+			if (e.keyCode === 13 || e.type === 'click') {
+				$('#translation-links ul').stop().fadeToggle();
+			}
+		});
+
+		$('#translation-links ul').on('mouseleave',function(){
+			$(this).fadeOut();
+		});
+
+		var translateURL = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+
+		 // Translate Script
+		$.getScript(translateURL);
+		console.log(translateURL);
+		$('#translation-links a').click(function() {
+			var lang = $(this).data('lang');
+			console.log(lang);
+			var $frame = $('.goog-te-menu-frame:first');
+			if (!$frame.size()) {
+				return false;
+			}
+			$frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+			return false;
+		});
+
+		$('header .social-media-links').clone().insertAfter('#logo-footer');
+
+		// matchHeight
+		if(typeof $.fn.matchHeight !== "undefined"){
+			$('.equal').matchHeight({
+				//defaults
+				byRow: true,
+				property: 'height', // height or min-height
+				target: null,
+				remove: false
+			});
+		}
+
+		//#Smooth Scrolling
+		$('a[href*=#]:not([href=#],[href*="#collapse"])').click(function() {
+			if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
+
+		/*global jQuery */
+		/*!
+		* FlexVerticalCenter.js 1.0
+		*
+		* Copyright 2011, Paul Sprangers http://paulsprangers.com
+		* Released under the WTFPL license
+		* http://sam.zoy.org/wtfpl/
+		*
+		* Date: Fri Oct 28 19:12:00 2011 +0100
+		*/
+		$.fn.flexVerticalCenter = function( options ) {
+			var settings = $.extend({
+				cssAttribute:   'margin-top', // the attribute to apply the calculated value to
+				verticalOffset: 0,            // the number of pixels to offset the vertical alignment by
+				parentSelector: null,         // a selector representing the parent to vertically center this element within
+				debounceTimeout: 25,          // a default debounce timeout in milliseconds
+				deferTilWindowLoad: false     // if true, nothing will take effect until the $(window).load event
+			}, options || {});
+
+			return this.each(function(){
+				var $this   = $(this); // store the object
+				var debounce;
+
+				// recalculate the distance to the top of the element to keep it centered
+				var resizer = function () {
+
+					var parentHeight = (settings.parentSelector && $this.parents(settings.parentSelector).length) ?
+						$this.parents(settings.parentSelector).first().height() : $this.parent().height();
+
+					$this.css(
+						settings.cssAttribute, ( ( ( parentHeight - $this.height() ) / 2 ) + parseInt(settings.verticalOffset) )
+					);
+				};
+
+				// Call on resize. Opera debounces their resize by default.
+				$(window).resize(function () {
+					clearTimeout(debounce);
+					debounce = setTimeout(resizer, settings.debounceTimeout);
+				});
+
+				if (!settings.deferTilWindowLoad) {
+					// call it once, immediately.
+					resizer();
+				}
+
+				// Call again to set after window (frames, images, etc) loads.
+				$(window).load(function () {
+					resizer();
+				});
+
+			});
+
+		};
+		$('.v-align').flexVerticalCenter();
+
+	}); // Ready
+
+})(jQuery);
+
+
+})(jQuery);

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Directory</title>
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/directory.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="faviconKTOWN2.ico">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-and-text">
+                <img src="images/tree.jpeg" alt="logo" class="header-logo" width="34" height="48">
+                <div class="header-text">
+                    <h1>Kirtland NM</h1>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </div>
+            <button id="hamburger">&#9776;</button>
+            <nav id="nav-menu">
+                <ul class="menu-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <p>Under construction. More to come soon</p>
+
+    </main>
+    <footer>
+        <div class="left-footer">
+            <p>Kirtland NM Chamber of Commerce</p>
+            <p class="address1">2 Road 6500</p>
+            <p class="address2">Kirland, NM 87417</p>
+            <p class="addressEmail">info@kirtlandnm.org</p>
+            <p>(505) 598-1234</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.jpeg" alt="YouTube" width="50" height="50"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/x.jpeg" alt="Twitter X" width="50" height="50"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.jpeg" alt="LinkedIn" width="50" height="50"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.jpeg" alt="Facebook" width="50" height="50"></a>
+        </div>
+        <div class="right-footer">
+            <p>WDD231 Class Project</p>
+            <p>Tanya Trampp</p>
+            <p>&copy;<span id="currentyear"></span> Kirtland NM Chamber of Commerce</p>
+            <p>Last Modified: <span id="date-modified">Loading...</span></p>
+        </div>
+        <script>
+            let text = document.lastModified;
+            document.getElementById("date-modified").innerHTML = text;
+        </script>
+    </footer>
+</body>
+
+</html>

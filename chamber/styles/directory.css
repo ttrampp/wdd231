@@ -1,0 +1,267 @@
+.roboto-regular {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --heading-font: 'Roboto', san-serif;
+    --paragraph-font: 'Roboto', san-serif;
+    --color-one: #f8f9fa;
+    --color-two: #002b5c;
+    --color-three: #cccccc;
+    --color-four: #212529;
+    --color-five: #ff7043;
+}
+
+body {
+    background-color: var(--color-one);
+    color: var(--color-four);
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+/**********HEADER**********/
+header {
+    background-color: var(--color-two);
+    color: var(--color-one);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo-and-text {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-one);
+}
+
+/**********NAVAGATION MENU**********/
+nav {
+    background-color: var(--color-two);
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+    /*grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;*/
+}
+
+.menu-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/**********HAMBURGER**********/
+#hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/*nav ul {
+    overflow: hidden;
+}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+*/
+
+/*#myButton::before {
+    /*content: "🍔";*/
+/*content: "\2630";
+}*/
+
+/*#myButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: yellow;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 2vw;
+}*/
+
+/*ul.menuLinks li a {
+    /*border: pink dashed 1px;*/
+/*display: block;
+    padding: .75rem 2vw;
+    color: fff;
+    text-decoration: none;
+}
+
+ul.current-menu-item a {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+ul.menuLinks {
+    /*display: none;*/
+/*list-style-type: none;
+    /*effects large*/
+/*}*/
+
+/* CSS for the open class */
+/*#myButton.open::before {
+    content: "x";
+}
+
+/*ul.menuLinks.open {
+    display: block;
+}*/
+
+/**********MOBILE**********/
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #hamburger {
+        display: block;
+        align-self: flex-end;
+    }
+
+    nav {
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        max-height: 0;
+    }
+
+    nav.open {
+        max-height: 300px;
+        display: block;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 0;
+    }
+
+    .menu-links li {
+        text-align: left;
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #ff7043;
+    }
+
+    .menu-links li a {
+        display: block;
+    }
+
+    /*ul.menuLinks a:hover {
+        color: #ff7043;
+    }*/
+
+}
+
+/**********FOOTER**********/
+footer {
+    background-color: var(--color-two);
+    color: var(--color-two);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+}
+
+.left-footer {
+    flex: 1;
+    text-align: left;
+    color: var(--color-one);
+    /*margin: 2px;*/
+}
+
+.left-footer p {
+    line-height: 1;
+    gap: 2px;
+    margin: 0;
+    font-size: 13px;
+    font-stretch: expanded;
+}
+
+.address1 {
+    font-style: italic;
+}
+
+.address2 {
+    font-style: italic;
+}
+
+.addressEmail {
+    text-decoration: underline;
+}
+
+.social-icons img {
+    flex: 0 0 auto;
+    text-align: center;
+    /*align-items: center;*/
+    justify-content: space-between;
+}
+
+.right-footer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+    text-align: left;
+    color: var(--color-one);
+    gap: 4px;
+}
+
+.right-footer p {
+    line-height: 1;
+    gap: 2px;
+    margin: 0;
+    font-size: 13px;
+}

@@ -45,7 +45,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
 }
 
 .logo-and-text {
@@ -86,12 +86,24 @@ nav {
     gap: 1rem;
     margin: 0;
     padding: 0;
+    justify-content: flex-end;
 }
 
 .menu-links li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li a:hover {
+    color: var(--color-five);
+    background-color: var(--color-four);
+    font-size: large;
+}
+
+.menu-links li a.active {
+    text-decoration: double underline;
 }
 
 /**********HAMBURGER**********/

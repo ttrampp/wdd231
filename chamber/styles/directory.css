@@ -167,12 +167,12 @@ section {
 }
 
 #cards section p:first-of-type {
-    margin-top: 10;
+    margin-top: 10px;
 }
 
 #cards.grid-view {
     display: grid;
-    grid-template-columns: (3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 26px;
     align-items: center;
 }

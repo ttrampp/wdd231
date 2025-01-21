@@ -1,0 +1,94 @@
+{
+    "businesses": [
+        {
+            "name": "Dairy Queen",
+            "address": "4216 US HWY 64",
+            "phone": "505-598-5544",
+            "URLs": "https://www.dairyqueen.com/en-us/",
+            "image": "https://dairyqueen-prod.dotcdn.io/application/themes/dairyqueen/assets/images/logos/dq-logo.svg",
+            "membership_level": 3,
+            "other": "idk",
+            "restaurant": true
+        },
+        {
+            "name": "Nena's House Restaurant",
+            "address": "4272 US HWY 64",
+            "phone": "505-787-2435",
+            "URLs": "https://www.facebook.com/nenashouserestaurant/",
+            "image": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/470218839_1087521659832439_7828923362226101161_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=uCo6t66rsicQ7kNvgFQRcCI&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=AYlZIiUWqN8vZHcACFDKbSh&oh=00_AYADP3VXdqIIr3fQTsbO-PvxwEbkx1nGdsmvmc2mTSLWsw&oe=6794BD8B",
+            "membership_level": 2,
+            "other": "idk",
+            "restaurant": true
+        },
+        {
+            "name": "Kentucky Fried Chicken",
+            "address": "4198 US HWY 64",
+            "phone": "505-598-1228",
+            "URLs": "https://www.kfc.com/",
+            "image": "https://locations.kfc.com/permanent-b0b701/assets/images/logo_black.c0af2f38.png",
+            "membership_level": 1,
+            "other": "idk",
+            "restaurant": true
+        },
+        {
+            "name": "Kirtland Mercantile",
+            "address": "4217 US HWY 64",
+            "phone": "505-599-0246",
+            "URLs": "https://www.esscopipe.com",
+            "image": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/468428688_538291729168115_5008868382734507435_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=KlujhdYFgGwQ7kNvgHWMPa_&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=A838OHzDMmWKSq0VfVO_lu_&oh=00_AYAM-g98vI1Aj2JOTBmZKU93ZikywbPDT4_3yh2nHD_6WQ&oe=6794CD1F",
+            "membership_level": 2,
+            "other": "idk",
+            "restaurant": false
+        },
+        {
+            "name": "Valley Pawn & Laundry and General Supply",
+            "address": "4345 US HWY 64",
+            "phone": "505-598-0499",
+            "URLs": "https://www.facebook.com/ValleyPawnandLaundry.GeneralSupply/photos",
+            "image": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/301948295_514334950694941_3451626526315931930_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=CdOB7rFxU5wQ7kNvgGMmFrZ&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=AW_EF9-sWCtsfvUFq2JsS4e&oh=00_AYB1BWK-6XW9yFKhhibOtWLjpx3BYDVjIh8bpvFlNWq8Eg&oe=6794CBBF",
+            "membership_level": 3,
+            "other": "idk",
+            "restaurant": false
+        },
+        {
+            "name": "A-1 Auto Recyclers",
+            "address": "99 County Road 6100",
+            "phone": "505-525-1994",
+            "URLs": "https://a1autorecyclersnm.com/",
+            "image": "https://a1autorecyclersnm.com/wp-content/uploads/2023/01/A1-Auto-Recyclers-LOGO-2-2048x1013.png",
+            "membership_level": 3,
+            "other": "idk",
+            "restaurant": false
+        },
+        {
+            "name": "Four Corners Federal Credit Union",
+            "address": "16 County Road 6500",
+            "phone": "505-598-6623",
+            "URLs": "https://www.fourcornersfcu.org/",
+            "image": "https://www.fourcornersfcu.org/S3Assets/FourCorners/images/logo-site.png",
+            "membership_level": 3,
+            "other": "idk",
+            "restaurant": false
+        },
+        {
+            "name": "Casey's Critter Care",
+            "address": "18 County Road 6407",
+            "phone": "505-686-1510",
+            "URLs": "https://caseyscrittercare.com/",
+            "image": "https://www.kirtlandchamber.com/wp-content/uploads/2024/04/Caseys-Critter-Care.webp",
+            "membership_level": 1,
+            "other": "idk",
+            "restaurant": false
+        },
+        {
+            "name": "Homestead RV Park",
+            "address": "11 County Road 6432",
+            "phone": "505-598-9181",
+            "URLs": "http://www.homesteadrvparknm.com/",
+            "image": "https://media.rainpos.com/1055/img_0477_copy.jpg",
+            "membership_level": 3,
+            "other": "idk",
+            "restaurant": false
+        }
+    ]
+}

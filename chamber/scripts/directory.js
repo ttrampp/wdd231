@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
             portrait.setAttribute('src', business.image);
             portrait.setAttribute('alt', `Portrait of ${business.name}`);
             /*portrait.setAttribute('loading', 'lazy');*/
-            portrait.setAttribute('width', 100);
-            portrait.setAttribute('height', 70);
+            portrait.setAttribute('width', 80);
+            portrait.setAttribute('height', 50);
 
             card.appendChild(topContent);
             card.appendChild(businessAddress);

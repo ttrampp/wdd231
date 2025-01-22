@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             portrait.setAttribute('src', business.image);
             portrait.setAttribute('alt', `Portrait of ${business.name}`);
-            portrait.setAttribute('loading', 'lazy');
+            /*portrait.setAttribute('loading', 'lazy');*/
             portrait.setAttribute('width', 150);
             portrait.setAttribute('height', 120);
 

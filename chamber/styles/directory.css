@@ -289,6 +289,12 @@ section {
 
 /**********INDEX**********/
 
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .joining-link-container {
     display: flex;
     justify-content: center;
@@ -352,7 +358,7 @@ section {
     background-color: var(--color-five);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: var(--color-four);
+    box-shadow: 2px 2px 10px #212529;
     text-align: center;
 }
 
@@ -369,7 +375,7 @@ section {
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 10px;
-    box-shadow: var(--color-two);
+    box-shadow: 2px 2px 10px #002b5c;
     text-align: center;
 }
 

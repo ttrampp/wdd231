@@ -116,3 +116,90 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     getBusinessData();
 });
+
+//index joining button
+document.addEventListener("DOMContentLoaded", function () {
+    const joiningButton = document.getElementById("joining-link");
+
+    joiningButton.addEventListener("click", function () {
+        window.location.href = "join.html";
+    });
+});
+
+// index weather api
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('figcaption');
+
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=36.75082&lon=-108.36565&units=imperial&appid=f63f3c9b0e500e13346f9e9a881a061a';
+
+async function apiFetch() {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            displayResults(data);
+        }
+        else {
+            throw Error(await response.text());
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+function displayResults(data) {
+    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    let desc = data.weather[0].description;
+    weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('alt', desc);
+    captionDesc.textContent = `${desc}`;
+}
+
+apiFetch();
+
+// Load events dynamically
+const events = [
+    { date: 'March 12, 2025 : 6pm - 7:30pm', place: '47 Road 6500', name: 'Business Networking Event', info: 'Join us for an evening of networking with local businesses.' },
+    { date: 'April 5, 2025 : 9am - Noon', place: '47 Road 6500', name: 'Community Cleanup Day', info: 'Help keep Kirtland clean and green!' },
+    { date: 'May 17, 2025 : 8am - Noon', place: '47 Road 6500', name: 'Local Farmers Market', info: 'Support local farmers and enjoy fresh produce.' },
+    { date: 'June 6, 2025 : 6pm - 8pm', place: '47 Road 6500', name: 'Tech Innovations Expo', info: 'Discover the latest tech trends and innovations.' },
+    { date: 'July 19, 2025 : 8am - 2pm', place: '47 Road 6500', name: 'Music in the Park', info: 'Live music from local artists. Fun for the whole family!' },
+    { date: 'August 22, 2025 : 6pm - 7:30pm', place: '47 Road 6500', name: 'Small Business Workshop', info: 'Learn how to grow and market your small business.' }
+];
+
+const eventsContainer = document.getElementById('events-container');
+eventsContainer.innerHTML = events.map(event => `
+    <div class="event-card">
+        <h3>${event.name}</h3>
+        <h5>${event.date}</h5>
+        <p>${event.info}</p>
+        <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+    </div>
+`).join('');
+
+// Fetch and display spotlight members
+fetch('members.json')
+    .then(response => response.json())
+    .then(data => {
+        const members = data.businesses.filter(member => member.membership_level === 2 || member.membership_level === 3);
+        const spotlightContainer = document.getElementById('spotlight-container');
+
+        // Get 3 random gold or silver members
+        const shuffledMembers = members.sort(() => 0.5 - Math.random()).slice(0, 3);
+        const levelMap = { 1: 'Member', 2: 'Silver', 3: 'Gold' };
+        spotlightContainer.innerHTML = shuffledMembers.map(member => `
+                <div class="spotlight-card">
+                    <h3>${member.name}</h3>
+                    <img src="${member.image}" alt="${member.name}" style="width: 150px; height: 150px; object-fit: contain; border-radius: 8px;">
+                    <p>${member.address}</p>
+                    <p>${member.phone}</p>
+                    <p><strong>Membership Level:</strong> ${levelMap[member.membership_level]}</p>
+                    <a href="${member.URLs}" target="_blank">Visit Website</a>
+                </div>
+        `).join('');
+    })
+    .catch(error => console.error('Error loading members:', error));

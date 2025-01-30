@@ -11,14 +11,14 @@
             "restaurant": true
         },
         {
-            "name": "Nena's House Restaurant",
-            "address": "4272 US HWY 64",
-            "phone": "505-787-2435",
-            "URLs": "https://www.facebook.com/nenashouserestaurant/",
-            "image": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/470218839_1087521659832439_7828923362226101161_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=uCo6t66rsicQ7kNvgFQRcCI&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=AYlZIiUWqN8vZHcACFDKbSh&oh=00_AYADP3VXdqIIr3fQTsbO-PvxwEbkx1nGdsmvmc2mTSLWsw&oe=6794BD8B",
+            "name": "Kirtland Growers' Market",
+            "address": "47 ROAD 6500",
+            "phone": "505-555-6500",
+            "URLs": "https://farmersmarketsnm.org/marketfinder-markets/kirtland-growers-market/",
+            "image": "https://farmersmarketsnm.org/wp-content/uploads/two-logos-smaller-2.png",
             "membership_level": 2,
             "other": "idk",
-            "restaurant": true
+            "restaurant": false
         },
         {
             "name": "Kentucky Fried Chicken",
@@ -35,7 +35,7 @@
             "address": "4217 US HWY 64",
             "phone": "505-599-0246",
             "URLs": "https://www.esscopipe.com",
-            "image": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/468428688_538291729168115_5008868382734507435_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=KlujhdYFgGwQ7kNvgHWMPa_&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=A838OHzDMmWKSq0VfVO_lu_&oh=00_AYAM-g98vI1Aj2JOTBmZKU93ZikywbPDT4_3yh2nHD_6WQ&oe=6794CD1F",
+            "image": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/468428688_538291729168115_5008868382734507435_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=-yL1iGzonI0Q7kNvgFtiVoJ&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=AaAmpCys1ZEma-2hYfdGTd8&oh=00_AYDbNaf3sKO_PGE7a3zIlJAaLUK5RUiL0E7N5J8WXy_7Jg&oe=67A18B9F",
             "membership_level": 2,
             "other": "idk",
             "restaurant": false
@@ -45,7 +45,7 @@
             "address": "4345 US HWY 64",
             "phone": "505-598-0499",
             "URLs": "https://www.facebook.com/ValleyPawnandLaundry.GeneralSupply/photos",
-            "image": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/301948295_514334950694941_3451626526315931930_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=CdOB7rFxU5wQ7kNvgGMmFrZ&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=AW_EF9-sWCtsfvUFq2JsS4e&oh=00_AYB1BWK-6XW9yFKhhibOtWLjpx3BYDVjIh8bpvFlNWq8Eg&oe=6794CBBF",
+            "image": "https://www.kirtlandchamber.com/wp-content/uploads/2022/03/valley-pawn-jewelry.jpg",
             "membership_level": 3,
             "other": "idk",
             "restaurant": false

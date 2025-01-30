@@ -4,19 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirtland NM Chamber of Commerce Directory Page</title>
-    <meta name="description" content="WDD 231 Chamber Directory Page">
+    <title>Kirtland NM Chamber of Commerce Home Page</title>
+    <meta name="description" content="WDD 231 Chamber Home Page">
     <meta name="author" content="Tanya Trampp">
 
-    <meta property="og:title" content="WDD 231 Chamber Directory Page">
+    <meta property="og:title" content="WDD 231 Chamber Home Page">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://ttrampp.github.io/wdd231/chamber/images/kirtland.jpeg">
     <meta property="og:url" content="https://ttrampp.github.io/wdd231/chamber/directory.html">
     <meta property="og:description"
         content="Discover local businesses, services, and events in our community directory.">
-
-
-
 
     <link rel="stylesheet" href="styles/directory.css">
     <script src="scripts/directory.js" defer></script>
@@ -49,12 +46,37 @@
     </header>
 
     <main>
-        <h2 id="members">Members</h2>
-        <div class="view-toggle">
-            <button id="grid-view">Grid View</button>
-            <button id="list-view">Single Column View</button>
+        <div class="hero">
+            <img src="images/new_mexico.jpg" alt="logo" class="hero-image" width="100%">
         </div>
-        <div id="cards"></div>
+
+        <div class="main-container">
+            <div class="left-column">
+                <h2>Upcoming Events</h2>
+                <div id="events-container"></div>
+            </div>
+
+            <div class="right-column">
+                <div class="weather-container">
+                    <h2>Weather</h2>
+                    <p>The current temperature in Kirtland, NM, USA is <span id="current-temp"></span></p>
+                    <figure>
+                        <img id="weather-icon" src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </div>
+
+                <div class="spotlight-ads-container">
+                    <h2>Spotlight Members</h2>
+                    <div id="spotlight-container"></div>
+                </div>
+
+                <div class="joining-link-container">
+                    <button id="joining-link">Join Chamber of Commerce</button>
+                </div>
+            </div>
+        </div>
+
 
 
     </main>

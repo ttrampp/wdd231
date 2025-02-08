@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else {
                 courseBtn.classList.add('incomplete')
             }
+            courseBtn.addEventListener('click', () => showModal(course));
             coursesContainer.appendChild(courseBtn);
         });
     }
@@ -139,5 +140,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     displayCourses('all');
-    //filters[0].classList.add('active');//
+
+    const modal = document.getElementById('course-details');
+    const closeModal = document.getElementById('close-modal');
+
+    function showModal(course) {
+        document.getElementById('modal-title').textContent = course.title;
+        document.getElementById('modal-number').textContent = `${course.subject} ${course.number}`;
+        document.getElementById('modal-credits').textContent = course.credits;
+        document.getElementById('modal-description').textContent = course.description;
+        document.getElementById('modal-certificate').textContent = course.certificate;
+        document.getElementById('modal-tech').textContent = course.technology.join(', ');
+        modal.showModal();
+    }
+
+    closeModal.addEventListener('click', () => modal.close());
+
+    modal.addEventListener('click', event => {
+        if (event.target === modal) modal.close();
+    });
+
+    const courseButtons = document.querySelectorAll('.course-btn');
+    courseButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const course = courses.find(c => button.textContent.includes(c.number));
+            showModal(course);
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector("figure img").classList.add("visible");
 });

@@ -14,12 +14,15 @@
     <meta property="og:url" content="https://ttrampp.github.io/wdd231/chamber/directory.html">
     <meta property="og:description"
         content="Discover local businesses, services, and events in our community directory.">
-
+    <link rel="preload" href="styles/directory.css" as="style">
     <link rel="stylesheet" href="styles/directory.css">
     <script src="scripts/directory.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--preconnect to google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" as="style">
+    <!--preload the font stylesheet to prevent layout shifts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <!--load the font stylesheet immediately after preloading-->
     <link rel="icon" href="faviconKTOWN2.ico">
 </head>
 
@@ -27,7 +30,7 @@
     <header>
         <div class="header-container">
             <div class="logo-and-text">
-                <img src="images/kirtland.webp" alt="logo" class="header-logo" width="34" height="48">
+                <img src="images/kirtland.webp" alt="logo" class="header-logo" width="34" height="48" loading="lazy">
                 <div class="header-text">
                     <h1>Kirtland NM</h1>
                     <p>Chamber of Commerce</p>
@@ -47,7 +50,7 @@
 
     <main>
         <div class="hero">
-            <img src="images/new_mexico.jpg" alt="logo" class="hero-image">
+            <img src="images/new_mexico_1.jpg" alt="logo" class="hero-image" width="1200" height="600">
         </div>
 
         <div class="main-container">
@@ -61,8 +64,9 @@
                     <h2>Weather</h2>
                     <p>The current temperature in Kirtland, NM, USA is <span id="current-temp"></span></p>
                     <figure>
-                        <img id="weather-icon" src="images/default-weather.png" alt="Weather Icon">
-                        <figcaption></figcaption>
+                        <img id="weather-icon" src="images/weatherIcon.webp" alt="Weather Icon" loading="lazy"
+                            width="50" height="50">
+                        <figcaption>weather icon</figcaption>
                     </figure>
                 </div>
 

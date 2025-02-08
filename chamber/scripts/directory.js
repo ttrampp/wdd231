@@ -11,9 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('open');
-    });
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+    }
+    else {
+        console.warn("Hamburger menu not found")
+    }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,29 +43,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridViewButton = document.getElementById('grid-view');
     const listViewButton = document.getElementById('list-view');
 
-    gridViewButton.addEventListener('click', () => {
-        cards.classList.add('grid-view');
-        cards.classList.remove('list-view');
-    });
+    if (gridViewButton && listViewButton && cards) {
+        gridViewButton.addEventListener('click', () => {
+            cards.classList.add('grid-view');
+            cards.classList.remove('list-view');
+        });
 
-    listViewButton.addEventListener('click', () => {
-        cards.classList.add('list-view');
-        cards.classList.remove('grid-view');
-    })
-
+        listViewButton.addEventListener('click', () => {
+            cards.classList.add('list-view');
+            cards.classList.remove('grid-view');
+        });
+    }
 
 
 
     async function getBusinessData() {
+
+        if (!window.location.pathname.includes("directory.html")) return;
+
+        const cards = document.querySelector('#cards');
+
+        if (!cards) {
+            console.warn("#cards container not found on this page");
+            return;
+        }
+
         try {
             cards.innerHTML = '<p>Loading data...</p>';
             const response = await fetch(url);
+
             if (!response.ok) throw new Error('Failed to load JSON data. Status: ${response.status}');
+
             const data = await response.json();
             displayBusinesses(data.businesses);
         }
         catch (error) {
-            cards.innerHTML = '<p>Failed to load data. Please try again later.</p>';
             console.error("Error! Failed to fetch data:", error);
         }
     }
@@ -100,9 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             portrait.setAttribute('src', business.image);
             portrait.setAttribute('alt', `Portrait of ${business.name}`);
-            /*portrait.setAttribute('loading', 'lazy');*/
+            portrait.setAttribute('loading', 'lazy');
             portrait.setAttribute('width', 80);
             portrait.setAttribute('height', 50);
+            portrait.setAttribute('loading', 'lazy');
 
             card.appendChild(topContent);
             card.appendChild(businessAddress);
@@ -121,9 +139,17 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", function () {
     const joiningButton = document.getElementById("joining-link");
 
-    joiningButton.addEventListener("click", function () {
-        window.location.href = "join.html";
-    });
+    console.log("Debugging joiningButton", joiningButton);
+
+    if (joiningButton) {
+        joiningButton.addEventListener("click", function () {
+            window.location.href = "join.html";
+        });
+    }
+    else {
+        console.warn("Warning #joining-link not found")
+    }
+
 });
 
 // index weather api
@@ -156,6 +182,7 @@ function displayResults(data) {
     let desc = data.weather[0].description;
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
+    weatherIcon.setAttribute('loading', 'lazy');
     captionDesc.textContent = `${desc}`;
 }
 
@@ -203,3 +230,104 @@ fetch('members.json')
         `).join('');
     })
     .catch(error => console.error('Error loading members:', error));
+
+
+
+// populate membership levels dropdown options
+const joinLevels = [
+    {
+        id: "NPM",
+        name: "NP Membership is for non profit organizations and there is no fee",
+        cost: "$Free"
+    },
+    {
+        id: "BM",
+        name: "Bronze Membership",
+        cost: "$50"
+    },
+    {
+        id: "SM",
+        name: "Silver Membership",
+        cost: "$100"
+    },
+    {
+        id: "GM",
+        name: "Gold Membership",
+        cost: "$200"
+    }
+];
+
+// Populate Membership Dropdown in Join Form
+function populateMembershipDropdown() {
+    const selectElement = document.querySelector('#membership-level');
+
+    if (!selectElement) {
+        console.error("Membership dropdown (#membership-level) not found.");
+        return;
+    }
+
+    // Clear existing options to prevent duplicates
+    selectElement.innerHTML = '<option value="" disabled selected>Choose your membership level</option>';
+
+    joinLevels.forEach(level => {
+        const option = document.createElement("option");
+        option.value = level.id;
+        option.textContent = `${level.name} - ${level.cost}`;
+        selectElement.appendChild(option);
+    });
+
+    console.log("Membership dropdown populated successfully.");
+}
+
+// Ensure dropdown is populated when the page loads
+//document.addEventListener("DOMContentLoaded", populateMembershipDropdown);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const selectElement = document.querySelector('#membership-level');
+    if (selectElement) {
+        populateMembershipDropdown();
+    }
+});
+
+
+// Function to retrieve query parameters from URL
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const value = urlParams.get(param);
+
+    if (!value) {
+        console.warn(`⚠ Query parameter "${param}" not found in URL.`);
+    } else {
+        console.log(`✅ Retrieved query param: ${param} = ${value}`);
+    }
+
+    return value;
+}
+
+// Display Confirmation Message on Thank You Page
+function displayConfirmation() {
+    const confirmationMessage = document.getElementById("confirmationMessage");
+    if (!confirmationMessage) {
+        console.warn("Confirmation message element not found. Skipping update.");
+        return;
+    }
+
+    const levelID = getQueryParam("membership-level");
+    if (!levelID) return;
+
+    const levelDetails = joinLevels.find(c => c.id === levelID);
+
+    confirmationMessage.textContent = levelDetails
+        ? `You signed up for: ${levelDetails.name}. Cost: ${levelDetails.cost}`
+        : "Membership details could not be found. Please try again.";
+}
+
+// Ensure confirmation message displays when the thank-you page loads
+//document.addEventListener("DOMContentLoaded", displayConfirmation);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const confirmationMessage = document.getElementById("confirmationMessage");
+    if (confirmationMessage) {
+        displayConfirmation();
+    }
+});

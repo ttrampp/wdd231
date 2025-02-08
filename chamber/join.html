@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber Directory</title>
+    <title>Join-Kirtland NM Chamber of Commerce Page</title>
     <meta name="description" content="WDD 231 Chamber Join Page">
     <meta name="author" content="Tanya Trampp">
     <meta property="og:title" content="WDD 231 Chamber Join Page">
@@ -17,7 +17,7 @@
 
 
     <link rel="stylesheet" href="styles/directory.css">
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
     <header>
         <div class="header-container">
             <div class="logo-and-text">
-                <img src="images/tree.jpeg" alt="logo" class="header-logo" width="34" height="48">
+                <img src="images/kirtland.webp" alt="logo" class="header-logo" width="34" height="48">
                 <div class="header-text">
                     <h1>Kirtland NM</h1>
                     <p>Chamber of Commerce</p>
@@ -46,41 +46,112 @@
         </div>
     </header>
 
-
-
     <main>
-        <p>Under construction. More to come soon</p>
 
-    </main>
-    <footer>
-        <div class="left-footer">
-            <p>Kirtland NM Chamber of Commerce</p>
-            <p class="address1">2 Road 6500</p>
-            <p class="address2">Kirland, NM 87417</p>
-            <p class="addressEmail">info@kirtlandnm.org</p>
-            <p>(505) 598-1234</p>
+        <div class="join-container">
+            <section class="join-form-container">
+                <h2>Join Us</h2>
+                <form method="get" action="thankyou.html" class="wf1" id="joinForm"
+                    onsubmit="setTimestampBeforeSubmission()">
+                    <fieldset>
+
+                        <label for="firstName">First Name<span class="firstName"></span></label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+
+                        <label for="lastName">Last Name<span class="lastName"></span></label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+                        <label for="organization-title">Organizational Title<span
+                                class="organization-title"></span></label>
+                        <input type="text" id="organization-title" name="organization-title"
+                            placeholder="Enter your title in your organization">
+
+                        <label for="email">Email<span class="email"></span></label>
+                        <input type="email" id="email" name="email" required placeholder="john79@gmail.com"
+                            title="Your Email" autocomplete="email">
+
+                        <label for="phoneNumber">Phone Number<span class="phoneNumber"></span></label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number"
+                            required>
+
+                        <label for="organization">Organization Name<span class="organization"></span></label>
+                        <input type="text" id="organization" name="organization"
+                            placeholder="Enter the name of your organization" required>
+
+                        <label for="membership-level">Membership Level<span class="membership-level"></span></label>
+                        <select id="membership-level" name="membership-level" required>
+                            <option value="" disabled selected>Choose your membership level</option>
+                        </select>
+
+                        <input type="hidden" id="timestamp" name="timestamp">
+
+                        <button type="submit">Join Kirtland NM Chamber of Commerce</button>
+
+                        <!--<p>To reach a goal you have never attained, you must do things you have never done before. -
+                            Richard G Scott</p>-->
+
+                    </fieldset>
+                </form>
+            </section>
+
+            <section class="membership-levels-container">
+                <h2>Membership Levels</h2>
+                <div class="membership-cards">
+                    <div class="membership-card" id="bronze">
+                        <h3>Bronze Membership</h3>
+                        <p>$50/year</p>
+                        <button class="modal-button" data-modal="modal-bronze">View Benefits</button>
+                    </div>
+
+                    <div class="membership-card" id="silver">
+                        <h3>Silver Membership</h3>
+                        <p>$100/year</p>
+                        <button class="modal-button" data-modal="modal-silver">View Benefits</button>
+                    </div>
+
+                    <div class="membership-card" id="gold">
+                        <h3>Gold Membership</h3>
+                        <p>$200/year</p>
+                        <button class="modal-button" data-modal="modal-gold">View Benefits</button>
+                    </div>
+
+                    <div class="membership-card" id="nonprofit">
+                        <h3>Non-Profit Membership</h3>
+                        <p>Free</p>
+                        <button class="modal-button" data-modal="modal-np">View Benefits</button>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="social-icons">
-            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.jpeg" alt="YouTube" width="50"
-                    height="50"></a>
-            <a href="https://x.com/" target="_blank"><img src="images/x.jpeg" alt="Twitter X" width="50"
-                    height="50"></a>
-            <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.jpeg" alt="LinkedIn"
-                    width="50" height="50"></a>
-            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.jpeg" alt="Facebook"
-                    width="50" height="50"></a>
-        </div>
-        <div class="right-footer">
-            <p>WDD231 Class Project</p>
-            <p>Tanya Trampp</p>
-            <p>&copy;<span id="currentyear"></span> Kirtland NM Chamber of Commerce</p>
-            <p>Last Modified: <span id="date-modified">Loading...</span></p>
-        </div>
-        <script>
-            let text = document.lastModified;
-            document.getElementById("date-modified").innerHTML = text;
-        </script>
-    </footer>
 </body>
+
+<footer>
+    <div class="left-footer">
+        <p>Kirtland NM Chamber of Commerce</p>
+        <p class="address1">2 Road 6500</p>
+        <p class="address2">Kirland, NM 87417</p>
+        <p class="addressEmail">info@kirtlandnm.org</p>
+        <p>(505) 598-1234</p>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.jpeg" alt="YouTube" width="50"
+                height="50"></a>
+        <a href="https://x.com/" target="_blank"><img src="images/x.webp" alt="Twitter X" width="50" height="50"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.jpeg" alt="LinkedIn" width="50"
+                height="50"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.jpeg" alt="Facebook" width="50"
+                height="50"></a>
+    </div>
+    <div class="right-footer">
+        <p>WDD231 Class Project</p>
+        <p>Tanya Trampp</p>
+        <p>&copy;<span id="currentyear"></span> Kirtland NM Chamber of Commerce</p>
+        <p>Last Modified: <span id="date-modified">Loading...</span></p>
+    </div>
+    <script>
+        let text = document.lastModified;
+        document.getElementById("date-modified").innerHTML = text;
+    </script>
+</footer>
 
 </html>

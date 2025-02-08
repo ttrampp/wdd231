@@ -28,6 +28,7 @@ body {
 
 main {
     flex: 1;
+    min-height: 100vh;
 }
 
 
@@ -56,6 +57,8 @@ header {
 .header-logo {
     width: 50px;
     margin-right: 1rem;
+    height: auto;
+    object-fit: contain;
 }
 
 .header-text h1 {
@@ -135,6 +138,20 @@ nav {
     margin: 0 auto;
     align-items: stretch;
     margin-bottom: 26px;
+}
+
+#cards img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+#cards img,
+.spotlight-ads-container img {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+
 }
 
 section {
@@ -259,6 +276,24 @@ section {
         flex-direction: column;
     }
 
+    /*JOIN*/
+    /*.membership-cards {
+        display: flex;
+        /*flex-direction: column;
+        position: absolute;
+        width: 350px;
+        right: 26px;
+        top: 75px;
+        margin-top: 20px;
+        justify-content: center;*/
+    /*flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+    }*/
+
 
     /**********smaller****/
     @media (max-width: 480px) {
@@ -338,6 +373,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-height: 300px;
+    overflow: hidden;
 }
 
 /***WEATHER***/
@@ -386,6 +423,7 @@ section {
     border-radius: 8px;
     text-align: center;
     box-shadow: 2px 2px 10px var(--color-five);
+    min-height: 300px;
 }
 
 .spotlight-card {
@@ -402,6 +440,250 @@ section {
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+/**********CONFIRMATION**********/
+/**********************************************************************/
+
+.confirmationContainer {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--color-three);
+    border: 2px solid var(--color-two);
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+.confirmationContainer h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--color-two);
+    margin-bottom: 20px;
+}
+
+.confirmationContainer p {
+
+    font-size: 1.2rem;
+
+    color: var(--color-two);
+    margin-bottom: 20px;
+}
+
+.confirmationMessage {
+    font-family: var(--paragraph-font);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-three);
+    background-color: var(--color-five);
+    padding: 15px;
+    border: 2px solid var(--color-two);
+    border-radius: 8px;
+    margin: 20px auto;
+    display: inline-block;
+}
+
+/**********JOIN FORM**********/
+/**********************************************************************/
+
+#joinForm {
+    background-color: var(--color-three);
+    padding: 20px;
+    text-align: left;
+    border: solid var(--color-two);
+    border-radius: 8px;
+    max-width: 100%;
+    width: 808px;
+    flex: 1;
+    position: sticky;
+    top: 10px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+#joinForm fieldset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+#joinForm label,
+#joinForm p {
+    display: block;
+    margin-top: 10px;
+}
+
+#joinForm label {
+    display: block;
+    font-weight: bold;
+    margin-top: 26px;
+}
+
+#joinForm #membership-level {
+    margin-top: 0;
+}
+
+#joinForm .skill {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 40%;
+}
+
+#joinForm .skill label {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    white-space: nowrap;
+    font-weight: normal;
+    margin-top: 5px;
+    color: blue;
+    min-width: 20%;
+}
+
+#joinForm textarea {
+    height: 50px;
+    border: 1px thick var(--color-one);
+    background-color: var(--color-six);
+}
+
+#joinForm input[type="text"],
+#joinForm input[type="date"],
+#joinForm input[type="email"],
+#joinForm select,
+#joinForm p {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: var(--color-one);
+}
+
+#joinForm button {
+    width: auto;
+    padding: 10px 20px;
+    background-color: var(--color-five);
+    color: var(--color-one);
+    border: thin black;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+#joinForm button:hover {
+    background-color: var(--color-two);
+    color: var(--color-one);
+}
+
+/**********MEMBERSHIP CARDS**********/
+.membership-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Individual Card Styling */
+.membership-card {
+    background-color: var(--color-one);
+    color: var(--color-four);
+    border: 2px solid var(--color-three);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: var(--paragraph-font);
+    flex: 1 1 calc(50% - 20px);
+    margin: 0 auto;
+}
+
+.membership-card h3 {
+    font-family: var(--heading-font);
+    color: var(--color-two);
+    margin-bottom: 10px;
+}
+
+.membership-card p {
+    color: var(--color-four);
+    margin-bottom: 15px;
+}
+
+.membership-card button {
+    background-color: var(--color-five);
+    color: var(--color-two);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: var(--paragraph-font);
+    transition: background-color 0.3s ease;
+}
+
+.membership-card button:hover {
+    background-color: var(--color-two);
+    color: var(--color-one);
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--color-three);
+    border: 2px solid var(--color-two);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);*/
+    /*font-family: var(--heading-font), sans-serif;*/
+    color: var(--color-four);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--color-one);
+    font-weight: bold;
+    background-color: var(--color-five);
+
+
+}
+
+.close:hover {
+    color: var(--color-two);
+    transform: scale(1.2);
+    padding: 5px;
 }
 
 /**********FOOTER**********/
@@ -446,6 +728,9 @@ footer {
     text-align: center;
     /*align-items: center;*/
     justify-content: space-between;
+    width: 50px;
+    height: auto;
+    object-fit: contain;
 }
 
 .right-footer {
@@ -463,4 +748,96 @@ footer {
     gap: 2px;
     margin: 0;
     font-size: 13px;
+}
+
+
+
+/********from test page****just testing******/
+/* Layout: Two-Column Structure */
+.join-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Column: Membership Form */
+.join-form-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-one);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Column: Membership Levels */
+.membership-levels-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-two);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-one);
+}
+
+/* Membership Cards Styling */
+/*.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.membership-card {
+    background-color: var(--color-one);
+    color: var(--color-four);
+    border: 2px solid var(--color-three);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.membership-card h3 {
+    font-family: var(--heading-font);
+    color: var(--color-two);
+    margin-bottom: 10px;
+}
+
+.membership-card p {
+    color: var(--color-four);
+    margin-bottom: 15px;
+}
+
+.membership-card button {
+    background-color: var(--color-five);
+    color: var(--color-one);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: var(--paragraph-font);
+    transition: background-color 0.3s ease;
+}
+
+.membership-card button:hover {
+    background-color: var(--color-two);
+}*/
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .join-container {
+        flex-direction: column;
+    }
+
+    .membership-levels-container {
+        margin-top: 20px;
+    }
 }

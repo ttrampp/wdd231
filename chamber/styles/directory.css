@@ -559,12 +559,14 @@ section {
 #joinForm textarea {
     height: 50px;
     border: 1px thick var(--color-one);
-    background-color: var(--color-six);
+    background-color: var(--color-one);
 }
 
 #joinForm input[type="text"],
 #joinForm input[type="date"],
 #joinForm input[type="email"],
+#joinForm input[type="tel"],
+#joinForm textarea,
 #joinForm select,
 #joinForm p {
     display: block;
@@ -591,6 +593,7 @@ section {
     background-color: var(--color-two);
     color: var(--color-one);
 }
+
 
 /**********MEMBERSHIP CARDS**********/
 .membership-cards {
@@ -705,14 +708,14 @@ footer {
     padding: 4px;
 }
 
-.left-foot {
+.left-footer {
     flex: 1;
     text-align: left;
     color: var(--color-one);
     /*margin: 2px;*/
 }
 
-.left-foot p {
+.left-footer p {
     line-height: 1;
     gap: 2px;
     margin: 0;
@@ -742,7 +745,7 @@ footer {
     object-fit: contain;
 }
 
-.right-foot {
+.right-footer {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -752,7 +755,7 @@ footer {
     gap: 4px;
 }
 
-.right-foot p {
+.right-footer p {
     line-height: 1;
     gap: 2px;
     margin: 0;

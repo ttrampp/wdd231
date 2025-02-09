@@ -74,6 +74,9 @@ header {
     color: var(--color-one);
 }
 
+.subheading {
+    font-size: 0.9rme;
+}
 
 
 /**********NAVAGATION MENU**********/

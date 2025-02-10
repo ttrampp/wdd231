@@ -4,25 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirtland NM Chamber of Commerce Home Page</title>
+    <title>Kirtland NM Chamber of Commerce</title>
     <meta name="description" content="WDD 231 Chamber Home Page">
     <meta name="author" content="Tanya Trampp">
 
     <meta property="og:title" content="WDD 231 Chamber Home Page">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://ttrampp.github.io/wdd231/chamber/images/kirtland.jpeg">
-    <meta property="og:url" content="https://ttrampp.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://ttrampp.github.io/wdd231/chamber/images/kirtland.webp">
+    <meta property="og:url" content="https://ttrampp.github.io/wdd231/chamber/images/kirtland.webp">
     <meta property="og:description"
         content="Discover local businesses, services, and events in our community directory.">
-    <link rel="preload" href="styles/directory.css" as="style">
+
     <link rel="stylesheet" href="styles/directory.css">
     <script src="scripts/directory.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--preconnect to google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" as="style">
-    <!--preload the font stylesheet to prevent layout shifts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <!--load the font stylesheet immediately after preloading-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" href="faviconKTOWN2.ico">
 </head>
 
@@ -30,10 +27,11 @@
     <header>
         <div class="header-container">
             <div class="logo-and-text">
-                <img src="images/kirtland.webp" alt="logo" class="header-logo" width="34" height="48" loading="lazy">
+                <img src="images/kirtland.webp" alt="logo" class="header-logo" width="34" height="48">
                 <div class="header-text">
-                    <h1>Kirtland NM</h1>
-                    <p>Chamber of Commerce</p>
+                    <h2>Kirtland NM<br>
+                        <span class="subheading">Chamber of Commerce</span>
+                    </h2>
                 </div>
             </div>
             <button id="hamburger">&#9776;</button>
@@ -84,6 +82,18 @@
 
 
     </main>
+
+    <dialog id="course-details">
+        <div class="modal-content">
+            <button id="close-modal">❌</button>
+            <h2 id="modal-title"></h2>
+            <p><strong>Course Number:</strong> <span id="modal-number"></span></p>
+            <p><strong>Credits:</strong> <span id="modal-credits"></span></p>
+            <p><strong>Description:</strong> <span id="modal-description"></span></p>
+            <p><strong>Certificate:</strong> <span id="modal-certificate"></span></p>
+            <p><strong>Technology Stack:</strong> <span id="modal-tech"></span></p>
+        </div>
+    </dialog>
 
     <footer>
         <div class="left-footer">

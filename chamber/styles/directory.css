@@ -87,8 +87,7 @@ nav {
     align-items: center;
     flex-grow: 1;
     justify-content: flex-end;
-    /*grid-template-rows: 0fr;
-    transition: grid-template-rows 0.5s ease-out;*/
+
 }
 
 .menu-links {
@@ -127,6 +126,7 @@ nav {
     display: none;
 }
 
+/**************************************************************************************/
 /**********DIRECTORY ONLY**********/
 /**********CARDS**********/
 #members {
@@ -231,105 +231,8 @@ section {
     color: var(--color-two);
 }
 
-/**********TABLET**********/
-@media (max-width: 1024px) {
-    #cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-/**********MOBILE**********/
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    #hamburger {
-        display: block;
-        align-self: flex-end;
-    }
-
-    nav {
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s ease-out;
-        max-height: 0;
-    }
-
-    nav.open {
-        max-height: 300px;
-        display: block;
-    }
-
-    .menu-links {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        gap: 0;
-    }
-
-    .menu-links li {
-        text-align: left;
-        padding: 0.5rem 1rem;
-        border-bottom: 1px solid #ff7043;
-    }
-
-    .menu-links li a {
-        display: block;
-    }
-
-    /*INDEX*/
-    .main-container {
-        flex-direction: column;
-    }
-
-    /*JOIN*/
-    /*.membership-cards {
-        display: flex;
-        /*flex-direction: column;
-        position: absolute;
-        width: 350px;
-        right: 26px;
-        top: 75px;
-        margin-top: 20px;
-        justify-content: center;*/
-    /*flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        max-width: 600px;
-        margin: 0 auto;
-    }*/
-
-
-    /**********smaller****/
-    @media (max-width: 480px) {
-        #cards.grid-view {
-            grid-template-columns: 1fr;
-            gap: 14px;
-        }
-
-        .view-toggle {
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        #grid-view {
-            display: none;
-        }
-    }
-
-
-    /******DIRECTORY ONLY*****/
-    #cards {
-        grid-template-columns: 1fr;
-    }
-
-
-
-}
-
+/*******************************************************************************/
 /**********INDEX**********/
 
 .hero-image {
@@ -450,8 +353,9 @@ section {
     border-radius: 50%;
 }
 
-/**********CONFIRMATION**********/
+
 /**********************************************************************/
+/**********CONFIRMATION**********/
 
 .confirmationContainer {
     text-align: center;
@@ -491,8 +395,46 @@ section {
     display: inline-block;
 }
 
+/******************************************************************************/
+/**********JOIN PAGE**********/
+/* Layout: Two-Column Structure */
+.join-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Column: Membership Form */
+.join-form-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-one);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Column: Membership Levels */
+.membership-levels-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-two);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-one);
+}
+
+h1 {
+    text-align: center;
+}
+
 /**********JOIN FORM**********/
-/**********************************************************************/
 
 #joinForm {
     background-color: var(--color-three);
@@ -652,7 +594,7 @@ section {
 }
 
 
-
+/**********MODALS**********/
 .modal {
     display: none;
     position: fixed;
@@ -698,7 +640,105 @@ section {
     padding: 5px;
 }
 
+/************************************************************************************/
+/**********DISCOVER**********/
+
+
+
+/************************************************************************************/
+/**********REDUCED SCREENS FORMATTING**********/
+
+/**********TABLET**********/
+@media (max-width: 1024px) {
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/**********MOBILE**********/
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #hamburger {
+        display: block;
+        align-self: flex-end;
+    }
+
+    nav {
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        max-height: 0;
+    }
+
+    nav.open {
+        max-height: 300px;
+        display: block;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 0;
+    }
+
+    .menu-links li {
+        text-align: left;
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #ff7043;
+    }
+
+    .menu-links li a {
+        display: block;
+    }
+
+    /*INDEX*/
+    .main-container {
+        flex-direction: column;
+    }
+
+    /*JOIN*/
+    .join-container {
+        flex-direction: column;
+    }
+
+    .membership-levels-container {
+        margin-top: 20px;
+    }
+
+
+    /**********smaller****/
+    @media (max-width: 480px) {
+        #cards.grid-view {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        .view-toggle {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        #grid-view {
+            display: none;
+        }
+    }
+
+
+    /******DIRECTORY ONLY*****/
+    #cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/************************************************************************************/
 /**********FOOTER**********/
+
 footer {
     background-color: var(--color-two);
     color: var(--color-two);
@@ -760,52 +800,4 @@ footer {
     gap: 2px;
     margin: 0;
     font-size: 13px;
-}
-
-
-
-/********from test page****just testing******/
-/* Layout: Two-Column Structure */
-.join-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Left Column: Membership Form */
-.join-form-container {
-    flex: 1;
-    min-width: 300px;
-    background-color: var(--color-one);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Right Column: Membership Levels */
-.membership-levels-container {
-    flex: 1;
-    min-width: 300px;
-    background-color: var(--color-two);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--color-one);
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .join-container {
-        flex-direction: column;
-    }
-
-    .membership-levels-container {
-        margin-top: 20px;
-    }
 }

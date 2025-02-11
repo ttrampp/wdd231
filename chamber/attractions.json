@@ -1,0 +1,64 @@
+{
+    "attractions": [
+        {
+            "name": "Bisti/De-Na-Zin Wilderness",
+            "address": "New Mexico, USA",
+            "description": "A remote area featuring unique rock formations, hoodoos, and badlands, ideal for hiking and photography.",
+            "photo": "Bisti_DeNaZin_Wilderness.webp"
+        },
+        {
+            "name": "Shiprock Pinnacle",
+            "address": "Shiprock, NM",
+            "description": "A sacred monadnock rising nearly 1,600 feet above the high-desert plain, significant in Navajo culture.",
+            "photo": "Shiprock.webp"
+        },
+        {
+            "name": "Chaco Culture National Historical Park",
+            "address": "Nageezi, NM",
+            "description": "A UNESCO World Heritage Site preserving ancient Puebloan ruins and kivas, offering insights into pre-Columbian history.",
+            "photo": "Chaco_Culture_National_Historical_Park.webp"
+        },
+        {
+            "name": "Bolack Museum of Fish and Wildlife",
+            "address": "6261 Bloomfield Hwy, Farmington, NM 87401",
+            "description": "A museum featuring an extensive collection of taxidermy animals from around the world, showcasing wildlife conservation efforts.",
+            "photo": "Bolack_Museum.webp"
+        },
+        {
+            "name": "Riverview Golf Course",
+            "address": "64 Road 6520, Kirtland, NM 87417",
+            "description": "An 18-hole golf course with scenic views, suitable for golfers of all skill levels.",
+            "photo": "Riverview_Golf_Course.webp"
+        },
+        {
+            "name": "Animas River Walk",
+            "address": "Farmington, NM",
+            "description": "A scenic riverside trail perfect for walking, biking, and enjoying nature along the Animas River.",
+            "photo": "Riverview_Golf_Course.webp"
+        },
+        {
+            "name": "Mountain Waters Rafting",
+            "address": "303 W College Dr, Durango, CO 81301",
+            "description": "Offers white-water rafting adventures on the Animas River, suitable for families and thrill-seekers.",
+            "photo": "Mountain_Waters_Rafting.webp"
+        },
+        {
+            "name": "Aztec Ruins National Monument",
+            "address": "725 Ruins Rd, Aztec, NM 87410",
+            "description": "Preserves ancestral Puebloan structures, including a reconstructed Great Kiva.",
+            "photo": "Aztec_Ruins.webp"
+        },
+        {
+            "name": "Salmon Ruins Museum",
+            "address": "6131 Hwy 64, Bloomfield, NM 87413",
+            "description": "Features archaeological sites and exhibits related to the ancient Chacoan and Pueblo cultures.",
+            "photo": "Salmon_Ruins.webp"
+        },
+        {
+            "name": "Farmington Museum at Gateway Park",
+            "address": "3041 E Main St, Farmington, NM 87402",
+            "description": "Offers exhibits on regional history, culture, and art, including traveling exhibitions.",
+            "photo": "Farmington_Museum.webp"
+        }
+    ]
+}

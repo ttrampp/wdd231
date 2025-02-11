@@ -643,6 +643,90 @@ h1 {
 /************************************************************************************/
 /**********DISCOVER**********/
 
+#place-card-container {
+    flex-grow: 1;
+    padding-bottom: 80px;
+}
+
+#placeCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 26px;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.place-card {
+    background-color: var(--color-three);
+    border: 2px solid var(--color-five);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem auto;
+
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photograph"
+        "description"
+        "location"
+        "button";
+    grid-template-rows: auto auto 1fr auto auto auto;
+    gap: 5px;
+    height: 100%;
+    padding: 1rem;
+}
+
+.place-card h2 {
+    margin: 1rem 8px;
+    grid-area: name;
+}
+
+.place-card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    grid-area: photograph;
+}
+
+.place-card p {
+    margin: 5px 8px;
+    grid-area: description;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.place-card address {
+    margin: 1rem 8px;
+    grid-area: location;
+}
+
+
+.place-card img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px var(--color-four);
+}
+
+.place-card .learn-more-button {
+    padding: 8px;
+    font-size: 1rem;
+    background-color: var(--color-five);
+    color: var(--color-two);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    grid-area: button;
+    align-self: end;
+    justify-self: center;
+    margin-bottom: 26px;
+}
+
+.place-card .learn-more-button:hover {
+    background-color: var(--color-two);
+    color: var(--color-one);
+}
 
 
 /************************************************************************************/
@@ -653,10 +737,15 @@ h1 {
     #cards {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+
+    #placeCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*}
 
 /**********MOBILE**********/
-@media (max-width: 768px) {
+    /*@media (max-width: 768px) {*/
     .header-container {
         flex-direction: column;
         align-items: flex-start;
@@ -710,31 +799,96 @@ h1 {
         margin-top: 20px;
     }
 
+    #placeCards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        width: 85%;
 
-    /**********smaller****/
-    @media (max-width: 480px) {
-        #cards.grid-view {
-            grid-template-columns: 1fr;
-            gap: 14px;
-        }
-
-        .view-toggle {
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        #grid-view {
-            display: none;
-        }
     }
 
+    .place-card {
+        margin: .5rem auto;
 
-    /******DIRECTORY ONLY*****/
-    #cards {
-        grid-template-columns: 1fr;
     }
 
 }
+
+
+/**********smaller****/
+@media (max-width: 640px) {
+    #cards.grid-view {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .view-toggle {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #grid-view {
+        display: none;
+    }
+
+    #placeCards {
+        grid-template-columns: 1fr;
+        width: 90%;
+        max-width: 375px;
+        gap: 30px;
+        padding: 20px;
+        margin: auto;
+    }
+
+    .place-card {
+        margin: 1.5rem auto;
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .place-card h2,
+    .place-card p,
+    .place-card address,
+    .place-card .learn-more-button {
+        text-align: center;
+        width: 100%;
+        =
+    }
+
+    .place-card img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .place-card .learn-more-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: var(--color-five);
+        color: var(--color-two);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+}
+
+
+/******DIRECTORY ONLY*****/
+#cards {
+    grid-template-columns: 1fr;
+}
+
 
 /************************************************************************************/
 /**********FOOTER**********/

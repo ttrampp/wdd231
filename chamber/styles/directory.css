@@ -10,13 +10,14 @@
     --color-one: #f8f9fa;
     --color-two: #002b5c;
     --color-three: #cccccc;
-    --color-four: #212529;
+    --color-four: #000000;
     --color-five: #ff7043;
+
 }
 
 body {
-    background-color: var(--color-one);
-    color: var(--color-four);
+    /*background-color: var(--color-one);
+    color: var(--color-four);*/
     height: 100%;
     padding: 0;
     margin: 0;
@@ -47,6 +48,7 @@ header {
     align-items: center;
     width: 100%;
     max-width: 100%;
+    background-color: var(--color-two);
 }
 
 .logo-and-text {
@@ -71,7 +73,7 @@ header {
 .header-text p {
     margin: 0;
     font-size: 0.9rem;
-    color: var(--color-one);
+    color: orangered;
 }
 
 .header-text h2 .subheading {
@@ -82,7 +84,8 @@ header {
 
 /**********NAVAGATION MENU**********/
 nav {
-    background-color: var(--color-two);
+    background-color: var(--color-two) !important;
+    color: var(--color-one) !important;
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -97,23 +100,30 @@ nav {
     margin: 0;
     padding: 0;
     justify-content: flex-end;
+    background-color: var(--color-two);
 }
 
 .menu-links li a {
-    color: white;
+    color: var(--color-one) !important;
+    /*test here*/
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
 
+.menu-links li a:visited {
+    color: var(--color-one);
+}
+
 .menu-links li a:hover {
-    color: var(--color-five);
-    background-color: var(--color-four);
+    background-color: var(--color-five);
+    color: var(--color-four);
     font-size: large;
 }
 
 .menu-links li a.active {
     text-decoration: double underline;
+    text-decoration: var(--color-five);
 }
 
 /**********HAMBURGER**********/
@@ -121,7 +131,7 @@ nav {
     font-size: 2rem;
     background: none;
     border: none;
-    color: white;
+    color: var(--color-five);
     cursor: pointer;
     display: none;
 }
@@ -643,6 +653,12 @@ h1 {
 /************************************************************************************/
 /**********DISCOVER**********/
 
+.discover-main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
 #place-card-container {
     flex-grow: 1;
     padding-bottom: 80px;
@@ -713,7 +729,7 @@ h1 {
     padding: 8px;
     font-size: 1rem;
     background-color: var(--color-five);
-    color: var(--color-two);
+    color: var(--color-four);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -778,11 +794,12 @@ h1 {
     .menu-links li {
         text-align: left;
         padding: 0.5rem 1rem;
-        border-bottom: 1px solid #ff7043;
+        border-bottom: 1px solid var(--color-one);
     }
 
     .menu-links li a {
         display: block;
+
     }
 
     /*INDEX*/
@@ -856,7 +873,7 @@ h1 {
     .place-card .learn-more-button {
         text-align: center;
         width: 100%;
-        =
+
     }
 
     .place-card img {
@@ -867,14 +884,16 @@ h1 {
         object-fit: cover;
         display: block;
         margin: 0 auto;
+
     }
 
     .place-card .learn-more-button {
         display: inline-block;
         padding: 10px 20px;
         font-size: 1rem;
+        font-weight: bold;
         background-color: var(--color-five);
-        color: var(--color-two);
+        color: var(--color-four);
         border: none;
         border-radius: 5px;
         cursor: pointer;

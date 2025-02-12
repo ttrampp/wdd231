@@ -709,6 +709,8 @@ h1 {
     object-fit: cover;
     border-radius: 8px;
     grid-area: photograph;
+    display: block;
+    background-color: var(--color-three);
 }
 
 .place-card p {

@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const thePhoto = document.createElement('img');
             thePhoto.src = place.photo.startsWith("http") ? place.photo : `images/${place.photo}`;
             thePhoto.alt = place.name;
+            thePhoto.loading = "lazy";
             theFigure.appendChild(thePhoto);
             theCard.appendChild(theFigure);
 

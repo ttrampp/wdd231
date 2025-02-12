@@ -63,20 +63,21 @@ header {
     object-fit: contain;
 }
 
-.header-text h2 {
+.header-text .site-title {
     margin: 0;
     padding: 0;
     line-height: 1;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.header-text p {
+/*.header-text p {
     margin: 0;
     font-size: 0.9rem;
-    color: orangered;
-}
+    color: var(--color-one);
+}*/
 
-.header-text h2 .subheading {
+.header-text .subheading {
     font-size: large;
     font-weight: normal;
 }

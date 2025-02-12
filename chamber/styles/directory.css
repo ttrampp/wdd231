@@ -124,7 +124,8 @@ nav {
 
 .menu-links li a.active {
     text-decoration: double underline;
-    text-decoration: var(--color-five);
+    text-decoration-thickness: 3px;
+    color: var(--color-five)!important;
 }
 
 /**********HAMBURGER**********/
@@ -563,6 +564,17 @@ h1 {
 }
 
 /* Individual Card Styling */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 .membership-card {
     background-color: var(--color-one);
     color: var(--color-four);
@@ -576,6 +588,7 @@ h1 {
     font-family: var(--paragraph-font);
     flex: 1 1 calc(50% - 20px);
     margin: 0 auto;
+    animation: fadeInUp 0.8s ease-in-out;
 }
 
 .membership-card h3 {
@@ -806,6 +819,13 @@ h1 {
     .menu-links li a {
         display: block;
 
+    }
+
+    .menu-links li a.active {
+        background-color: var(--color-five);
+        color: var(--color-one) !important;
+        padding: 5px;
+        border-radius: 5px;
     }
 
     /*INDEX*/

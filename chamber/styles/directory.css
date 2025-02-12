@@ -443,6 +443,9 @@ section {
 
 h1 {
     text-align: center;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /**********JOIN FORM**********/

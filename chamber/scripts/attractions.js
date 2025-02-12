@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             // Title
             const theTitle = document.createElement('h2');
-            theTitle.innerContent = place.name;
+            theTitle.textContent = place.name;
             theCard.appendChild(theTitle);
 
             // Address

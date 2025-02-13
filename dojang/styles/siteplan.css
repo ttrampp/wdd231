@@ -1,0 +1,100 @@
+.noto-sans-regular {
+    font-family: "Noto Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+:root {
+    --color-one: #010001;
+    --color-two: #f22b29;
+    --color-three: #004494;
+    --color-four: #e5f9e0;
+    --color-five: #c09891;
+    --color-six: #f7f7f7;
+    --color-seven: #C0C0C0;
+
+}
+
+/***Font and Background***/
+body {
+    font-family: "Noto Sans", sans-serif;
+    background-color: var(--color-three);
+    color: var(--color-one);
+    margin: 0;
+    padding: 0;
+}
+
+/***Header***/
+header {
+    background-color: var(--color-one);
+    color: var(--color-six);
+    text-align: center;
+    padding: 26px 8px;
+    width: 100%;
+    border-bottom: 3px solid var(--color-two);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+header p {
+    margin: 8px 0;
+    font-size: 20px;
+    color: var(--color-six);
+}
+
+/***Sections***/
+section {
+    background: var(--color-six);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    border-left: 5px solid var(--color-two);
+}
+
+/***Headings***/
+h2 {
+    color: var(--color-three);
+    border-bottom: 3px solid var(--color-three);
+    padding-bottom: 5px;
+}
+
+/***Site Name Section***/
+.site-name {
+    background-color: var(--color-six);
+    border-left: 5px solid var(--color-two);
+}
+
+/***Site Purpose Section***/
+.site-purpose {
+    background-color: var(--color-six);
+    border-left: 5px solid var(--color-two);
+}
+
+/***Typography***/
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--color-one);
+}
+
+/***Wireframe Images***/
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/***Responsive Design***/
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+}

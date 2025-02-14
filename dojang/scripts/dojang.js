@@ -1,3 +1,5 @@
+//header nav links and footer date modified for all html pages
+
 const currentYear = new Date().getFullYear();
 document.getElementById('currentyear').textContent = currentYear;
 
@@ -17,9 +19,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('date-modified').textContent = document.lastModified;
+//upcoming events on index.hmtl page
+//why cant i get this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("🚀 DOM fully loaded. Running scripts...");
+
+    // Ensure footer date updates correctly
+    const dateModifiedElement = document.getElementById("date-modified");
+    if (dateModifiedElement) {
+        dateModifiedElement.textContent = document.lastModified;
+    }
+
+    // MODAL FIX: Ensure modal elements exist before trying to use them
+    const modal = document.getElementById('event-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDate = document.getElementById('modal-date');
+    const modalDescription = document.getElementById('modal-description');
+    const closeModalButton = document.getElementById('close-modal');
+
+    if (!modal || !modalTitle || !modalDate || !modalDescription || !closeModalButton) {
+        console.error("Modal elements missing! Check index.html.");
+        return;
+    }
+
+    // ensure modal is HIDDEN when page loads
+    modal.style.display = 'none';
+
+    // EVENT LIST: Add event details dynamically
     const events = [
         { name: "Regional Tournament", date: "March 10, 2025", time: "10:00 AM", description: "Compete with the best in the region!" },
         { name: "Kids Class", date: "March 15, 2025", time: "4:00 PM", description: "A fun introduction to Taekwondo for kids." },
@@ -29,36 +59,46 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const eventList = document.getElementById('event-list');
-    const modal = document.getElementById('event-modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalDate = document.getElementById('modal-date');
-    const modalDescription = document.getElementById('modal-description');
-    const closeButton = document.querySelector('.close');
 
     events.forEach(event => {
         const li = document.createElement('li');
         li.innerHTML = `<a href="#" class="event-link">${event.name}</a>`;
-        li.addEventListener('click', () => {
+        
+        // only opens modal when an event is clicked
+        li.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(`Opening modal for: ${event.name}`);
+
             modalTitle.textContent = event.name;
             modalDate.textContent = `Date: ${event.date} | Time: ${event.time}`;
             modalDescription.textContent = event.description;
-            modal.style.display = 'flex';
+
+            modal.style.display = 'flex'; //opens modal properly
         });
+
         eventList.appendChild(li);
     });
 
-    closeButton.addEventListener('click', () => {
+    //CLOSE MODAL FUNCTIONALITY
+    closeModalButton.addEventListener('click', () => {
         modal.style.display = 'none';
+        console.log("Modal closed.");
     });
 
     window.addEventListener('click', (e) => {
-        if (e.target == modal) {
+        if (e.target === modal) {
             modal.style.display = 'none';
+            console.log("Modal closed by clicking outside.");
         }
     });
+
+    // ensure modal is hidden on first page load
+    modal.style.display = 'none';
 });
 
 
+//***************************************************************************************** */
+//Random training photos on index.html page
 
 const url = 'dojang.json';
 

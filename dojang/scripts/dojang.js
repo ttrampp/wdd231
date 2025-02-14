@@ -69,8 +69,16 @@ const cards = document.querySelector('#cards');
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('date-modified').textContent = document.lastModified;
 
-    fetch('dojang.json')
-        .then(response => response.json())
+    const dateModified = document.getElementById('date-modified');
+    if (dateModified) {
+        dateModified.textContent = document.lastModified;
+    }
+
+    fetch('./dojang.json')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.json();
+        })
         .then(data => {
 
             let images = [...data.trainings];
@@ -84,8 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
             let leftImages = selectedImages.slice(0, 3);
             let rightImages = selectedImages.slice(3, 6);
 
-            insertImages('left-images', leftImages);
-            insertImages('right-images', rightImages);
+            if (document.getElementById('left-images') && document.getElementById('right-images')) {
+                insertImages('left-images', leftImages);
+                insertImages('right-images', rightImages);
+            }
+            else {
+                console.error("Image containers not found!");
+            }
         })
         .catch(error => console.error("Error loading images:", error));
 
@@ -99,13 +112,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById(containerId);
         container.innerHTML = "";
 
-        images.forEach(imgSrc => {
+        images.forEach((imgSrc, index) => {
             let img = document.createElement('img');
-            img.src = `./${imgSrc}`;
-            img.alt = "Taekwondo Training";
+            img.src = `${imgSrc}`;
+
+            img.alt = `Taekwondo Training ${index + 1}`;
             img.loading = "lazy";
             img.style.width = "100%";
             img.style.height = "auto";
+
+            console.log(`Adding image ${index + 1} to ${containerId}: ${imgSrc}`);
             container.appendChild(img);
         });
 

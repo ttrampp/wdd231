@@ -168,38 +168,16 @@ main {
     transition: margin-top 0.3s ease-in-out;
 }
 
-/*.description {
-    background-color: var(--color-six);
-    padding: 20;
-    margin-bottom: 20px;
-}*/
 
-/*.grid-container-left {
+
+.three-column-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    text-align: center;
-    padding: 20px;
-}*/
-
-/*.grid-container-right {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    text-align: center;
-    padding: 20px;
-}*/
-
-/*.grid-item {
-    background: var(--color-four);
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
     padding: 10px;
-    border: 2px solid var(--color-two);
+    align-items: center;
 }
-
-.grid-item img {
-    width: 100%;
-    height: auto;
-}*/
 
 .grid-container {
     display: flex;
@@ -211,15 +189,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 14px;
-}
-
-.three-column-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
-    margin-top: 20px;
-    padding: 10px;
-    align-items: center;
 }
 
 .welcome-message {
@@ -252,7 +221,9 @@ main {
 /**********UPCOMING EVENTS**********/
 .upcoming-events {
     text-align: center;
-    margin: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
 }
 
 .upcoming-events ul {

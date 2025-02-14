@@ -19,19 +19,11 @@
 
 }
 
-body {
-    background-color: var(--color-four);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-    width: 100vw;
-    max-width: 100%;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
 
 /************************************************************************************/
 /**********HEADER**********/
@@ -144,6 +136,26 @@ body {
 }
 
 /************************************************************************************/
+/**********BODY**********/
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    background-color: var(--color-four);
+    color: var(--color-one);
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100%;
+
+    box-sizing: border-box;
+}
+
+/************************************************************************************/
 /**********MAIN**********/
 
 main {
@@ -156,21 +168,29 @@ main {
     transition: margin-top 0.3s ease-in-out;
 }
 
-.description {
+/*.description {
     background-color: var(--color-six);
     padding: 20;
     margin-bottom: 20px;
-}
+}*/
 
-.grid-container {
+/*.grid-container-left {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
     text-align: center;
     padding: 20px;
-}
+}*/
 
-.grid-item {
+/*.grid-container-right {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    text-align: center;
+    padding: 20px;
+}*/
+
+/*.grid-item {
     background: var(--color-four);
     padding: 10px;
     border: 2px solid var(--color-two);
@@ -179,21 +199,111 @@ main {
 .grid-item img {
     width: 100%;
     height: auto;
+}*/
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.contact-button {
+#trainings {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.three-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
     margin-top: 20px;
+    padding: 10px;
+    align-items: center;
 }
 
-.contact-button a {
+.welcome-message {
+    text-align: center;
+    width: 100%;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/**********LEARN MORE BUTTON**********/
+.learn-more-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.learn-more-button a {
     background: var(--color-two);
     color: var(--color-one);
     padding: 10px 20px;
     text-decoration: none;
+    display: inline-block;
     font-weight: bold;
     border-radius: 5px;
 }
 
+.learn-more-button a:hover {
+    background-color: var(--color-three);
+}
+
+/**********UPCOMING EVENTS**********/
+.upcoming-events {
+    text-align: center;
+    margin: 20px;
+}
+
+.upcoming-events ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.upcoming-events li {
+    margin: 10px 0;
+}
+
+.upcoming-events a {
+    text-decoration: none;
+    color: var(--color-three);
+    font-weight: bold;
+}
+
+.upcoming-events a:hover {
+    color: var(--color-two);
+}
+
+/**********MODAL**********/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-one);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--color-six);
+    padding: 20%;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
 
 /************************************************************************************/
 /**********SMALL SCREEN**********/

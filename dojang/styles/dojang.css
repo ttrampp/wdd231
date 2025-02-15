@@ -355,7 +355,7 @@ main {
         order: -1;
     }
 
-    .logo  {
+    .logo {
         justify-content: center;
         padding: 8px;
     }
@@ -489,7 +489,7 @@ main {
         max-width: 400px;
         padding: 15px;
     }
-    
+
 }
 
 /************************************************************************************/
@@ -501,7 +501,7 @@ main {
         order: -1;
     }
 
-    .logo  {
+    .logo {
         justify-content: center;
         padding: 8px;
     }

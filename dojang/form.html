@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dojang Contact Us Page</title>
+    <meta name="description" content="WDD 231 Project Dojang Contact Us Page">
+    <meta name="author" content="Tanya Trampp">
+
+    <meta property="og:title" content="WDD 231 Project Dojang Contact Us Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ttrampp.github.io/wdd231/dojang/images/kims_patch.webp">
+    <meta property="og:url" content="https://ttrampp.github.io/wdd231/dojang/images/kims_patch.webp">
+    <meta property="og:description" content="Come learn Taekwondo.">
+
+    <link rel="stylesheet" href="styles/dojang.css">
+    <script src="scripts/dojang.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" href="faviconKTOWN2.ico">
 </head>
+
 <body>
-    
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/kims_patch.webp" alt="logo" class="header-logo" width="34" height="48">
+            </div>
+
+            <div class="header-text">
+                <h1>Kirtland Taekwondo Dojang</h1>
+            </div>
+
+            <div class="navigation">
+                <button id="hamburger">&#9776;</button>
+                <nav id="nav-menu">
+                    <ul class="menu-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="form.html">Contact Us</a></li>
+                        <li><a href="study.html">Study</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <p>Under contruction. Come back soon.</p>
+    </main>
+
+
+    <footer>
+        <div class="left-footer">
+            <p>Dojang</p>
+            <p class="address1">8 Road 6500</p>
+            <p class="address2">Kirland, NM 87417</p>
+            <p class="addressEmail">info@dojang.org</p>
+            <p>(505) 598-1234</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.webp" alt="YouTube" width="50"
+                    height="50"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/x.webp" alt="Twitter X" width="50"
+                    height="50"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.webp" alt="LinkedIn"
+                    width="50" height="50"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.webp" alt="Facebook"
+                    width="50" height="50"></a>
+        </div>
+        <div class="right-footer">
+            <p>WDD231 Class Project</p>
+            <p>Tanya Trampp</p>
+            <p>&copy;<span id="currentyear"></span> Dojang</p>
+            <p>Last Modified: <span id="date-modified">Loading...</span></p>
+        </div>
+        <script>
+            let text = document.lastModified;
+            document.getElementById("date-modified").innerHTML = text;
+        </script>
+    </footer>
+
 </body>
+
 </html>

@@ -38,13 +38,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('event-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalDate = document.getElementById('modal-date');
+    const modalTime = document.getElementById('modal-time');
     const modalDescription = document.getElementById('modal-description');
-    const closeModalButton = document.getElementById('close-modal');
+    //const closeModalButton = document.getElementById('close-modal');
+    const closeXButton = document.getElementById('modal-close-x');
 
-    if (!modal || !modalTitle || !modalDate || !modalDescription || !closeModalButton) {
+    if (!modal || !modalTitle || !modalDate || !modalTime || !modalDescription || !closeXButton) {
         console.error("Modal elements missing! Check index.html.");
         return;
     }
+
+    const closeModal = () => {
+        modal.style.display = 'none';
+        console.log("Modal closed.");
+    };
+
+    //closeModalButton.addEventListener('click', closeModal);
+    closeXButton.addEventListener('click', closeModal);
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal && !e.target.closest('modal-content')) {
+            closeModal();
+        }
+    });
 
     // ensure modal is HIDDEN when page loads
     modal.style.display = 'none';
@@ -63,37 +79,26 @@ document.addEventListener('DOMContentLoaded', () => {
     events.forEach(event => {
         const li = document.createElement('li');
         li.innerHTML = `<a href="#" class="event-link">${event.name}</a>`;
-        
+
         // only opens modal when an event is clicked
         li.addEventListener('click', (e) => {
             e.preventDefault();
             console.log(`Opening modal for: ${event.name}`);
 
             modalTitle.textContent = event.name;
-            modalDate.textContent = `Date: ${event.date} | Time: ${event.time}`;
+            modalDate.textContent = `Date: ${event.date}`;
+            modalTime.textContent = `Time: ${event.time}`;
             modalDescription.textContent = event.description;
 
-            modal.style.display = 'flex'; //opens modal properly
+            if (modal.style.display !== 'flex') {
+                modal.style.display = 'flex';
+            }
         });
 
         eventList.appendChild(li);
     });
 
-    //CLOSE MODAL FUNCTIONALITY
-    closeModalButton.addEventListener('click', () => {
-        modal.style.display = 'none';
-        console.log("Modal closed.");
-    });
 
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            console.log("Modal closed by clicking outside.");
-        }
-    });
-
-    // ensure modal is hidden on first page load
-    modal.style.display = 'none';
 });
 
 

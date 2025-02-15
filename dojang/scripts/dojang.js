@@ -28,19 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     console.log("🚀 DOM fully loaded. Running scripts...");
 
-    // Ensure footer date updates correctly
-    const dateModifiedElement = document.getElementById("date-modified");
-    if (dateModifiedElement) {
-        dateModifiedElement.textContent = document.lastModified;
-    }
-
-    // MODAL FIX: Ensure modal elements exist before trying to use them
+    // Select Modal Elements
     const modal = document.getElementById('event-modal');
+    const modalContent = document.querySelector('.modal-content');
     const modalTitle = document.getElementById('modal-title');
     const modalDate = document.getElementById('modal-date');
     const modalTime = document.getElementById('modal-time');
     const modalDescription = document.getElementById('modal-description');
-    //const closeModalButton = document.getElementById('close-modal');
     const closeXButton = document.getElementById('modal-close-x');
 
     if (!modal || !modalTitle || !modalDate || !modalTime || !modalDescription || !closeXButton) {
@@ -48,24 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const closeModal = () => {
-        modal.style.display = 'none';
-        console.log("Modal closed.");
-    };
-
-    //closeModalButton.addEventListener('click', closeModal);
-    closeXButton.addEventListener('click', closeModal);
-
-    window.addEventListener('click', (e) => {
-        if (e.target === modal && !e.target.closest('modal-content')) {
-            closeModal();
-        }
-    });
-
-    // ensure modal is HIDDEN when page loads
+    // Ensure modal is hidden when the page loads
     modal.style.display = 'none';
 
-    // EVENT LIST: Add event details dynamically
+    // Modal Events Data
     const events = [
         { name: "Regional Tournament", date: "March 10, 2025", time: "10:00 AM", description: "Compete with the best in the region!" },
         { name: "Kids Class", date: "March 15, 2025", time: "4:00 PM", description: "A fun introduction to Taekwondo for kids." },
@@ -76,31 +56,110 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const eventList = document.getElementById('event-list');
 
+    // Function to Open Modal & Update Content Without Closing
+    function openModal(event) {
+        modal.style.display = 'flex'; // Keep modal visible
+        modalTitle.textContent = event.name;
+        modalDate.textContent = `Date: ${event.date}`;
+        modalTime.textContent = `Time: ${event.time}`;
+        modalDescription.textContent = event.description;
+
+        // If the modal has not been moved, center it
+        if (!modalContent.dataset.moved) {
+            centerModal();
+        }
+    }
+
+    // Function to Close Modal
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    // Function to Center Modal When First Opened
+    function centerModal() {
+        modalContent.style.position = "absolute";
+        modalContent.style.left = `${(window.innerWidth - modalContent.offsetWidth) / 2}px`;
+        modalContent.style.top = `${(window.innerHeight - modalContent.offsetHeight) / 2}px`;
+        modalContent.dataset.moved = "false"; // track if modal was moved
+    }
+
+    // Populate Event List with Clickable Links
     events.forEach(event => {
         const li = document.createElement('li');
         li.innerHTML = `<a href="#" class="event-link">${event.name}</a>`;
 
-        // only opens modal when an event is clicked
         li.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log(`Opening modal for: ${event.name}`);
-
-            modalTitle.textContent = event.name;
-            modalDate.textContent = `Date: ${event.date}`;
-            modalTime.textContent = `Time: ${event.time}`;
-            modalDescription.textContent = event.description;
-
-            if (modal.style.display !== 'flex') {
-                modal.style.display = 'flex';
-            }
+            openModal(event); // updates  content instead of closing modal
         });
 
         eventList.appendChild(li);
     });
 
+    // Attach Event Listener for Closing Modal
+    if (closeXButton) {
+        closeXButton.addEventListener('click', closeModal);
+    }
 
+    // Prevent modal from closing when clicking inside it
+    modalContent.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    // Allow modal to close when clicking outside modal content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Ensure modal stays centered when window resizes
+    window.addEventListener("resize", () => {
+        if (modal.style.display === 'flex' && modalContent.dataset.moved !== "true") {
+            centerModal();
+        }
+    });
+
+    // DRAGGING FUNCTIONALITY
+    let isDragging = false;
+    let offsetX = 0, offsetY = 0;
+
+    // Start Dragging
+    modalContent.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - modalContent.getBoundingClientRect().left;
+        offsetY = e.clientY - modalContent.getBoundingClientRect().top;
+        modalContent.style.cursor = 'grabbing';
+    });
+
+    // Move Modal Without Resetting on Click
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+
+        let newX = e.clientX - offsetX;
+        let newY = e.clientY - offsetY;
+
+        // Ensure modal stays within viewport bounds
+        let maxX = window.innerWidth - modalContent.clientWidth;
+        let maxY = window.innerHeight - modalContent.clientHeight;
+
+        newX = Math.max(0, Math.min(newX, maxX));
+        newY = Math.max(0, Math.min(newY, maxY));
+
+        modalContent.style.left = `${newX}px`;
+        modalContent.style.top = `${newY}px`;
+
+        // Mark modal as moved to prevent re-centering on new clicks
+        modalContent.dataset.moved = "true";
+    });
+
+    // Stop Dragging
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        modalContent.style.cursor = 'grab';
+    });
 });
-
+//end the dragging process
 
 //***************************************************************************************** */
 //Random training photos on index.html page

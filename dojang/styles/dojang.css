@@ -346,6 +346,297 @@ main {
     background-color: var(--color-six);
 }
 
+/******************************************************************************/
+/**********CONTACT US PAGE**********/
+
+/**********MAP**********/
+.map-container {
+    text-align: center;
+    margin: 26px auto;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px var(--color-one);
+}
+
+/* Layout: Two-Column Structure */
+.contact-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Column: Contact US Form */
+.contact-us-form-container {
+    /*form container*/
+    flex: 1;
+    min-width: 300px;
+    /*background-color: var(--color-one);*/
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us-form-container h2 {
+    /*Contact Us*/
+    color: black;
+}
+
+/* Right Column: Class Levels */
+.class-levels-container {
+    /*container class lvls is */
+    /*flex: 1;*/
+    /*min-width: 200px;*/
+    background-color: var(--color-four);
+    padding: 20px;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
+    align-items: center;
+    color: var(--color-one);
+    width: 100%;
+}
+
+.class-levels-container h2 {
+    /*Class Levels*/
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    /* Adjust size */
+    margin-bottom: 10px;
+    /* Space between the title and cards */
+    color: var(--color-one);
+    background-color: var(--color-four);
+}
+
+h1 {
+    text-align: center;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/**********CONTACT US FORM**********/
+
+#contactUsForm {
+    background-color: var(--color-three);
+    /**/
+    padding: 20px;
+    text-align: left;
+    border: solid var(--color-two);
+    border-radius: 8px;
+    max-width: 100%;
+    width: 808px;
+    flex: 1;
+    position: sticky;
+    top: 10px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+#contactUsForm fieldset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+#contactUsForm label,
+#contactUsForm p {
+    display: block;
+    margin-top: 10px;
+}
+
+#contactUsForm label {
+    display: block;
+    font-weight: bold;
+    margin-top: 26px;
+}
+
+#contactUsForm #class-level {
+    margin-top: 0;
+}
+
+#contactUsForm .skill {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 40%;
+}
+
+#contactUsForm .skill label {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    white-space: nowrap;
+    font-weight: normal;
+    margin-top: 5px;
+    color: blue;
+    min-width: 20%;
+}
+
+#contactUsForm textarea {
+    height: 50px;
+    border: 1px thick var(--color-one);
+    background-color: var(--color-one);
+}
+
+#contactUsForm input[type="text"],
+#contactUsForm input[type="date"],
+#contactUsForm input[type="email"],
+#contactUsForm input[type="tel"],
+#contactUsForm textarea,
+#contactUsForm select,
+#contactUsForm p {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: var(--color-one);
+}
+
+#contactUsForm button {
+    width: auto;
+    padding: 10px 20px;
+    background-color: var(--color-five);
+    color: black;
+    border: thin black;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: large;
+}
+
+#contactUsForm button:hover {
+    background-color: var(--color-two);
+    color: var(--color-one);
+}
+
+/**********CLASS CARDS**********/
+.class-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    /*align-items: center;*/
+    gap: 8px;
+    width: 100%;
+    /*margin: 0 auto;*/
+}
+
+/* Individual Card Styling */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.class-card {
+    background-color: var(--color-one);
+    color: var(--color-four);
+    border: 4px solid var(--color-three);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    min-width: 180px;
+    max-width: 250px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.class-card h3 {
+    color: var(--color-two);
+    margin-bottom: 10px;
+}
+
+.class-card p {
+    color: var(--color-four);
+    margin-bottom: 15px;
+}
+
+.class-card button {
+    background-color: var(--color-five);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: var(--paragraph-font);
+    transition: background-color 0.3s ease;
+    font-size: large;
+}
+
+.class-card button:hover {
+    background-color: var(--color-two);
+    color: var(--color-one);
+}
+
+
+
+/**********************************************************************/
+/**********CONFIRMATION**********/
+
+.confirmationContainer {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--color-three);
+    border: 2px solid var(--color-two);
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+.confirmationContainer h2 {
+
+    font-size: 2rem;
+    color: var(--color-two);
+    margin-bottom: 20px;
+}
+
+.confirmationContainer p {
+
+    font-size: 1.2rem;
+
+    color: var(--color-two);
+    margin-bottom: 20px;
+}
+
+.confirmationMessage {
+    font-family: var(--paragraph-font);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-three);
+    background-color: var(--color-five);
+    padding: 15px;
+    border: 2px solid var(--color-two);
+    border-radius: 8px;
+    margin: 20px auto;
+    display: inline-block;
+}
+
 /************************************************************************************/
 /**********TABLET**********/
 

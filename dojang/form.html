@@ -15,7 +15,8 @@
     <meta property="og:description" content="Come learn Taekwondo.">
 
     <link rel="stylesheet" href="styles/dojang.css">
-    <script src="scripts/dojang.js" defer></script>
+
+    <script src="scripts/form.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
@@ -49,14 +50,115 @@
     </header>
 
     <main>
-        <p>Under contruction. Come back soon.</p>
+        <h1>We would love to have you join us.</h1>
+        <div class="contact-us-container">
+
+            <section class="class-levels-container">
+                <h2>Class Levels</h2>
+                <div class="class-cards">
+                    <div class="class-card" id="little">
+                        <h3>Little Ninjas</h3>
+                        <p>$50/year</p>
+                        <button class="form-modal-button" data-modal="modal-little">More Info</button>
+                    </div>
+
+                    <div class="class-card" id="lower">
+                        <h3>Lower Rank</h3>
+                        <p>$100/year</p>
+                        <button class="form-modal-button" data-modal="modal-lower">More Info</button>
+                    </div>
+
+                    <div class="class-card" id="upper">
+                        <h3>Upper Rank</h3>
+                        <p>$200/year</p>
+                        <button class="form-modal-button" data-modal="modal-upper">More Info</button>
+                    </div>
+
+                    <div class="class-card" id="grappling">
+                        <h3>Grappling</h3>
+                        <p>Free</p>
+                        <button class="form-modal-button" data-modal="modal-grappling">More Info</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="map-container">
+                <h2>Find Us Here</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1609.1645451507459!2d-108.36012956432295!3d36.734280800000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x873b97178418f705%3A0xf6c5828c43a1c5f2!2s480%20Co%20Rd%206100%2C%20Kirtland%2C%20NM%2087417!5e1!3m2!1sen!2sus!4v1739668332043!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="address">
+                    <p>480 Road 6100<br>
+                        Kirtland, NM 87417<br>
+                        505-598-1234<br>
+                        <a href="mailto:infor@dojang.com">info@dojang.com</a>
+                    </p>
+                </div>
+            </section>
+
+            <section class="contact-us-form-container">
+                <h2>Contact Us</h2>
+                <form method="get" action="confirmation.html" class="wf1" id="contactUsForm"
+                    onsubmit="setTimestampBeforeSubmission()">
+                    <fieldset>
+
+                        <label for="firstName">First Name<span class="firstName"></span></label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+
+                        <label for="lastName">Last Name<span class="lastName"></span></label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+                        <label for="organization-title">Organizational Title<span
+                                class="organization-title"></span></label>
+                        <input type="text" id="organization-title" name="organization-title"
+                            placeholder="Enter your title in your organization" pattern="[A-Za-z\s\-]+"
+                            title="Only letters, spaces, and hyphens are allowed.">
+
+                        <label for="email">Email<span class="email"></span></label>
+                        <input type="email" id="email" name="email" required placeholder="john79@gmail.com"
+                            title="Your Email" autocomplete="email">
+
+                        <label for="phoneNumber">Phone Number<span class="phoneNumber"></span></label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number"
+                            required>
+
+                        <label for="organization">Organization Name<span class="organization"></span></label>
+                        <input type="text" id="organization" name="organization"
+                            placeholder="Enter the name of your organization" required>
+
+                        <label for="organization-description">Organization Description<span
+                                class="organization-description"></span></label>
+                        <textarea id="organization-description" name="organization-description"
+                            placeholder="Enter in a description of your organization"></textarea>
+
+                        <label for="class-level">Membership Level<span class="class-level"></span></label>
+                        <select id="class-level" name="class-level" required>
+                            <option value="" disabled selected>Choose your membership level</option>
+                        </select>
+
+                        <input type="hidden" id="timestamp" name="timestamp">
+
+                        <button type="submit">Contact Kirtland Taekwondo Dojang</button>
+
+                        <!--<p>To reach a goal you have never attained, you must do things you have never done before. -
+                            Richard G Scott</p>-->
+
+                    </fieldset>
+                </form>
+            </section>
+
+
+        </div>
+    </main>
     </main>
 
 
     <footer>
         <div class="left-footer">
             <p>Dojang</p>
-            <p class="address1">8 Road 6500</p>
+            <p class="address1">480 Road 6100</p>
             <p class="address2">Kirland, NM 87417</p>
             <p class="addressEmail">info@dojang.org</p>
             <p>(505) 598-1234</p>

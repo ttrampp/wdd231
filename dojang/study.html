@@ -15,11 +15,11 @@
     <meta property="og:description" content="Come learn Taekwondo.">
 
     <link rel="stylesheet" href="styles/dojang.css">
-    <script src="scripts/dojang.js" defer></script>
+    <script src="scripts/study.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="icon" href="faviconKTOWN2.ico">
+    <link rel="icon" href="favicon_white.ico">
 </head>
 
 <body>
@@ -49,8 +49,58 @@
     </header>
 
     <main>
-        <div class="box"></div>
+        <h2 class="instructions">🔻 ----- Click on either a BELT COLOR or a FORM NUMBER ----- 🔻</h2>
+        <div class="study-boxes">
+            <section class="belt-boxes">
+                <img src="images/black.webp" alt="black-belt" class="black-belt" data-index="0" width="450" height="50">
+                <img src="images/brown-two-black-stripes.webp" alt="brown-two-black-belt" class="brown-two-black-belt"
+                    data-index="1" width="450" height="50">
+                <img src="images/brown-black-stripe.webp" alt="brown-one-black-belt" class="brown-one-black-belt"
+                    data-index="2" width="450" height="50">
+                <img src="images/brown.webp" alt="brown-belt" class="brown-belt" data-index="3" width="450" height="50">
+                <img src="images/blue-two-brown-stripes.webp" alt="blue-two-brown-belt" class="blue-two-brown-belt"
+                    data-index="4" width="450" height="50">
+                <img src="images/blue-brown-stripes.webp" alt="blue-one-brown-belt" class="blue-one-brown-belt"
+                    data-index="5" width="450" height="50">
+                <img src="images/blue.webp" alt="blue-belt" class="blue-belt" data-index="6" width="450" height="50">
+                <img src="images/green.webp" alt="green-belt" class="green-belt" data-index="7" width="450" height="50">
+                <img src="images/yellow-green-stripe.webp" alt="yellow-one-green-belt" class="yellow-one-green-belt"
+                    data-index="8" width="450" height="50">
+                <img src="images/yellow.webp" alt="yellow-belt" class="yellow-belt" data-index="9" width="450"
+                    height="50">
+                <img src="images/white.webp" alt="white-belt" class="white-belt" data-index="10" width="450"
+                    height="50">
+            </section>
+
+            <section class="form-number-boxes">
+                <p class="ten" data-index="0">Form 10 : KWANG-GAE</p>
+                <p class="nine" data-index="1">Form 9 : CHOONG-MOO</p>
+                <p class="eight" data-index="2">Form 8 : HWA-RANG</p>
+                <p class="seven" data-index="3">Form 7 : TOI-GYE</p>
+                <p class="six" data-index="4">Form 6 : CHOONG-GUN</p>
+                <p class="five" data-index="5">Form 5 : YUL-KOK</p>
+                <p class="four" data-index="6">Form 4 : WON-HYO</p>
+                <p class="three" data-index="7">Form 3 : TO-SAN</p>
+                <p class="two" data-index="8">Form 2 : TAN-GUN</p>
+                <p class="one" data-index="9">Form 1 : CHON-JI</p>
+                <p class="na" data-index="10">Beginner</p>
+            </section>
+        </div>
     </main>
+
+    <div id="study-modal" class="study-modal">
+        <div class="study-modal-content">
+            <span id="study-modal-close" class="study-modal-close">❌</span>
+            <p class="study-modal-intro"> <strong>In order to obtain this belt: </strong></p>
+            <h2 id="study-modal-title"></h2>
+            <p><strong>Belt Rank: </strong><span id="study-modal-belt"></span></p>
+            <p class="study-modal-intro"><strong> You must learn these things: </strong></p>
+            <p><strong>Form: </strong><span id="study-modal-form"></span></p>
+            <p><strong>Name: </strong><span id="study-modal-name"></span></p>
+            <p><strong>Meaning: </strong><span id="study-modal-meaning"></span></p>
+            <p><strong>Steps: </strong><span id="study-modal-steps"></span></p>
+        </div>
+    </div>
 
 
     <footer>

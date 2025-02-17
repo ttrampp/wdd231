@@ -914,7 +914,7 @@ h1 {
 /************************************************************************************/
 /**********MOBILE**********/
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 480px), (max-width: 320px) {
 
     .header-text {
         order: -1;
@@ -1057,6 +1057,16 @@ h1 {
         align-items: center;
         gap: 10px;
         width: 100%;
+    }
+
+    .study-modal-content {
+        width: 95%;
+        max-width: 320px;
+        padding: 10px;
+    }
+
+    .study-modal-content p {
+        font-size: 1rem;
     }
 }
 

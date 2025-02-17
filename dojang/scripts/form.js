@@ -91,7 +91,7 @@ function setTimestampBeforeSubmission() {
 
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
+    return urlParams.get(param) ? decodeURIComponent(urlParams.get(param)) : "";    //makes sure to retrieve user input
 }
 
 
@@ -107,10 +107,12 @@ function displayConfirmation() {
     // Retrieve all form fields from the URL
     const firstName = getQueryParam("firstName");
     const lastName = getQueryParam("lastName");
-    const title = getQueryParam("organization-title");
+
     const email = getQueryParam("email");
     const phone = getQueryParam("phoneNumber");
-    const organization = getQueryParam("organization");
+
+    const userMessage = getQueryParam("what-to-discuss");
+
     const classID = getQueryParam("class-level");
     const timestamp = getQueryParam("timestamp");
 
@@ -119,12 +121,14 @@ function displayConfirmation() {
 
     // Build the confirmation message
     let confirmationHTML = `
-        <h2>Thank you for signing up!</h2>
+        <h2>Thank you for reaching out to us!<br> 📞 We will get back to you soon. 📧<br><br>This is the info you gave us:</h2>
         <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Title:</strong> ${title}</p>
+
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Organization:</strong> ${organization}</p>
+
+        <p><strong>Your message:</strong> ${userMessage ? userMessage : "No additional comments provided."}</p>
+ 
         <p><strong>Class Level:</strong> ${levelDetails ? levelDetails.name : "Unknown"}</p>
         <p><strong>Cost:</strong> ${levelDetails ? levelDetails.cost : "N/A"}</p>
         <p><strong>Signup Date:</strong> ${timestamp}</p>
@@ -142,6 +146,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    if (!window.location.pathname.includes("form.html")) return;                //exit early if not on form
+
     const formModalButtons = document.querySelectorAll(".form-modal-button");
 
 

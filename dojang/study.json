@@ -1,0 +1,81 @@
+{
+    "belts": [
+        {
+            "color": "1st Degree Black Belt",
+            "name": "KWANG-GAE",
+            "meaning": "19th King of the Koguryo Dynasty. he regained all the lost territories. The diagram --Scholar-- represents the expansion and recovery of the territory lost. the 39 movements refer to his reign for 39 years.",
+            "form": "10 AND a form of your own making",
+            "Steps": "All 6-three steps AND 6-one steps of your own making."
+        },
+        {
+            "color": "Brown Belt with two black stripes",
+            "name": "CHOONG-MOO",
+            "meaning": "The name fiven to the great admiral Yi Sun-Sin of the Yi Dynasty. He was reported to have invented the precursor of the precursor of the presesnt day submarine. The reason why this pattern ends up with a left hand attack is to symbolize his regrettable death, in battle, before he could show his full potential and loyalty to the king. 30 moves. --I-- pattern.",
+            "form": "9",
+            "Steps": "All 6-three steps AND 6-one steps of your own making."
+        },
+        {
+            "color": "Brown Belt with one black stripe",
+            "name": "HWA-RANG",
+            "meaning": "The youth group which originated in the Silla Dynasty about 1350 years ago, became the actual driving force for the unification of the Kingdom of Korea. 29 moves. --I-- pattern.",
+            "form": "8",
+            "Steps": "All 6-three steps AND 6-one steps of your own making."
+        },
+        {
+            "color": "Brown Belt",
+            "name": "TOI-GYE",
+            "meaning": "Pen-name of the noted scholar Yi-Hwang, 37 movements refer to his birthplace on 37th latitude. --Scholar-- pattern.",
+            "form": "7",
+            "Steps": "All 6-three steps AND 6-one steps of your own making."
+        },
+        {
+            "color": "Blue Belt with two brown stripes",
+            "name": "CHOONG-GUN",
+            "meaning": "The patriot An Chung-Gun who assassinated teh first Japanese Governor- General of Korea (known as the man who played the leading part of the Korea-Japan merger). 32 movements represent his age when he was executed. --I-- pattern.",
+            "form": "6",
+            "Steps": "All 6-three steps AND 6-one steps of your own making."
+        },
+        {
+            "color": "Blue Belt with one brown stripe",
+            "name": "YUL-KOK",
+            "meaning": "A great philosopher and scholar Yi-I, 'Confucius of Korea', 38 movements of this pattern refer to his birthplace on 38th latitude and the diagram represents 'scholar', full pattern.",
+            "form": "5",
+            "Steps": "All 6-three steps AND 6-one steps of your own making."
+        },
+        {
+            "color": "Blue Belt",
+            "name": "WON-HYO",
+            "meaning": "Monk who introduced Buddism to the Silla Dynasty, 28 moves, --I-- pattern.",
+            "form": "4",
+            "Steps": "All 6-one steps AND 6-one steps of your own making."
+        },
+        {
+            "color": "Green Belt",
+            "name": "TO-SAN",
+            "meaning": "The patriot Ahn Chang-Ho who devoted his entire life to furthering the education of Korea, 24 moves, --ZigZag-- pattern.",
+            "form": "3",
+            "Steps": "All 6-one steps AND 6-one steps of your own making."
+        },
+        {
+            "color": "Yellow Belt with one green stripe",
+            "name": "TAN-GUN",
+            "meaning": "the legendary founder of Korea, 21 moves, --I-- pattern.",
+            "form": "2",
+            "Steps": "All 6-one steps."
+        },
+        {
+            "color": "Yellow Belt",
+            "name": "CHON-JI",
+            "meaning": "Heaven and Earth, 19 moves --Cross-- pattern.",
+            "form": "1",
+            "Steps": "The first 5-one steps."
+        },
+        {
+            "color": "White Belt",
+            "name": "none - Beginner",
+            "meaning": "none - Beginner",
+            "form": "none - Beginner",
+            "Steps": "none - Beginner"
+        }
+    ]
+}

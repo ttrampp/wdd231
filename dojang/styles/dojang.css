@@ -11,11 +11,11 @@
 :root {
     --color-one: #010001;
     --color-two: #f22b29;
-    --color-three: #004494;
+    --color-three: #3c00e0;
     --color-four: #e5f9e0;
     --color-five: #c09891;
     --color-six: #f7f7f7;
-    --color-seven: #C0C0C0;
+    --color-seven: #aeb3c2;
 
 }
 
@@ -289,7 +289,7 @@ main {
 }
 
 .modal-content {
-    background-color: var(--color-seven);
+    background-color: var(--color-four);
     padding: 8%;
     border-radius: 8px;
     width: 450px;
@@ -363,6 +363,8 @@ main {
     box-shadow: 0px 4px 10px var(--color-one);
 }
 
+
+/**********CONTACT US FORM**********/
 /* Layout: Two-Column Structure */
 .contact-us-container {
     display: flex;
@@ -387,6 +389,28 @@ main {
     /*Contact Us*/
     color: black;
 }
+
+#what-to-discuss {
+    width: 100%;
+    min-height: 50px;
+    padding: 10px;
+    /*background-color: var(--color-seven);*/
+    color: var(--color-one);
+    font-size: 1rem;
+    resize: vertical;
+}
+
+/*#what-to-discuss:focus {
+    border-color: var(--color-two);
+    box-shadow: 0 0 5px var(--color-two);
+    background-color: orange;
+}*/
+
+#what-to-discuss::placeholder {
+    color: var(--color-one);
+    font-style: italic;
+}
+
 
 /* Right Column: Class Levels */
 .class-levels-container {
@@ -425,7 +449,7 @@ h1 {
     opacity: 1 !important;
 }
 
-/**********CONTACT US FORM**********/
+
 
 #contactUsForm {
     background-color: var(--color-three);
@@ -441,6 +465,7 @@ h1 {
     top: 10px;
     height: fit-content;
     box-sizing: border-box;
+
 }
 
 #contactUsForm fieldset {
@@ -454,12 +479,16 @@ h1 {
     display: flex;
     flex-direction: column;
     min-width: 50%;
+
 }
 
 #contactUsForm label,
 #contactUsForm p {
     display: block;
     margin-top: 10px;
+    color: var(--color-four);
+    font-size: 1.3rem;
+    font-style: oblique;
 }
 
 #contactUsForm label {
@@ -491,24 +520,31 @@ h1 {
 }
 
 #contactUsForm textarea {
-    height: 50px;
-    border: 1px thick var(--color-one);
-    background-color: var(--color-one);
+    height: 20px;
+
 }
 
 #contactUsForm input[type="text"],
-#contactUsForm input[type="date"],
 #contactUsForm input[type="email"],
 #contactUsForm input[type="tel"],
-#contactUsForm textarea,
-#contactUsForm select,
-#contactUsForm p {
+#what-to-discuss,
+#class-level {
     display: block;
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
-    border: var(--color-one);
+    border: var(--color-four);
+    transition: background-color 0.3s ease-in-out;
 }
+
+#contactUsForm input:focus,
+#contactUsForm select:focus,
+#contactUsForm textarea:focus,
+#what-to-discuss:focus,
+#class-level:focus {
+    background-color: orange !important;
+}
+
 
 #contactUsForm button {
     width: auto;
@@ -520,7 +556,8 @@ h1 {
     cursor: pointer;
     margin-top: 25px;
     font-weight: bold;
-    font-size: large;
+    font-size: 1.4rem;
+    border: 2px solid var(--color-two);
 }
 
 #contactUsForm button:hover {
@@ -611,21 +648,20 @@ h1 {
 
 .confirmationContainer h2 {
 
-    font-size: 2rem;
-    color: var(--color-two);
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: var(--color-one);
+    background-color: var(--color-four);
+    margin-bottom: 26px;
 }
 
 .confirmationContainer p {
 
-    font-size: 1.2rem;
-
-    color: var(--color-two);
+    font-size: 1.3rem;
+    color: var(--color-six);
     margin-bottom: 20px;
 }
 
 .confirmationMessage {
-    font-family: var(--paragraph-font);
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--color-three);
@@ -636,6 +672,12 @@ h1 {
     margin: 20px auto;
     display: inline-block;
 }
+
+/************************************************************************************/
+/**********STUDY PAGE**********/
+
+
+
 
 /************************************************************************************/
 /**********TABLET**********/

@@ -912,11 +912,12 @@ h1 {
 
 }
 
-@media (max-width: 768) {
+@media (max-width: 768px) {
     .class-cards {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 /************************************************************************************/
 /**********MOBILE**********/
 

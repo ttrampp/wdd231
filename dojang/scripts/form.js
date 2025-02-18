@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const classLevels = [
     {
-       
+        id: "NPM",
         name: "Questions about: Little Ninjas Class",
         cost: "Free"
     },

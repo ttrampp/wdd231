@@ -155,7 +155,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
     max-width: 100%;
 
     box-sizing: border-box;
@@ -769,7 +769,7 @@ h1 {
 /************************************************************************************/
 /**********TABLET**********/
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
 
     .header-text {
         order: -1;
@@ -910,13 +910,13 @@ h1 {
         padding: 15px;
     }
 
-}
-
-@media (max-width: 768px) {
     .class-cards {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
+
+
 
 /************************************************************************************/
 /**********MOBILE**********/
@@ -927,7 +927,7 @@ h1 {
     }
 }
 
-@media (max-width: 768px),
+@media 
 (max-width: 480px),
 (max-width: 320px) {
 
@@ -1072,6 +1072,7 @@ h1 {
         align-items: center;
         gap: 10px;
         width: 100%;
+        overflow-x: hidden;
     }
 
     .study-modal-content {

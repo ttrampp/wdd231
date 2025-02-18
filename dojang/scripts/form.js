@@ -33,24 +33,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const classLevels = [
     {
-        id: "NPM",
-        name: "NP Membership is for non profit organizations and there is no fee",
+       
+        name: "Questions about: Little Ninjas Class",
         cost: "Free"
     },
     {
         id: "BM",
-        name: "Bronze Membership",
+        name: "Questions about: Low Ranking Class",
         cost: "$50"
     },
     {
         id: "SM",
-        name: "Silver Membership",
+        name: "Questions about: High Ranking Class",
         cost: "$100"
     },
     {
         id: "GM",
-        name: "Gold Membership",
+        name: "Questions about: Grappling",
         cost: "$200"
+    },
+    {
+        id: "Other",
+        name: "Other",
+        cost: "free"
     }
 ];
 

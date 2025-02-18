@@ -927,8 +927,7 @@ h1 {
     }
 }
 
-@media 
-(max-width: 480px),
+@media (max-width: 480px),
 (max-width: 320px) {
 
     .header-text {
@@ -1079,6 +1078,9 @@ h1 {
         width: 95%;
         max-width: 320px;
         padding: 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: center;
     }
 
     .study-modal-content p {

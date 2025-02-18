@@ -47,11 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Modal Events Data
     const events = [
-        { name: "Regional Tournament", date: "March 10, 2025", time: "10:00 AM", description: "Compete with the best in the region!" },
-        { name: "Kids Class", date: "March 15, 2025", time: "4:00 PM", description: "A fun introduction to Taekwondo for kids." },
-        { name: "Low Ranking Class", date: "March 20, 2025", time: "6:00 PM", description: "A class tailored for white to green belts." },
-        { name: "High Ranking Class", date: "March 25, 2025", time: "7:30 PM", description: "Training for advanced students." },
-        { name: "Combined Class", date: "March 30, 2025", time: "5:00 PM", description: "All students train together for unity and growth." }
+        { name: "Kim's Tournament Prep", date: "March 11, 2025", time: "4:00 PM", description: "Tournament preperation kick-off meeting. All Black Belts & Helpers should attend." },
+        { name: "Regional Tournament", date: "March 15, 2025", time: "10:00 AM", description: "Compete with the best in the region! Volunteer sign up sheets are up on the bulletin board. Please consider competing and helping with the tournament." },
+        { name: "Testing", date: "March 22, 2025", time: "10:00 AM", description: "Full uniform required. We will start with lower ranks and move up. Bring a folding chair as there isn't much seating. Practice hard beforehand. You've got this! Master Kim will be attending." },
+        { name: "Weapons Class", date: "March 28, 2025", time: "7:00 PM", description: "Training for advanced students." }
     ];
 
     const eventList = document.getElementById('event-list');

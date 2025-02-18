@@ -166,34 +166,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const ClassInfo = {
         "modal-little": {
-            title: "Bronze Membership Benefits",
+            title: "Little Ninja Class",
             benefits: [
-                "Access to networking events",
-                "Discounts on select services",
-                "Basic directory listing"
+                "3 - 5 year olds",
+                "Learn basic stances and first form.",
+                "Focus on disipline and control",
+                "Mon & Wed: 4pm - 4:45pm"
             ]
         },
         "modal-lower": {
-            title: "Silver Membership Benefits",
+            title: "Lower Ranking Belts",
             benefits: [
-                "Everything in Bronze Membership",
-                "Spotlight position on homepage",
-                "Priority event seating"
+                "White, Yellow, and Green Belts",
+                "Focus on forms 1-4, stances, steps, and some sparring",
+                "Combined Rank Class: ",
+                "Mon-Thur: 5pm - 5:50pm & 6pm - 8:30pm"
             ]
         },
         "modal-upper": {
-            title: "Gold Membership Benefits",
+            title: "Upper Ranking Belts",
             benefits: [
-                "Everything in Silver Membership",
-                "Featured advertisements",
-                "VIP access to events"
+                "Blue, Brown, and Black Belts",
+                "Focus on forms 5-10",
+                "Sparring, endurance, accuracy",
+                "Combined Rank Class: ",
+                "Mon-Thur: 5pm - 5:50pm & 6pm - 8:30pm",
+                "Upper Rank ONLY:",
+                "Fridays 6pm - 8:30pm"
             ]
         },
         "modal-grappling": {
-            title: "Non-Profit Membership Benefits",
+            title: "MMA/Grappling",
             benefits: [
-                "Free directory listing",
-                "Access to educational workshops"
+                "Mixed Martial Arts competition training",
+                "Boxing, grappling, kicking, and physical conditioning"
             ]
         }
     };
@@ -226,7 +232,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="modal-content">
                     <span class="close">❌</span>
                     <h3>${ClassInfo[classType].title}</h3>
-                    <ul>${ClassInfo[classType].benefits.map(benefit => `<li>${benefit}</li>`).join('')}</ul>
+                    <div class="class-details">
+                        ${ClassInfo[classType].benefits.map(benefit => `<p>${benefit}</p>`).join('')}
+                    </div>
                 </div>
             `;
 

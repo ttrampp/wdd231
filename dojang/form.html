@@ -11,12 +11,13 @@
     <meta property="og:title" content="WDD 231 Project Dojang Contact Us Page">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://ttrampp.github.io/wdd231/dojang/images/kims_patch.webp">
-    <meta property="og:url" content="https://ttrampp.github.io/wdd231/dojang/images/kims_patch.webp">
+    <meta property="og:url" content="https://ttrampp.github.io/wdd231/dojang">
     <meta property="og:description" content="Come learn Taekwondo.">
 
     <link rel="stylesheet" href="styles/dojang.css">
 
     <script src="scripts/form.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
@@ -28,7 +29,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="images/kims_patch.webp" alt="logo" class="header-logo" width="34" height="48">
+                <img src="images/kims_patch.webp" alt="logo" class="header-logo" width="34" height="48" loading="lazy">
             </div>
 
             <div class="header-text">
@@ -86,7 +87,7 @@
                 <h2>Find Us Here</h2>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1609.1645451507459!2d-108.36012956432295!3d36.734280800000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x873b97178418f705%3A0xf6c5828c43a1c5f2!2s480%20Co%20Rd%206100%2C%20Kirtland%2C%20NM%2087417!5e1!3m2!1sen!2sus!4v1739668332043!5m2!1sen!2sus"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 <div class="address">
@@ -96,14 +97,26 @@
                         <a href="mailto:infor@dojang.com">info@dojang.com</a>
                         <br><br>Open Monday-Friday 4:30pm - 8:30pm
                         <br>Saturdays 10 am - Noon
+                        <br>
+                        <br>Closed if weather is below freezing
                     </p>
+                </div>
+
+                <div class="weather-container">
+                    <h2>Weather</h2>
+                    <p>The current temperature in<br> Kirtland, NM, USA<br> is <span id="current-temp"></span></p>
+                    <figure>
+                        <img id="weather-icon" src="images/weatherIcon.webp" alt="Weather Icon" loading="lazy"
+                            width="120" height="120">
+                        <figcaption>weather icon</figcaption>
+                    </figure>
                 </div>
             </section>
 
             <section class="contact-us-form-container">
                 <h2>Contact Us</h2>
                 <form method="get" action="confirmation.html" class="wf1" id="contactUsForm"
-                    onsubmit="setTimestampBeforeSubmission()">
+                    onsubmit="setTimestampBeforeSubmission()" autocomplete="on">
                     <fieldset>
 
                         <label for="firstName">First Name<span class="firstName"></span></label>
@@ -113,8 +126,8 @@
                         <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
 
                         <label for="email">Email<span class="email"></span></label>
-                        <input type="email" id="email" name="email" required placeholder="john79@gmail.com"
-                            title="Your Email" autocomplete="email">
+                        <input type="email" id="email" name="email" required placeholder="Enter your email"
+                            title="Your Email" autocomplete="email" inputmode="email">
 
                         <label for="phoneNumber">Phone Number<span class="phoneNumber"></span></label>
                         <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number"
@@ -149,10 +162,11 @@
 
     <footer>
         <div class="left-footer">
-            <p>Dojang</p>
+            <p>Kirtland Taekwondo Dojang</p>
             <p class="address1">480 Road 6100</p>
             <p class="address2">Kirland, NM 87417</p>
-            <p class="addressEmail">info@dojang.org</p>
+            <p><span class="footer-email"><a href="mailto:your@email.com"
+                        class="footer-email-link">info@dojang.org</a></span></p>
             <p>(505) 598-1234</p>
         </div>
         <div class="social-icons">
@@ -168,7 +182,7 @@
         <div class="right-footer">
             <p>WDD231 Class Project</p>
             <p>Tanya Trampp</p>
-            <p>&copy;<span id="currentyear"></span> Dojang</p>
+            <p>&copy;<span id="currentyear"></span> Kirtland Taekwondo Dojang</p>
             <p>Last Modified: <span id="date-modified">Loading...</span></p>
         </div>
         <script>

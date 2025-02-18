@@ -33,29 +33,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const classLevels = [
     {
-        id: "NPM",
-        name: "Questions about: Little Ninjas Class",
-        cost: "Free"
+        id: "N",
+        name: "Questions about: Little Ninjas Class"
+
     },
     {
-        id: "BM",
-        name: "Questions about: Low Ranking Class",
-        cost: "$50"
+        id: "L",
+        name: "Questions about: Low Ranking Class"
+
     },
     {
-        id: "SM",
-        name: "Questions about: High Ranking Class",
-        cost: "$100"
+        id: "U",
+        name: "Questions about: Upper Ranking Class"
+
     },
     {
-        id: "GM",
-        name: "Questions about: Grappling",
-        cost: "$200"
+        id: "G",
+        name: "Questions about: Grappling"
+
     },
     {
-        id: "Other",
-        name: "Other",
-        cost: "free"
+        id: "O",
+        name: "Other"
+
     }
 ];
 
@@ -75,7 +75,7 @@ function populateClassDropdown() {
     classLevels.forEach(level => {
         const option = document.createElement("option");
         option.value = level.id;
-        option.textContent = `${level.name} - ${level.cost}`;
+        option.textContent = `${level.name}`;
         selectElement.appendChild(option);
     });
 
@@ -156,13 +156,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const formModalButtons = document.querySelectorAll(".form-modal-button");
 
 
-    /*test*/
+
     if (formModalButtons.length === 0) {
         console.error("No modal buttons found");
         return;
     }
     console.log(`Found ${formModalButtons.length} modal buttons`);
-    /*end test*/
+
 
     const ClassInfo = {
         "modal-little": {
@@ -207,17 +207,17 @@ document.addEventListener("DOMContentLoaded", function () {
     formModalButtons.forEach(button => {
         button.addEventListener("click", function () {
             const classType = this.getAttribute("data-modal");
-            /*test*/
+
             console.log(`Button clicked: ${classType}`);
 
             if (!ClassInfo[classType]) {
 
-                /*test */
+
                 console.error(`No class data found for ${classType}`);
                 return;
             }
             console.log(`Opening modal for: ${classType}`);
-            /*end test*/
+
 
             let existingModal = document.getElementById("dynamic-modal");
             if (existingModal) {
@@ -259,7 +259,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 10);
 
 
-            /*test*/
             const closeButton = modal.querySelector(".close");
             if (closeButton) {
                 closeButton.addEventListener("click", function () {
@@ -270,14 +269,57 @@ document.addEventListener("DOMContentLoaded", function () {
             else {
                 console.error("Close button not found");
             }
-            /*end test*/
+
 
             modal.addEventListener("click", function (event) {
                 if (event.target === modal) {
                     modal.style.display = "none";
-                    console.log("Modal closed by clicking outside"); /*test*/
+                    console.log("Modal closed by clicking outside");
                 }
             });
+
+            // makes email in footer to be a clickable link
+            const emailElement = document.querySelector(".footer-email");
+            if (emailElement) {
+                const email = emailElement.textContent.trim();
+                emailElement.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+            }
         })
     });
+
+    //Weather API Intergration
+    const currentTemp = document.querySelector('#current-temp');
+    const weatherIcon = document.querySelector('#weather-icon');
+    const captionDesc = document.querySelector('figcaption');
+
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=36.75082&lon=-108.36565&units=imperial&appid=f63f3c9b0e500e13346f9e9a881a061a';
+
+    async function apiFetch() {
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data);
+                displayResults(data);
+            }
+            else {
+                throw Error(await response.text());
+            }
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+
+    function displayResults(data) {
+        currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+        const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+        let desc = data.weather[0].description;
+        weatherIcon.setAttribute('src', iconsrc);
+        weatherIcon.setAttribute('alt', desc);
+        weatherIcon.setAttribute('loading', 'lazy');
+        captionDesc.textContent = `${desc}`;
+    }
+
+    apiFetch();
 });

@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     studyModal.style.display = "none";
 
-    /*const studyModalTitle = document.getElementById("study-modal-title");*/
     const studyModalBelt = document.getElementById("study-modal-belt");
     const studyModalForm = document.getElementById("study-modal-form");
     const studyModalName = document.getElementById("study-modal-name");
@@ -109,4 +108,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     });
 
+
+    //makes email in footer to be a clickable link
+    const emailElement = document.querySelector(".footer-email");
+    if (emailElement) {
+        const email = emailElement.textContent.trim();
+        emailElement.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+    }
 });

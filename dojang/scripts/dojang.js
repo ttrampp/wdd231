@@ -1,252 +1,193 @@
-//header nav links and footer date modified for all html pages
+// Set the current year in the footer
+export function setupFooterAndNavbar() {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('currentyear').textContent = currentYear;
 
-const currentYear = new Date().getFullYear();
-document.getElementById('currentyear').textContent = currentYear;
+    document.addEventListener('DOMContentLoaded', () => {
+        const lastModifiedElement = document.getElementById("date-modified");
+        if (lastModifiedElement) {
+            lastModifiedElement.textContent = document.lastModified;
+        }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const lastModifiedText = document.lastModified;
-    const lastModifiedElement = document.getElementById("date-modified");
-    lastModifiedElement.textContent = lastModifiedText;
-});
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('open');
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+            });
+        }
     });
-});
-
-//upcoming events on index.hmtl page
-//why cant i get this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
 
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Modals -- ES Modules
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("🚀 DOM fully loaded. Running scripts...");
 
-    // Select Modal Elements
+// Open modal and insert event details
+export function openModal(event) {
     const modal = document.getElementById('event-modal');
-    const modalContent = document.querySelector('.modal-content');
-    const modalTitle = document.getElementById('modal-title');
-    const modalDate = document.getElementById('modal-date');
-    const modalTime = document.getElementById('modal-time');
-    const modalDescription = document.getElementById('modal-description');
-    const closeXButton = document.getElementById('modal-close-x');
 
-    if (!modal || !modalTitle || !modalDate || !modalTime || !modalDescription || !closeXButton) {
-        console.error("Modal elements missing! Check index.html.");
+    if (!modal) {
+        console.error("Modal not found!");
         return;
     }
 
-    // Ensure modal is hidden when the page loads
-    modal.style.display = 'none';
+    if (!event) {
+        console.warn("No event provided to openModal. Ignoring...");
+        return;
+    }
 
-    // Modal Events Data
+    modal.style.display = 'flex';
+    document.getElementById('modal-title').textContent = event.name || "Event Details";
+    document.getElementById('modal-date').textContent = event.date ? `Date: ${event.date}` : "";
+    document.getElementById('modal-time').textContent = event.time ? `Time: ${event.time}` : "";
+    document.getElementById('modal-description').textContent = event.description || "";
+
+    console.log("Modal opened with event:", event);
+
+}
+
+
+//Close modal function
+export function closeModal() {
+    const modal = document.getElementById('event-modal');
+
+    if (modal) {
+        modal.style.display = 'none';
+        console.log("Modal close.");
+    }
+}
+
+//Event listeners for modals
+export function setupEventListeners() {
+
+
+    console.log("setupEventListeners() is running... (confirmed call from index.js)");
+
+    const eventList = document.getElementById('event-list');
+
+    if (!eventList) {
+        console.error("Event list container not found.");
+        return;
+    }
+
+    eventList.style.opacity = "0"; //hide events initially
+
+    console.log("Found event list container. Adding events...");
+
+    //clear existing events
+    eventList.innerHTML = "";
+
+    // event data
     const events = [
-        { name: "Kim's Tournament Prep", date: "March 11, 2025", time: "4:00 PM", description: "Tournament preperation kick-off meeting. All Black Belts & Helpers should attend." },
-        { name: "Regional Tournament", date: "March 15, 2025", time: "10:00 AM", description: "Compete with the best in the region! Volunteer sign up sheets are up on the bulletin board. Please consider competing and helping with the tournament." },
+        { name: "Kim's Tournament Prep", date: "March 11, 2025", time: "4:00 PM", description: "Tournament preparation kick-off meeting. All Black Belts & Helpers should attend." },
+        { name: "Regional Tournament", date: "March 15, 2025", time: "10:00 AM", description: "Compete with the best in the region! Volunteer sign-up sheets are up on the bulletin board. Please consider competing and helping with the tournament." },
         { name: "Testing", date: "March 22, 2025", time: "10:00 AM", description: "Full uniform required. We will start with lower ranks and move up. Bring a folding chair as there isn't much seating. Practice hard beforehand. You've got this! Master Kim will be attending." },
         { name: "Weapons Class", date: "March 28, 2025", time: "7:00 PM", description: "Training for advanced students." }
     ];
 
-    const eventList = document.getElementById('event-list');
+    console.log("Upcoming Events:", events);
 
-    // Function to Open Modal & Update Content Without Closing
-    function openModal(event) {
-        modal.style.display = 'flex'; // Keep modal visible
-        modalTitle.textContent = event.name;
-        modalDate.textContent = `Date: ${event.date}`;
-        modalTime.textContent = `Time: ${event.time}`;
-        modalDescription.textContent = event.description;
-
-        // If the modal has not been moved, center it
-        if (!modalContent.dataset.moved) {
-            centerModal();
-        }
-    }
-
-    // Function to Close Modal
-    function closeModal() {
-        modal.style.display = 'none';
-    }
-
-    // Function to Center Modal When First Opened
-    function centerModal() {
-        modalContent.style.position = "absolute";
-        modalContent.style.left = `${(window.innerWidth - modalContent.offsetWidth) / 2}px`;
-        modalContent.style.top = `${(window.innerHeight - modalContent.offsetHeight) / 2}px`;
-        modalContent.dataset.moved = "false"; // track if modal was moved
-    }
-
-    // Populate Event List with Clickable Links
     events.forEach(event => {
-        const li = document.createElement('li');
-        li.innerHTML = `<a href="#" class="event-link">${event.name}</a>`;
-
-        li.addEventListener('click', (e) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td><a href="#" class="event-link">${event.name}</a></td>`;
+        tr.addEventListener('click', (e) => {
             e.preventDefault();
-            openModal(event); // updates  content instead of closing modal
+            openModal(event);
         });
-
-        eventList.appendChild(li);
+        eventList.appendChild(tr);
     });
 
-    // Attach Event Listener for Closing Modal
+    console.log("Events added successfully!");
+
+    //Fade-in effect after content loads
+    setTimeout(() => {
+        eventList.style.opacity = "1";
+        eventList.style.transition = "opacity 0.5s ease-in-out";
+    }, 100);
+
+    const closeXButton = document.getElementById('modal-close-x');
     if (closeXButton) {
         closeXButton.addEventListener('click', closeModal);
     }
+};
 
-    // Prevent modal from closing when clicking inside it
-    modalContent.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
 
-    // Allow modal to close when clicking outside modal content
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-
-    // Ensure modal stays centered when window resizes
-    window.addEventListener("resize", () => {
-        if (modal.style.display === 'flex' && modalContent.dataset.moved !== "true") {
-            centerModal();
-        }
-    });
-
-    // DRAGGING FUNCTIONALITY
+//Dragging functionality
+export function setupModalDragging() {
     let isDragging = false;
-    let offsetX = 0;
-    let offsetY = 0;
+    let startX, startY;
+    const modal = document.getElementById('event-modal');
 
     if (!modal) {
         console.error("Modal not found.");
         return;
     }
 
-    // Start dragging
     modal.addEventListener("mousedown", function (e) {
         isDragging = true;
-
         startX = e.clientX - modal.getBoundingClientRect().left;
         startY = e.clientY - modal.getBoundingClientRect().top;
         modal.style.position = "absolute";
         modal.style.zIndex = "1000";
         modal.style.cursor = "grabbing";
-
-        e.preventDefault(); // Prevents unwanted selection
+        e.preventDefault();
     });
 
-    // Dragging movement
     document.addEventListener("mousemove", function (e) {
         if (!isDragging) return;
-
-        const newX = e.clientX - startX;
-        const newY = e.clientY - startY;
-
-        modal.style.left = `${newX}px`;
-        modal.style.top = `${newY}px`;
+        modal.style.left = `${e.clientX - startX}px`;
+        modal.style.top = `${e.clientY - startY}px`;
     });
 
-    // Stop dragging
     document.addEventListener("mouseup", function () {
         isDragging = false;
         modal.style.cursor = "grab";
     });
+}
 
-    // Prevent text selection while dragging
-    modal.addEventListener("dragstart", function (e) {
-        e.preventDefault();
+
+export async function loadRandomTrainingImages() {
+    try {
+        const response = await fetch('./dojang.json');
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        const data = await response.json();
+
+        let images = [...data.trainings];
+        let selectedImages = getRandomImages(images, 6);
+        insertImages('left-images', selectedImages.slice(0, 3));
+        insertImages('right-images', selectedImages.slice(3, 6));
+    } catch (error) {
+        console.error("Error loading images:", error);
+    }
+}
+
+
+function getRandomImages(array, num) {
+    let shuffled = [...array].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
+}
+
+function insertImages(containerId, images) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = "";
+
+    images.forEach((imgSrc, index) => {
+        let img = document.createElement('img');
+        img.src = `${imgSrc}`;
+        img.alt = `Taekwondo Training ${index + 1}`;
+        img.loading = "lazy";
+        img.classList.add("hover-effect");
+        container.appendChild(img);
     });
-});
-//end the dragging process
 
-//***************************************************************************************** */
-//Random training photos on index.html page
-
-const url = 'dojang.json';
-
-const cards = document.querySelector('#cards');
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('date-modified').textContent = document.lastModified;
-
-    const dateModified = document.getElementById('date-modified');
-    if (dateModified) {
-        dateModified.textContent = document.lastModified;
+    //makes email in footer to be a clickable link
+    const emailElement = document.querySelector(".footer-email");
+    if (emailElement) {
+        const email = emailElement.textContent.trim();
+        emailElement.innerHTML = `<a href="mailto:${email}">${email}</a>`;
     }
+}
 
-    fetch('./dojang.json')
-        .then(response => {
-            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-            return response.json();
-        })
-        .then(data => {
-
-            let images = [...data.trainings];
-
-            console.log("All Available Images:", images);
-
-            let selectedImages = getRandomImages(images, 6);
-
-            console.log("Selected Random Images:", selectedImages);
-
-            let leftImages = selectedImages.slice(0, 3);
-            let rightImages = selectedImages.slice(3, 6);
-
-            if (document.getElementById('left-images') && document.getElementById('right-images')) {
-                insertImages('left-images', leftImages);
-                insertImages('right-images', rightImages);
-            }
-            else {
-                console.error("Image containers not found!");
-            }
-        })
-        .catch(error => console.error("Error loading images:", error));
-
-
-    function getRandomImages(array, num) {
-        let shuffled = [...array].sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, num);
-    }
-
-    function insertImages(containerId, images) {
-        const container = document.getElementById(containerId);
-        container.innerHTML = "";
-
-        images.forEach((imgSrc, index) => {
-            let img = document.createElement('img');
-            img.src = `${imgSrc}`;
-
-            img.alt = `Taekwondo Training ${index + 1}`;
-            img.loading = "lazy";
-            //img.style.width = "100%";
-            //img.style.height = "auto";
-            img.onload = function () {
-                img.classList.add("hover-effect");
-                console.log(`Hover effect added to ${img.src}`);
-            };
-
-            container.appendChild(img);
-        });
-
-
-
-        console.log(`Images added to ${containerId}:`, container.innerHTML);
-    }
-
-    window.onload = function () {
-        document.querySelectorAll("img").forEach(img => {
-            img.classList.add("hover-effect");
-            console.log(`Force-added hover-effect class to: ${img.src}`);
-        });
-    };
-});
 

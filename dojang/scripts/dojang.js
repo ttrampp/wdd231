@@ -121,41 +121,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // DRAGGING FUNCTIONALITY
     let isDragging = false;
-    let offsetX = 0, offsetY = 0;
+    let offsetX = 0;
+    let offsetY = 0;
 
-    // Start Dragging
-    modalContent.addEventListener('mousedown', (e) => {
+    if (!modal) {
+        console.error("Modal not found.");
+        return;
+    }
+
+    // Start dragging
+    modal.addEventListener("mousedown", function (e) {
         isDragging = true;
-        offsetX = e.clientX - modalContent.getBoundingClientRect().left;
-        offsetY = e.clientY - modalContent.getBoundingClientRect().top;
-        modalContent.style.cursor = 'grabbing';
+
+        startX = e.clientX - modal.getBoundingClientRect().left;
+        startY = e.clientY - modal.getBoundingClientRect().top;
+        modal.style.position = "absolute";
+        modal.style.zIndex = "1000";
+        modal.style.cursor = "grabbing";
+
+        e.preventDefault(); // Prevents unwanted selection
     });
 
-    // Move Modal Without Resetting on Click
-    document.addEventListener('mousemove', (e) => {
+    // Dragging movement
+    document.addEventListener("mousemove", function (e) {
         if (!isDragging) return;
 
-        let newX = e.clientX - offsetX;
-        let newY = e.clientY - offsetY;
+        const newX = e.clientX - startX;
+        const newY = e.clientY - startY;
 
-        // Ensure modal stays within viewport bounds
-        let maxX = window.innerWidth - modalContent.clientWidth;
-        let maxY = window.innerHeight - modalContent.clientHeight;
-
-        newX = Math.max(0, Math.min(newX, maxX));
-        newY = Math.max(0, Math.min(newY, maxY));
-
-        modalContent.style.left = `${newX}px`;
-        modalContent.style.top = `${newY}px`;
-
-        // Mark modal as moved to prevent re-centering on new clicks
-        modalContent.dataset.moved = "true";
+        modal.style.left = `${newX}px`;
+        modal.style.top = `${newY}px`;
     });
 
-    // Stop Dragging
-    document.addEventListener('mouseup', () => {
+    // Stop dragging
+    document.addEventListener("mouseup", function () {
         isDragging = false;
-        modalContent.style.cursor = 'grab';
+        modal.style.cursor = "grab";
+    });
+
+    // Prevent text selection while dragging
+    modal.addEventListener("dragstart", function (e) {
+        e.preventDefault();
     });
 });
 //end the dragging process
@@ -221,14 +227,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
             img.alt = `Taekwondo Training ${index + 1}`;
             img.loading = "lazy";
-            img.style.width = "100%";
-            img.style.height = "auto";
+            //img.style.width = "100%";
+            //img.style.height = "auto";
+            img.onload = function () {
+                img.classList.add("hover-effect");
+                console.log(`Hover effect added to ${img.src}`);
+            };
 
-            console.log(`Adding image ${index + 1} to ${containerId}: ${imgSrc}`);
             container.appendChild(img);
         });
 
+
+
         console.log(`Images added to ${containerId}:`, container.innerHTML);
     }
+
+    window.onload = function () {
+        document.querySelectorAll("img").forEach(img => {
+            img.classList.add("hover-effect");
+            console.log(`Force-added hover-effect class to: ${img.src}`);
+        });
+    };
 });
 

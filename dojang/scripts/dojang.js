@@ -220,3 +220,4 @@ function insertImages(containerId, images) {
 
     });
 }
+

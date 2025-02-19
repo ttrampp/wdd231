@@ -304,6 +304,8 @@ main {
     text-align: left;
     outline: 3px solid var(--color-two);
     padding-bottom: 38px;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .modal-content h2 {

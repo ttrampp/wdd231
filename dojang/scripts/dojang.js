@@ -66,8 +66,8 @@ export function openModal(event) {
 
     modal.style.display = 'flex';
     document.getElementById('modal-title').textContent = event.name || "Event Details";
-    document.getElementById('modal-date').textContent = event.date ? `Date: ${event.date}` : "";
-    document.getElementById('modal-time').textContent = event.time ? `Time: ${event.time}` : "";
+    document.getElementById('modal-date').textContent = event.date ? `Date: ${event.date}` : "";        //****usage of template****/
+    document.getElementById('modal-time').textContent = event.time ? `Time: ${event.time}` : "";        //****when building strings****/
     document.getElementById('modal-description').textContent = event.description || "";
 
     console.log("Modal opened with event:", event);

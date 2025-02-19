@@ -17,6 +17,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     setupFooterAndNavbar();
 
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            console.log("Hamburger menu toggled!");
+        });
+    }
+
     console.log("Calling loadRandomTrainingImages...")
     await loadRandomTrainingImages(); // Loads images dynamically
 

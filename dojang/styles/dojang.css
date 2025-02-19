@@ -646,8 +646,6 @@ h1 {
     color: var(--color-one);
 }
 
-
-
 /**********************************************************************/
 /**********CONFIRMATION**********/
 
@@ -776,22 +774,12 @@ h1 {
 }
 
 /************************************************************************************/
-/**********up to 1024**********/
+/**********up to 1023**********/
 
 @media screen and (max-width: 1023px) {
-    /*.class-levels-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;  /* Centers items horizontally */
-    /**align-items: center;      /* Centers items vertically */
-    /*text-align: center;
-        max-width: 800px;         /* Ensures it doesn’t stretch too wide */
-    /*margin: 0 auto;           /* Centers it on the page */
-    /*}*/
 
     .class-cards {
         grid-template-columns: repeat(2, 1fr);
-        /* Two columns instead of four */
         gap: 15px;
         justify-content: center;
         width: 100%;
@@ -800,28 +788,20 @@ h1 {
     .study-boxes {
         display: grid;
         grid-template-columns: repeat(2, minmax(100px, 1fr));
-        /* Forces columns to be at least 100px */
         gap: 5px;
-        /* Reduces gap for a tighter layout */
         width: 75%;
-        /* Shrinks overall width */
         max-width: 450px;
-        /* Prevents stretching */
         margin: 0 auto;
-        /* Centers the grid */
         justify-content: center;
     }
 
     .study-boxes div {
         width: 100%;
         max-width: 180px;
-        /* Forces each box to be skinnier */
         padding: 5px;
-        /* Reduces extra spacing inside */
         text-align: center;
         box-sizing: border-box;
         overflow: hidden;
-        /* Prevents text from forcing boxes to grow */
     }
 
     .study-boxes p {
@@ -834,17 +814,13 @@ h1 {
 
     .study-modal {
         max-width: 400px;
-        /* Prevents modal from affecting study-boxes */
         width: 90%;
-        /* Keeps it responsive */
         margin: 0 auto;
     }
 
     .study-modal-content {
         max-width: 350px;
-        /* Shrinks modal content */
         padding: 10px;
-        /* Prevents excessive spacing */
     }
 }
 

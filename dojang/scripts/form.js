@@ -87,7 +87,7 @@ function setTimestampBeforeSubmission() {
 
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param) ? decodeURIComponent(urlParams.get(param)) : "";    //makes sure to retrieve user input
+    return urlParams.get(param) ? decodeURIComponent(urlParams.get(param)) : "";
 }
 
 
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    if (!window.location.pathname.includes("form.html")) return;                //exit early if not on form
+    if (!window.location.pathname.includes("form.html")) return;
 
     const formModalButtons = document.querySelectorAll(".form-modal-button");
 

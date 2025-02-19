@@ -10,27 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("form.js is running on form.html");
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.getElementById("nav-menu");
-
-    if (!hamburger || !navMenu) {
-        console.error("Hamburger menu or nav menu not found on form.html.");
-        return;
-    }
-
-    // Remove existing event listener to prevent duplication
-    hamburger.removeEventListener("click", toggleNavMenu);
-
-    // Define and attach event listener
-    function toggleNavMenu() {
-        navMenu.classList.toggle("open");
-        console.log("Hamburger menu toggled!");
-    }
-
-    hamburger.addEventListener("click", toggleNavMenu);
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
 });
 
 //Form page specifically

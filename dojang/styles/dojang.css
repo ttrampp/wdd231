@@ -1154,32 +1154,25 @@ footer {
     font-stretch: expanded;
 }
 
-/* Ensure all footer links inherit the correct styling */
+
 footer a {
     color: white !important;
-    /* Default white text */
     text-decoration: none !important;
     font-weight: bold;
 }
 
-/* Specific styles for the email link */
 .footer-email a {
     color: white !important;
-    /* Ensure it's visible against the blue background */
     text-decoration: underline !important;
 }
 
-/* Change color when hovered */
 .footer-email a:hover {
     color: var(--color-two) !important;
-    /* Change to red when hovered */
     text-decoration: underline !important;
 }
 
-/* Change color when clicked */
 .footer-email a:active {
     color: var(--color-two) !important;
-    /* Stay red when clicked */
 }
 
 

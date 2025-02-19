@@ -13,7 +13,11 @@ export function setupFooterAndNavbar() {
         const navMenu = document.getElementById('nav-menu');
 
         if (hamburger && navMenu) {
-            hamburger.addEventListener('click', () => {
+            // Remove existing event listeners to avoid duplication
+            hamburger.replaceWith(hamburger.cloneNode(true));
+            const newHamburger = document.getElementById('hamburger');
+
+            newHamburger.addEventListener('click', () => {
                 navMenu.classList.toggle('open');
             });
         }

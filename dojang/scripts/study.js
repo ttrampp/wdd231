@@ -109,10 +109,5 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
 
 
-    //makes email in footer to be a clickable link
-    const emailElement = document.querySelector(".footer-email");
-    if (emailElement) {
-        const email = emailElement.textContent.trim();
-        emailElement.innerHTML = `<a href="mailto:${email}">${email}</a>`;
-    }
+
 });

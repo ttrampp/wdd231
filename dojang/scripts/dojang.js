@@ -21,7 +21,33 @@ export function setupFooterAndNavbar() {
 }
 
 
-//Modals -- ES Modules
+//makes email in footer to be a clickable link
+export function makeFooterEmailClickable() {
+    console.log("makeFooterEmailClickable() function is running...");
+
+    const emailElement = document.querySelector(".footer-email");
+    if (emailElement) {
+        console.log("Footer email element found:", emailElement.textContent);
+
+        // Check if it's already wrapped in a link to avoid duplication
+        if (!emailElement.querySelector("a")) {
+            const email = emailElement.textContent.trim();
+            emailElement.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+            console.log("Footer email updated successfully:", email);
+        } else {
+            console.log("Footer email is already a link.");
+        }
+    } else {
+        console.error("Footer email element not found!");
+    }
+}
+
+// Run function after DOM loads
+document.addEventListener("DOMContentLoaded", makeFooterEmailClickable);
+
+
+
+
 
 
 // Open modal and insert event details
@@ -45,7 +71,6 @@ export function openModal(event) {
     document.getElementById('modal-description').textContent = event.description || "";
 
     console.log("Modal opened with event:", event);
-
 }
 
 
@@ -147,17 +172,29 @@ export function setupModalDragging() {
     });
 }
 
-
+console.log("dojang.js is running")
 export async function loadRandomTrainingImages() {
+    console.log("1-Attempting to fetch dojang.json")
     try {
         const response = await fetch('./dojang.json');
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        console.log("2-Fetch request made")
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        console.log("3- Response received successfully");
+
         const data = await response.json();
+        console.log("4-JSON data parse:", data);
 
         let images = [...data.trainings];
         let selectedImages = getRandomImages(images, 6);
         insertImages('left-images', selectedImages.slice(0, 3));
         insertImages('right-images', selectedImages.slice(3, 6));
+
+        console.log("5- Images inserted successfully");
+
     } catch (error) {
         console.error("Error loading images:", error);
     }
@@ -180,14 +217,6 @@ function insertImages(containerId, images) {
         img.loading = "lazy";
         img.classList.add("hover-effect");
         container.appendChild(img);
+
     });
-
-    //makes email in footer to be a clickable link
-    const emailElement = document.querySelector(".footer-email");
-    if (emailElement) {
-        const email = emailElement.textContent.trim();
-        emailElement.innerHTML = `<a href="mailto:${email}">${email}</a>`;
-    }
 }
-
-

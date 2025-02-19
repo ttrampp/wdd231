@@ -1,10 +1,12 @@
-import { setupFooterAndNavbar, openModal, closeModal, setupEventListeners, setupModalDragging, loadRandomTrainingImages } from './dojang.js';
-
 console.log("index.js is running!");
+
+import { setupFooterAndNavbar, openModal, closeModal, setupEventListeners, setupModalDragging, loadRandomTrainingImages, makeFooterEmailClickable } from './dojang.js';
+
+
 
 //ensure functions run after the page loads
 document.addEventListener("DOMContentLoaded", async () => {
-    console.log("DOMContentLoaded event fired");
+    console.log("DOMContentLoaded event fired in index.js");
 
     //hide the modal immediately when the page loads
     const modal = document.getElementById("event-modal");
@@ -14,6 +16,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     setupFooterAndNavbar();
+
+    console.log("Calling loadRandomTrainingImages...")
     await loadRandomTrainingImages(); // Loads images dynamically
 
     console.log("Calling setupEventListeners...")
@@ -21,10 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     setupModalDragging();
 
-    //makes email in footer to be a clickable link
-    const emailElement = document.querySelector(".footer-email");
-    if (emailElement) {
-        const email = emailElement.textContent.trim();
-        emailElement.innerHTML = `<a href="mailto:${email}">${email}</a>`;
-    }
+    makeFooterEmailClickable(),
+
+        console.log("All event listeners are images should now be loaded")
 });

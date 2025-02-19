@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="styles/dojang.css">
     <script src="scripts/study.js" defer></script>
+    <script type="module" src="scripts/dojang.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
@@ -52,7 +53,7 @@
         <h2 class="instructions">Click on either a BELT COLOR or a FORM NUMBER<br> 🔻 ---------- 🔻 ----------
             🔻---------- 🔻</h2>
         <div class="study-boxes">
-            <section class="belt-boxes">
+            <div class="belt-boxes">
                 <img src="images/black.webp" alt="black-belt" class="black-belt" data-index="0" width="450" height="50">
                 <img src="images/brown-two-black-stripes.webp" alt="brown-two-black-belt" class="brown-two-black-belt"
                     data-index="1" width="450" height="50">
@@ -71,9 +72,9 @@
                     height="50">
                 <img src="images/white.webp" alt="white-belt" class="white-belt" data-index="10" width="450"
                     height="50">
-            </section>
+            </div>
 
-            <section class="form-number-boxes">
+            <div class="form-number-boxes">
                 <p class="ten" data-index="0">Form 10 : KWANG-GAE</p>
                 <p class="nine" data-index="1">Form 9 : CHOONG-MOO</p>
                 <p class="eight" data-index="2">Form 8 : HWA-RANG</p>
@@ -85,7 +86,7 @@
                 <p class="two" data-index="8">Form 2 : TAN-GUN</p>
                 <p class="one" data-index="9">Form 1 : CHON-JI</p>
                 <p class="na" data-index="10">Beginner</p>
-            </section>
+            </div>
         </div>
     </main>
 
@@ -93,7 +94,7 @@
         <div class="study-modal-content">
             <span id="study-modal-close" class="study-modal-close">❌</span>
             <p class="study-modal-intro"> <strong>In order to obtain this belt: </strong></p>
-            <h2 id="study-modal-title"></h2>
+
             <p><strong>Belt Rank: </strong><span id="study-modal-belt"></span></p>
             <p class="study-modal-intro"><strong> You must learn these things: </strong></p>
             <p><strong>Form: </strong><span id="study-modal-form"></span></p>
@@ -109,7 +110,7 @@
             <p>Kirtland Taekwondo Dojang</p>
             <p class="address1">480 Road 6100</p>
             <p class="address2">Kirland, NM 87417</p>
-            <p class="addressEmail">info@dojang.org</p>
+            <p class="footer-email">info@dojang.org</p>
             <p>(505) 598-1234</p>
         </div>
         <div class="social-icons">
@@ -133,6 +134,8 @@
             document.getElementById("date-modified").innerHTML = text;
         </script>
     </footer>
+
+    <script type="module" src="scripts/dojang.js"></script>
 
 </body>
 

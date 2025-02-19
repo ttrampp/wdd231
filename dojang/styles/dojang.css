@@ -304,8 +304,7 @@ main {
     text-align: left;
     outline: 3px solid var(--color-two);
     padding-bottom: 38px;
-    
-    overflow-y: auto;
+
 }
 
 .modal-content h2 {
@@ -928,6 +927,7 @@ h1 {
         width: 90%;
         max-width: 400px;
         padding: 15px;
+        overflow-y: auto;
     }
 
     .class-cards {
